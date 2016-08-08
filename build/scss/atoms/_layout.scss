@@ -45,3 +45,11 @@ $gallery: (
   global-box-sizing: content-box,
   last-flow: to,
 );
+
+
+// ============================== //
+
+#section__main 
+  {
+   @include linear-gradient($primary-color 0%,  $white 100%);
+  }
