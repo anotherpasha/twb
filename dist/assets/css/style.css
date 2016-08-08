@@ -476,9 +476,9 @@ img.fluid {
  ** this config it's config from susy
  */
 #section__main {
-  background: #ffffff;
-  background: -webkit-linear-gradient(90deg-#1e419b 0%, #ffffff 100%);
-  background: linear-gradient(#1e419b 0%, #ffffff 100%); }
+  background: #000000;
+  background: -webkit-linear-gradient(90deg-#1e419b 0%, #000000 100%);
+  background: linear-gradient(#1e419b 0%, #000000 100%); }
 
 /* ======================== *\
 	FONT EMBED

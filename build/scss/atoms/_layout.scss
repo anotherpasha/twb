@@ -51,5 +51,5 @@ $gallery: (
 
 #section__main 
   {
-   @include linear-gradient($primary-color 0%,  $white 100%);
+   @include linear-gradient($primary-color 0%,  $black 100%);
   }
