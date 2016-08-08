@@ -5,7 +5,7 @@ build/vendor/**/*
 src/vendor/**/*
 
 
-build/scss/.sass-cache/
+build/scss/.sass-cache/**/*
 
 
 .codekit-cache/
