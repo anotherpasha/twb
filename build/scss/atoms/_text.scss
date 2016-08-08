@@ -1,0 +1,185 @@
+$base-font-size: 14px;
+
+
+$h1-font-size: 37px;
+$h2-font-size: 31px;
+$h3-font-size: 28px;
+$h4-font-size: 26px;
+$h5-font-size: 22px;
+$h6-font-size: 18px;
+
+$heading-color: $primary-color;
+
+$font-path: '../fonts/';
+
+$paragraph-margin-bottom: 10px;
+
+$gotham-book	: 'GothamRounded-Book'	;
+$gotham-medium  : 'GothamRounded-Medium';
+$gotham-bold	: 'GothamRounded-Bold'	;
+
+$primary-font-family: $gotham-book, 'Helvetica', sans-serif;
+
+
+/* ======================== *\
+	FONT EMBED
+\* ======================== */
+
+@font-face {
+  font-family: 'GothamRounded-Medium';
+  src: url('#{$font-path}GothamRounded-Medium.eot?#iefix') format('embedded-opentype'),
+  	   url('#{$font-path}GothamRounded-Medium.otf')  format('opentype'),
+	   url('#{$font-path}GothamRounded-Medium.woff') format('woff'),
+	   url('#{$font-path}GothamRounded-Medium.ttf')  format('truetype'),
+	   url('#{$font-path}GothamRounded-Medium.svg#GothamRounded-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamRounded-Book';
+  src: url('#{$font-path}GothamRounded-Book.eot?#iefix') format('embedded-opentype'),
+  	   url('#{$font-path}GothamRounded-Book.otf')  format('opentype'),
+	   url('#{$font-path}GothamRounded-Book.woff') format('woff'),
+	   url('#{$font-path}GothamRounded-Book.ttf')  format('truetype'),
+	   url('#{$font-path}GothamRounded-Book.svg#GothamRounded-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'GothamRounded-Bold';
+  src: url('#{$font-path}GothamRounded-Bold.eot?#iefix') format('embedded-opentype'),
+  	   url('#{$font-path}GothamRounded-Bold.otf')  format('opentype'),
+	   url('#{$font-path}GothamRounded-Bold.woff') format('woff'),
+	   url('#{$font-path}GothamRounded-Bold.ttf')  format('truetype'),
+	   url('#{$font-path}GothamRounded-Bold.svg#GothamRounded-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+.text-color-{
+	&-black{
+		color: $black;
+	}
+	&-darkgrey{
+		color: scale-color($black, $lightness: 10%);
+	}
+	&-grey{
+		color: scale-color($black, $lightness: 30%);
+	}
+	&-light-grey{
+		color: scale-color($white, $lightness: -20%);
+	}
+	&-primary{
+		color: $primary-color;
+	}
+	&-white{
+		color: $white;
+	}
+}
+.text-{
+	&-light{
+		font-weight: light;
+	}
+}
+
+p{
+	font-size: $base-font-size;
+	display: block;
+	margin-bottom: $paragraph-margin-bottom;
+	font-style: normal;
+	font-family: $primary-font-family;
+	display: block;
+	@include mappy-bp(max-width small) {
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+}
+
+a{
+	cursor: pointer;
+	font-family: $primary-font-family;
+	font-size: $base-font-size;
+	display: inline-block;
+}
+ul{
+	&.no-dot{
+		list-style: none;
+	}
+	&.inline-list{
+		display: inline-block;
+		list-style: none;
+		li{
+			float: left;
+		}
+	}
+}
+
+
+
+
+h1,h2,h3,h4,h5,h6{
+	font-family : $gotham-bold;
+	color 	    : $heading-color;
+}
+
+h1{
+	font-size: $h1-font-size;
+}
+h2{
+	font-size: $h2-font-size;
+}
+h3{
+	font-size: $h3-font-size;
+}
+h4{
+	font-size: $h4-font-size;
+}
+h5{
+	font-size: $h5-font-size;
+}
+h6{
+	font-size: $h6-font-size;
+}
+
+h1,h2,h3,h4,h5,h6,p,a,ul,ol,li,span{
+	text-rendering: optimizeLegibility;
+}
+strong{
+	font-family: $gotham-bold;
+
+}
+
+.font_{
+	&_weight-{
+		&-light{
+			font-family: $gotham-book;
+		}
+		&-medium{
+			font-family: $gotham-medium;
+		}
+		&-bold{
+			font-family: $gotham-bold;
+		}		
+	}
+
+	&_color-{
+		&-white{
+			color: $white;
+		}
+	}
+
+}
+
+
+
+.slider--title{
+	@include mappy-bp(max-width small) {
+		font-size: 28px;
+		margin-top: 5px;
+	}
+}

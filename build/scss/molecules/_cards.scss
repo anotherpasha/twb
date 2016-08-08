@@ -1,0 +1,18 @@
+.testimonial-content{
+	display: block;
+	width: 100%;
+	max-width: 584px;
+	margin: auto;
+	list-style: none;
+		li{
+			margin-bottom: 25px;
+		}
+		.images{
+			display: inline-block;
+			width: 120px;
+			height: 120px;
+			overflow: hidden;
+			@include vendor((border-radius: 10000px), webkit moz ms o);
+		}
+
+}

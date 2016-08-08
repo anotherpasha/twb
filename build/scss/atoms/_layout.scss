@@ -1,0 +1,47 @@
+/* ====================== *\
+    Config Layout Section
+\* ====================== */
+/**
+ ** a config layout for gallery section
+ ** this config it's config from susy
+ */
+
+$global: (
+  flow: ltr,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  container: auto,
+  container-position: center,
+  columns: 6,
+  gutters: .25,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to,
+);
+
+$mobile: (
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  container: auto,
+  container-position: center,
+  columns: 3,
+  gutters: 1/8,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to,
+);
+
+$gallery: (
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  container: auto,
+  container-position: center,
+  columns: 6,
+  gutters: 1/8,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to,
+);
