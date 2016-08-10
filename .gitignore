@@ -1,8 +1,9 @@
 .DS_Store
 *.zip
 
-build/vendor/**/*
-src/vendor/**/*
+build/vendor/**/**/*
+build/vendor/**/*.scssc
+src/vendor/**/**/*
 
 
 build/scss/.sass-cache/**/*.scssc
