@@ -1,12 +1,12 @@
 /* ====================== *\
-    Config Layout Section
+	Config Layout Section
 \* ====================== */
 /**
  ** a config layout for gallery section
  ** this config it's config from susy
  */
 
-$global: (
+$susy: (
   flow: ltr,
   math: fluid,
   output: float,
@@ -47,9 +47,30 @@ $gallery: (
 );
 
 
-// ============================== //
+/* ============================== *\
+	Container
+\* ============================== */
 
-#section__main 
+.section
+{
+	display: table;
+	width: 100%;
+}
+	.section__container
+	{
+		@include container(1024px);
+	}
+
+			#section--main 
+			{
+				@include linear-gradient($tertiary-color 0%,  $white 100%);
+			}
+
+
+
+.content--vertical-middle 
   {
-   @include linear-gradient($primary-color 0%,  $black 100%);
+	display: table-cell;
+	vertical-align: middle;
+
   }

@@ -1,0 +1,57 @@
+$primary-button-color: $secondary-color;
+$secondary-button-color: $quartiery-color;
+$primary-button-border-color: $primary-color;
+
+
+$small-button-font-size: 12px;
+$medium-button-font-size: ($small-button-font-size + 2px);
+$large-button-font-size: ($medium-button-font-size + 4px);
+
+
+
+$small-button-padding: 8px 18px;
+$medium-button-padding: 12px 22px;
+$large-button-padding: 16px 26px;
+
+
+.button
+{
+	display: inline-block;
+	text-decoration: none;
+	@include vendor((border-radius: 10px), webkit moz ms o);
+	@include transition(all, 600ms);
+	font-weight: bolder;
+}
+
+	.button__primary
+	{
+		background-color: $primary-button-color;
+		border: solid 3px $primary-button-border-color;
+		color: $white;
+	}
+
+	.button__secondary
+	{
+		background-color: $secondary-button-color;
+		border: solid 3px $primary-button-border-color;
+		color: $primary-color;
+	}
+
+
+		.button--small
+		{
+			padding: $small-button-padding;
+			font-size: $small-button-font-size;
+		}
+
+		.button--medium
+		{
+			padding: $medium-button-padding;
+			font-size: $medium-button-font-size;
+		}
+
+		.button--large
+		{
+			padding: $large-button-padding;
+			font-size: $large-button-font-size;
+		}		
