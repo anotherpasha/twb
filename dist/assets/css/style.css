@@ -613,6 +613,10 @@ strong {
   border: solid 3px #1e419b;
   color: #1e419b; }
 
+.button__tertiary {
+  border: solid 3px #ffffff;
+  color: #ffffff; }
+
 .button--small {
   padding: 8px 18px;
   font-size: 12px; }
@@ -746,75 +750,27 @@ strong {
   background-size: 100% 100%; }
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%; }
-
-.nav__toggle {
-  width: 44px;
-  height: 44px;
-  -webkit-border-radius: 50%;
-  -mos-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  background-color: #eb1c24;
-  border: solid 1px #ffffff;
-  position: fixed;
-  top: 23px;
-  right: 40px;
-  z-index: 10030;
-  padding: 10px 9px;
-  line-height: 0.4; }
-  .nav__toggle span {
-    width: 25px;
-    height: 2px;
-    background-color: #ffffff;
-    display: inline-block; }
-
-.container__menu {
-  position: fixed;
-  display: none;
   width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  z-index: 10000;
-  background-color: rgba(255, 255, 255, 0.9); }
-  .container__menu nav {
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-    height: inherit;
-    margin-left: auto;
-    margin-right: auto; }
-  .container__menu .list__menu {
-    display: inline-block;
-    list-style: none;
-    width: 100%; }
-    .container__menu .list__menu li {
-      text-align: center;
-      margin: 10px; }
-      .container__menu .list__menu li a {
-        border-bottom: dotted 2px #1e419b;
-        font-size: 30px;
-        color: #1e419b;
-        font-family: "GothamRounded-Bold"; }
-        @media all and (max-width: 39.9375em) {
-          .container__menu .list__menu li a {
-            font-size: 16px; } }
-  .container__menu .footer {
-    display: block;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    background-color: #1a1a1a;
-    padding: 10px; }
-    .container__menu .footer p {
-      color: #ffffff;
-      text-align: center; }
+  z-index: 10;
+  padding: 20px 50px; }
+
+.navigation--home {
+  padding: 10px 0;
+  float: right;
+  display: inline-block; }
+  .navigation--home li {
+    margin-right: 20px; }
+    .navigation--home li:last-child {
+      margin-right: 0; }
+  @media all and (max-width: 39.9375em) {
+    .navigation--home {
+      display: none; } }
+
+.navigation--link {
+  margin-top: 30px; }
 
 .subscribe {
   max-width: 670px;
