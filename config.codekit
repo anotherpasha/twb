@@ -3653,182 +3653,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/dist\/assets\/images\/characters\/land.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 27716,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/characters\/land.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/characters\/land.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/butterfly.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3565,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/butterfly.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/butterfly.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/cloud-01.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3153,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/cloud-01.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/cloud-01.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/cloud-02.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1624,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/cloud-02.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/cloud-02.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/cloud-03.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2450,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/cloud-03.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/cloud-03.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/duck.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3626,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/duck.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/duck.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/elephant.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 4459,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/elephant.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/elephant.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/fish.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3134,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/fish.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/fish.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/flower-red-big.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3053,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/flower-red-big.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/flower-red-big.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/flower-red-small.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2051,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/flower-red-small.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/flower-red-small.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/flower-white.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3137,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/flower-white.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/flower-white.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/grass.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1894,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/grass.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/grass.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/tree-big.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2609,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/tree-big.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/tree-big.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/tree-grass.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 5766,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/tree-grass.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/tree-grass.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/tree-small.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1789,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/tree-small.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/tree-small.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dist\/assets\/images\/fallbacks\/turtle.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3937,
-		"inputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/turtle.png",
-		"outputAbbreviatedPath": "\/dist\/assets\/images\/fallbacks\/turtle.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/dist\/assets\/images\/icon.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3836,6 +3660,17 @@
 		"initialSize": 20898,
 		"inputAbbreviatedPath": "\/dist\/assets\/images\/icon.png",
 		"outputAbbreviatedPath": "\/dist\/assets\/images\/icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/assets\/images\/land.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27716,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/land.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/land.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3872,17 +3707,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
-		},
-	"\/dist\/assets\/js\/init.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dist\/assets\/js\/init.min.js",
-		"outputAbbreviatedPath": "\/dist\/assets\/js\/init.min.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
 		},
 	"\/dist\/assets\/js\/libs.min.js": {
 		"fileType": 64,
