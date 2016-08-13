@@ -67,7 +67,20 @@ $gallery: (
 				@include linear-gradient($tertiary-color 0%,  $white 100%);
 			}
 
+                  #section--prize 
+                  {
+                    background-color: $querniry-color;
+                  }
 
+                  #section--howto 
+                  {
+                    background-color: $white;
+                  }
+
+                  #section--gallery 
+                  {
+                   background-color: scale-color($white, $lightness: -10%)
+                  }
 
 .content--vertical-middle 
   {
@@ -75,3 +88,48 @@ $gallery: (
 	vertical-align: middle;
 
   }
+
+
+  /**
+   ** Column 
+   */
+   .column
+   {
+        &__span-1
+        {
+          @include span(1);
+        }
+
+        &__span-2
+        {
+          @include span(2);
+        }
+
+        &__span-3
+        {
+          @include span(3);
+        }
+
+        &__span-4
+        {
+          @include span(4);
+        }
+
+        &__span-5
+        {
+          @include span(5);
+        }
+
+        &__span-6
+        {
+          @include span(6);
+        }
+
+
+        &__offset-3
+        {
+          @include push(3)
+        }
+
+
+   }

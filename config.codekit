@@ -651,7 +651,7 @@
 		},
 	"\/build\/vendor\/gsap\/src\/minified\/plugins\/ScrollToPlugin.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/vendor\/gsap\/src\/minified\/plugins\/ScrollToPlugin.min.js",
 		"outputAbbreviatedPath": "\/dist\/assets\/js\/ScrollToPlugin.min.min.js",
@@ -2500,7 +2500,7 @@
 		},
 	"\/build\/vendor\/scrollmagic\/scrollmagic\/minified\/ScrollMagic.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/vendor\/scrollmagic\/scrollmagic\/minified\/ScrollMagic.min.js",
 		"outputAbbreviatedPath": "\/dist\/assets\/js\/ScrollMagic.min.min.js",
@@ -3644,15 +3644,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/dist\/_navbar.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dist\/_navbar.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/dist\/assets\/css\/style.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -3669,6 +3660,39 @@
 		"initialSize": 27716,
 		"inputAbbreviatedPath": "\/dist\/assets\/images\/characters\/land.png",
 		"outputAbbreviatedPath": "\/dist\/assets\/images\/characters\/land.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/assets\/images\/consolation-prize-01.png": {
+		"fileType": 32768,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 69939,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/consolation-prize-01.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/consolation-prize-01.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/assets\/images\/consolation-prize-02.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 70282,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/consolation-prize-02.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/consolation-prize-02.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/assets\/images\/consolation-prize-03.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 90189,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/consolation-prize-03.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/consolation-prize-03.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3838,6 +3862,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/dist\/assets\/images\/figure-submission.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 32534,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/figure-submission.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/figure-submission.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/dist\/assets\/images\/icon.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3878,6 +3913,28 @@
 		"initialSize": 122186,
 		"inputAbbreviatedPath": "\/dist\/assets\/images\/prizes.png",
 		"outputAbbreviatedPath": "\/dist\/assets\/images\/prizes.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/assets\/images\/weekly-prize-01.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 94083,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/weekly-prize-01.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/weekly-prize-01.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/assets\/images\/weekly-prize-02.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24374,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/weekly-prize-02.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/weekly-prize-02.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

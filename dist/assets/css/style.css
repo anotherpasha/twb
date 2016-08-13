@@ -497,9 +497,72 @@ img.fluid {
   background: -webkit-linear-gradient(90deg-#33c2ff 0%, #ffffff 100%);
   background: linear-gradient(#33c2ff 0%, #ffffff 100%); }
 
+#section--prize {
+  background-color: #ffd847; }
+
+#section--howto {
+  background-color: #ffffff; }
+
+#section--gallery {
+  background-color: #e6e6e6; }
+
 .content--vertical-middle {
   display: table-cell;
   vertical-align: middle; }
+
+/**
+ ** Column 
+ */
+.column__span-1 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 16.6666666667%;
+  float: left;
+  padding-left: 1.6666666667%;
+  padding-right: 1.6666666667%; }
+.column__span-2 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.3333333333%;
+  float: left;
+  padding-left: 1.6666666667%;
+  padding-right: 1.6666666667%; }
+.column__span-3 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 1.6666666667%;
+  padding-right: 1.6666666667%; }
+.column__span-4 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 66.6666666667%;
+  float: left;
+  padding-left: 1.6666666667%;
+  padding-right: 1.6666666667%; }
+.column__span-5 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 83.3333333333%;
+  float: left;
+  padding-left: 1.6666666667%;
+  padding-right: 1.6666666667%; }
+.column__span-6 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 1.6666666667%;
+  padding-right: 1.6666666667%; }
+.column__offset-3 {
+  margin-left: 50%; }
 
 /* ======================== *\
 	FONT EMBED
@@ -601,7 +664,8 @@ strong {
   -ms-transition: all 600ms ease;
   -o-transition: all 600ms ease;
   transition: all 600ms ease;
-  font-weight: bolder; }
+  font-weight: bolder;
+  cursor: pointer; }
 
 .button__primary {
   background-color: #eb1c24;
