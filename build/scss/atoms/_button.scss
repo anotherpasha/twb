@@ -21,6 +21,7 @@ $large-button-padding: 16px 26px;
 	@include vendor((border-radius: 10px), webkit moz ms o);
 	@include transition(all, 600ms);
 	font-weight: bolder;
+	cursor: pointer;
 }
 
 	.button__primary
