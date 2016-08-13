@@ -16,7 +16,6 @@
 	};
 
 	Animated.prototype.fading = function(time) {
-		console.log(this.selector)
 		var tween = TweenMax.fromTo(this.selector, time, {
 			opacity: 0
 		},
