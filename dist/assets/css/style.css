@@ -635,7 +635,7 @@ img.fluid {
   font-weight: normal;
   font-style: normal; }
 .text--white {
-  color: #ffffff; }
+  color: #ffffff !important; }
 .text--black {
   color: #000000; }
 .text--primary {
@@ -839,6 +839,34 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, span {
   .button--facebook:hover {
     background-color: #3e5890; }
     .button--facebook:hover .button--icon {
+      background-color: #364d7e; }
+
+.button--facebook-share {
+  background-color: #4f6fb3;
+  color: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px; }
+  .button--facebook-share .button--icon {
+    background-color: #3e5890;
+    padding: 5px 10px;
+    -webkit-border-top-left-radius: 10px !important;
+    -moz-border-top-left-radius: 10px !important;
+    -ms-border-top-left-radius: 10px !important;
+    -o-border-top-left-radius: 10px !important;
+    border-top-left-radius: 10px !important;
+    -webkit-border-bottom-left-radius: 10px !important;
+    -moz-border-bottom-left-radius: 10px !important;
+    -ms-border-bottom-left-radius: 10px !important;
+    -o-border-bottom-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important; }
+  .button--facebook-share .button--text {
+    padding: 5px 20px; }
+  .button--facebook-share:hover {
+    background-color: #3e5890; }
+    .button--facebook-share:hover .button--icon {
       background-color: #364d7e; }
 
 .button__form {

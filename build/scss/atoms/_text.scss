@@ -54,7 +54,7 @@ $heading-font-family: $oduda , helvetica, sans-serif;
 
 .text-{
 	&-white{
-		color: $white;
+		color: $white !important;
 	}
 	&-black{
 		color: $black;
