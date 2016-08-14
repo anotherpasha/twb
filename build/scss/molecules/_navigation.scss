@@ -6,6 +6,11 @@ header
 	width: 100%;
 	z-index: 10;
 	padding: 20px 50px;
+		&.navbar__subpage
+		{
+			background-color: $white;
+			padding: 10px 50px;
+		}
 }
 
 	.navigation--home
@@ -13,6 +18,10 @@ header
 		padding: 10px 0;
 		float: right;
 		display: inline-block;
+		&.subpage
+		{
+			padding: 5px;
+		}
 		li
 		{
 			margin-right: 20px ;
