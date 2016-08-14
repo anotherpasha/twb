@@ -9,7 +9,7 @@ $large-button-font-size: ($medium-button-font-size + 4px);
 
 
 
-$small-button-padding: 8px 18px;
+$small-button-padding: 3px 18px;
 $medium-button-padding: 12px 22px;
 $large-button-padding: 16px 26px;
 
@@ -22,6 +22,8 @@ $large-button-padding: 16px 26px;
 	@include transition(all, 600ms);
 	font-weight: bolder;
 	cursor: pointer;
+	margin-top: 20px;
+	font-family: $oduda;
 }
 
 	.button__primary
@@ -29,6 +31,10 @@ $large-button-padding: 16px 26px;
 		background-color: $primary-button-color;
 		border: solid 3px $primary-button-border-color;
 		color: $white;
+			&:hover
+			{
+				background-color: scale-color($primary-button-color, $lightness: -20%);
+			}
 	}
 
 	.button__secondary
@@ -36,19 +42,41 @@ $large-button-padding: 16px 26px;
 		background-color: $secondary-button-color;
 		border: solid 3px $primary-button-border-color;
 		color: $primary-color;
+			&:hover
+			{
+				background-color: scale-color($secondary-button-color, $lightness: -20%);
+			}
 	}
 
 	.button__tertiary
 	{
 		border: solid 3px $white;
 		color: $white;
+			&:hover
+			{
+				background-color: $white;
+				color: $primary-color;
+			}
 	}
+
+	.button__quertiary
+	{
+		border: solid 3px scale-color($black, $lightness: 15%);
+		color: scale-color($black, $lightness: 15%);
+			&:hover
+			{
+				background-color: $white;
+				color: $primary-color;
+			}
+	}
+
 
 
 		.button--small
 		{
 			padding: $small-button-padding;
 			font-size: $small-button-font-size;
+			font-size: 18px;
 		}
 
 		.button--medium
