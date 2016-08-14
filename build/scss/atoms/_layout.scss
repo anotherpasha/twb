@@ -101,6 +101,26 @@ $gallery: (
                     background: url(../images/characters.png) no-repeat bottom right,#32c0ff;
                   }
 
+                  #section--photo-detail
+                  {
+                    position: relative;
+                      &:before
+                        {
+                          position: absolute;
+                          width: 100%;
+                          content: '';
+                          height: 300px;
+                          top: 0;
+                          left: 0;
+                          background-color: #32c0ff;
+                          z-index: -1;
+                            @include mappy-bp(max-width small)
+                            {
+                              height: 180px;
+                            }
+                        }
+                  }
+
                   .section--subpage
                   {
                     padding: 40px 0;
@@ -114,9 +134,9 @@ $gallery: (
 
   }
 
-  .container__photo-page
+  .container__photo-detail
   {
-    @include container(960px);
+    @include container(770px);
   }
 
 .row

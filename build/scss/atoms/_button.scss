@@ -136,6 +136,34 @@ $large-button-padding: 16px 26px;
 
 			}
 	}	
+	.button--tweet
+	{
+		background-color: #5ea9dd;
+		color: $white;
+		@include vendor((border-radius: 10px ), webkit moz  ms o);
+			.button--icon
+			{
+				background-color: scale-color( #5ea9dd, $lightness: -20%);
+				padding: 5px 10px;
+				@include vendor((border-top-left-radius: 10px !important), webkit moz ms o);
+				@include vendor((border-bottom-left-radius: 10px !important), webkit moz ms o);
+			}
+			.button--text
+			{
+				padding: 5px 20px;
+			}
+			&:hover
+			{
+				background-color: scale-color( #5ea9dd, $lightness: -20%);
+
+				.button--icon
+				{
+					background-color: scale-color( #5ea9dd, $lightness: -30%);
+				}
+
+			}
+	}	
+	
 	.button__form
 	{
 		background-color: $red;

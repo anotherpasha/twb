@@ -405,6 +405,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/build\/scss\/organism\/_block.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/build\/scss\/organism\/_block.scss",
+		"outputAbbreviatedPath": "\/dist\/assets\/css\/style.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/build\/scss\/organism\/_card.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -4037,6 +4053,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/dist\/assets\/images\/photo-decoration.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28969,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/photo-decoration.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/photo-decoration.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/dist\/assets\/images\/prizes.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -4135,6 +4162,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/dist\/dummy\/submission-01.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 78836,
+		"inputAbbreviatedPath": "\/dist\/dummy\/submission-01.jpg",
+		"outputAbbreviatedPath": "\/dist\/dummy\/submission-01.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/dist\/index.html": {
 		"fileType": 8192,
