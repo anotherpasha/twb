@@ -68,6 +68,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/build\/js\/modules\/modal.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/build\/js\/modules\/modal.js",
+		"outputAbbreviatedPath": "\/dist\/assets\/js\/modal.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/build\/js\/plugins.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -119,6 +130,22 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/scss\/atoms\/_decoration.scss",
+		"outputAbbreviatedPath": "\/dist\/assets\/css\/style.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/build\/scss\/atoms\/_footer.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/build\/scss\/atoms\/_footer.scss",
 		"outputAbbreviatedPath": "\/dist\/assets\/css\/style.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -319,22 +346,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/build\/scss\/molecules\/_fullpage.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/build\/scss\/molecules\/_fullpage.scss",
-		"outputAbbreviatedPath": "\/dist\/assets\/css\/style.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
 	"\/build\/scss\/molecules\/_modal.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -359,22 +370,6 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/scss\/molecules\/_navigation.scss",
-		"outputAbbreviatedPath": "\/dist\/assets\/css\/style.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/build\/scss\/molecules\/_parallax.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/build\/scss\/molecules\/_parallax.scss",
 		"outputAbbreviatedPath": "\/dist\/assets\/css\/style.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -439,22 +434,6 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/scss\/organism\/_text.scss",
-		"outputAbbreviatedPath": "\/dist\/assets\/css\/style.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/build\/scss\/templates\/_slider.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/build\/scss\/templates\/_slider.scss",
 		"outputAbbreviatedPath": "\/dist\/assets\/css\/style.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
@@ -3617,12 +3596,39 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/build\/views\/pages\/photo.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/build\/views\/pages\/photo.kit",
+		"outputAbbreviatedPath": "\/dist\/photo.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/build\/views\/pages\/snk.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/build\/views\/pages\/snk.kit",
+		"outputAbbreviatedPath": "\/dist\/snk.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/build\/views\/partials\/_navbar.kit": {
 		"fileType": 2048,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/views\/partials\/_navbar.kit",
 		"outputAbbreviatedPath": "\/dist\/_navbar.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/build\/views\/partials\/_navbar_subpage.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/build\/views\/partials\/_navbar_subpage.kit",
+		"outputAbbreviatedPath": "\/dist\/_navbar_subpage.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -3873,13 +3879,46 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/dist\/assets\/images\/google-play.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6619,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/google-play.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/google-play.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/dist\/assets\/images\/icon.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 20898,
+		"initialSize": 1110,
 		"inputAbbreviatedPath": "\/dist\/assets\/images\/icon.png",
 		"outputAbbreviatedPath": "\/dist\/assets\/images\/icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/assets\/images\/logo-small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24110,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/logo-small.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/logo-small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/assets\/images\/logo-twb-small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11653,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/logo-twb-small.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/logo-twb-small.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3913,6 +3952,28 @@
 		"initialSize": 122186,
 		"inputAbbreviatedPath": "\/dist\/assets\/images\/prizes.png",
 		"outputAbbreviatedPath": "\/dist\/assets\/images\/prizes.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/assets\/images\/step-02.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9358,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/step-02.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/step-02.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dist\/assets\/images\/step-03.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7896,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/step-03.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/step-03.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3988,6 +4049,24 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dist\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dist\/photo.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dist\/photo.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dist\/snk.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dist\/snk.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
