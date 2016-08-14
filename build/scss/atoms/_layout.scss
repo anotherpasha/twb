@@ -114,6 +114,11 @@ $gallery: (
 
   }
 
+  .container__photo-page
+  {
+    @include container(960px);
+  }
+
 .row
 {
     margin-left: -15px;
@@ -137,6 +142,10 @@ $gallery: (
         }
 
         &__span-2
+        {
+          @include span(2);
+        }
+        &__span-2-desktop
         {
           @include span(2);
         }
