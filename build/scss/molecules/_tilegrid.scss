@@ -3,6 +3,7 @@
 	.wrapper__thumb
 	{
 		@include span(1);
+		margin-bottom: 20px;
 			@include mappy-bp(max-width small)
 			{
 				@include span(2);

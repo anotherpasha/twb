@@ -102,6 +102,7 @@ p{
 	margin-bottom: $paragraph-margin-bottom;
 	font-style: normal;
 	display: block;
+	color: scale-color($black, $lightness: 30%);
 	font-family: $body-font-family;
 	@include mappy-bp(max-width small) {
 		font-size: 12px;
@@ -137,6 +138,10 @@ h6{
 
 h1,h2,h3,h4,h5,h6,p,a,ul,ol,li,span{
 	text-rendering: optimizeLegibility;
+}
+strong
+{
+	text-shadow: 0px 0 $black;
 }
 
 
