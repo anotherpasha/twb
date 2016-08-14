@@ -1,0 +1,30 @@
+input
+{
+	padding: 5px 10px;
+	background-color: $grey-default;
+	@include vendor((border-radius: 10px), webkit moz  ms o);
+	font-size: 14px;
+	width: 100%;
+}
+.form--login{
+	max-width: 70%;
+	margin: auto;
+}
+
+.form__wrapper
+{
+	display: inline-block;
+	width: 100%;
+}
+
+.form__submit
+{
+	max-width: 80%;
+	margin: auto;
+}
+.form__control
+{
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 15px;
+}

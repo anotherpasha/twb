@@ -636,6 +636,47 @@ h6 {
 h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, span {
   text-rendering: optimizeLegibility; }
 
+.divider--horizontal {
+  width: auto;
+  position: relative;
+  margin: 20px 0;
+  text-align: center; }
+  .divider--horizontal:after {
+    position: absolute;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    content: '';
+    width: 100%;
+    background-color: #e6e6e6; }
+.divider--vertical {
+  position: relative;
+  width: 100%; }
+  .divider--vertical:after {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    content: '';
+    width: 1px;
+    background-color: #e6e6e6; }
+  .divider--vertical span {
+    margin: 40px 0;
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 5px 20px;
+    position: relative;
+    z-index: 3;
+    color: #b3b3b3; }
+
+.divider--login span {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 5px 20px;
+  position: relative;
+  z-index: 3;
+  color: #b3b3b3; }
+
 .icon {
   display: inline-block;
   margin: 0;
@@ -646,6 +687,11 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, span {
   width: 14px;
   height: 11px;
   background-position: 0 0; }
+
+.icon--facebook {
+  width: 10px;
+  height: 20px;
+  background-position: 0 -11px; }
 
 .icon--close {
   width: 20px;
@@ -700,6 +746,53 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, span {
     background-color: #ffffff;
     color: #1e419b; }
 
+.button__split .button--icon {
+  display: inline-block;
+  padding: 15px 25px;
+  float: left;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease; }
+.button__split .button--text {
+  display: inline-block;
+  padding: 15px 25px;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease; }
+
+.button--facebook {
+  background-color: #4f6fb3;
+  color: #ffffff;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+  border-radius: 0 !important; }
+  .button--facebook .button--icon {
+    background-color: #3e5890; }
+  .button--facebook:hover {
+    background-color: #3e5890; }
+    .button--facebook:hover .button--icon {
+      background-color: #364d7e; }
+
+.button__form {
+  background-color: #ec1c24;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+  border-radius: 0 !important;
+  color: #ffffff;
+  padding: 17px 25px;
+  font-family: "Montserrat-Regular"; }
+
+.button--expand {
+  width: 100%; }
+
 .button--small {
   padding: 3px 18px;
   font-size: 12px;
@@ -712,6 +805,34 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, span {
 .button--large {
   padding: 16px 26px;
   font-size: 18px; }
+
+input {
+  padding: 5px 10px;
+  background-color: #e6e6e6;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%; }
+
+.form--login {
+  max-width: 70%;
+  margin: auto; }
+
+.form__wrapper {
+  display: inline-block;
+  width: 100%; }
+
+.form__submit {
+  max-width: 80%;
+  margin: auto; }
+
+.form__control {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px; }
 
 .image--responsive {
   max-width: 100%; }
@@ -1013,7 +1134,7 @@ header {
   margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
-  height: 80%;
+  height: auto;
   padding: 20px;
   background-color: #ffffff;
   -webkit-border-radius: 10px;
@@ -1037,6 +1158,21 @@ header {
   overflow: scroll;
   height: 100%; }
 
+.modal__header {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px; }
+
+.modal__body {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px; }
+
+.modal__footer {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px; }
+
 .list__tnc {
   padding-left: 30px; }
   .list__tnc li {
@@ -1047,3 +1183,22 @@ header {
   position: absolute;
   top: 10px;
   right: 10px; }
+
+.modal--login .modal__dialog {
+  max-width: 380px; }
+
+.modal--signup .modal__dialog {
+  max-width: 600px; }
+
+.modal--span {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.3333333333%;
+  float: left;
+  padding-left: 3.3333333333%;
+  padding-right: 3.3333333333%;
+  padding: 0; }
+
+.span--signup {
+  padding: 30px 0; }

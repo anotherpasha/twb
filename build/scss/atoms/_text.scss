@@ -121,3 +121,65 @@ h6{
 h1,h2,h3,h4,h5,h6,p,a,ul,ol,li,span{
 	text-rendering: optimizeLegibility;
 }
+
+
+.divider
+{
+	&--horizontal
+	{
+		width: auto;
+		position: relative;
+		margin: 20px 0;
+		text-align: center;
+		&:after
+		{
+			position: absolute;
+			height: 1px;
+			top: 50%;
+			left: 0;
+			content: '';
+			width: 100%;
+			background-color: $grey-default;
+		}
+	}
+	&--vertical
+	{
+		position: relative;
+		width: 100%;
+		&:after
+		{
+			position: absolute;
+			height: 100%;
+			top: 0;
+			left: 50%;
+			content: '';
+			width: 1px;
+			background-color: $grey-default;
+		}
+
+		span
+		{
+			margin: 40px 0;
+			display: inline-block;
+			background-color: $white;
+			padding: 5px 20px;
+			position: relative;
+			z-index: 3;
+			color: scale-color($white, $lightness: -30%);
+		}
+	}
+
+}
+
+.divider--login
+{
+	span
+	{
+		display: inline-block;
+		background-color: $white;
+		padding: 5px 20px;
+		position: relative;
+		z-index: 3;
+		color: scale-color($white, $lightness: -30%);
+	}
+}

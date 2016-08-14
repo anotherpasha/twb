@@ -21,7 +21,7 @@
 		left: auto;
 		right: auto;
 	};
-	height: 80%;
+	height: auto;
 	padding: 20px;
 	background-color: $white;
 	@include vendor((border-radius: 10px), webkit moz ms o);
@@ -43,7 +43,25 @@
 	overflow: scroll;
 	height: 100%;
 }
+.modal__header
+{
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.modal__body
+{
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 20px;
+}
 
+.modal__footer
+{
+	display: inline-block;
+	width: 100%;
+	margin-top: 20px;
+}
 
 .list__tnc{
 	padding-left: 30px;
@@ -60,4 +78,34 @@
 	right: 10px;
 		&:hover{
 		}
+}
+
+.modal--login
+{
+	.modal__dialog
+	{
+		max-width: 380px;
+	}
+}
+
+.modal--signup
+{
+	.modal__dialog
+	{
+		max-width: 600px;
+	}
+}
+
+@include with-layout(3)
+{
+	.modal--span
+	{
+		@include span(1);
+		padding: 0;
+	}	
+
+	.span--signup
+	{
+		padding: 30px 0; 
+	}
 }
