@@ -530,6 +530,9 @@ img.fluid {
   padding-top: 66px;
   padding-bottom: 68px; }
 
+#section--success-submission {
+  background-color: #32c0ff; }
+
 .section--subpage {
   padding: 40px 0;
   min-height: 80vh; }
@@ -631,6 +634,10 @@ img.fluid {
   src: url("../fonts/Oduda-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Oduda-Bold.otf") format("opentype"), url("../fonts/Oduda-Bold.woff") format("woff"), url("../fonts/Oduda-Bold.ttf") format("truetype"), url("../fonts/Oduda-Bold.svg#Oduda-Bold") format("svg");
   font-weight: normal;
   font-style: normal; }
+.text--white {
+  color: #ffffff; }
+.text--black {
+  color: #000000; }
 .text--primary {
   color: #1e419b; }
 .text--red {
