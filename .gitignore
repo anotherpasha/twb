@@ -7,7 +7,7 @@ src/vendor/**/**/*
 
 
 build/scss/.sass-cache/**/*.scssc
-build/scss/.sash-cache/*
+build/scss/.sass-cache/*
 
 .codekit-cache/
 
