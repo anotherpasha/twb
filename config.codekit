@@ -3722,6 +3722,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/dist\/assets\/images\/characters.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 48535,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/characters.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/characters.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/dist\/assets\/images\/characters\/land.png": {
 		"fileType": 32768,
 		"ignore": 0,
