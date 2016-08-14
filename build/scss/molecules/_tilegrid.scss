@@ -1,157 +1,18 @@
-$base-size-tilegrid: 250px;
-$mobile-base-size-tilegrid: 180px;
-.tilegrid__container{
-	height: ($base-size-tilegrid * 2) ;
-	overflow: hidden;
-	position: relative;
-	margin-bottom:  30px;
-	@include mappy-bp(max-width small) {
-		height: ($mobile-base-size-tilegrid * 2) ;
+@include with-layout($gallery)
+{
+	.wrapper__thumb
+	{
+		@include span(1);
+			@include mappy-bp(max-width small)
+			{
+				@include span(2);
+				margin-bottom: 20px;
+			}
 	}
 }
 
-.tilegrid{
+.thumb--gallery
+{
 	display: inline-block;
-	list-style: none;
 	width: 100%;
-	height: inherit;
-	position: relative;
-	cursor: pointer;
-
-}
-.tilegrid__toggle{
-	cursor: pointer;	
-	width: 100%;
-	height: 100%;
-}
-	.tilegrid__item{
-		overflow: hidden;
-		&.large{
-			width: $base-size-tilegrid;
-			height: $base-size-tilegrid;
-			background-color: $primary-color;	
-			@include mappy-bp(max-width small) {
-				width: $mobile-base-size-tilegrid;
-				height: $mobile-base-size-tilegrid;
-
-			}	
-				figure{
-
-					.caption__wrapper{
-						opacity: 0;	
-						background-color: rgba($primary-color, 0.5);
-						position: absolute;
-						width: 100%;
-						top: 0;
-						left: 0;
-						height: 100%;
-						padding: 20px 10px;
-						text-align: center;	
-						@include transition(all, 500ms);
-						color: $white;
-						display: table;
-							.caption{
-								h6{
-									color: $white;
-									font-size: 16px;
-									margin-bottom: 10px;
-								}
-								display: table-cell;
-								vertical-align: middle;
-							}
-					}						
-				}
-				&:hover{
-					figure{
-						.caption__wrapper{
-							opacity: 1;		
-						}						
-					}
-				}	
-		}
-		&.landscape{
-			width: $base-size-tilegrid;
-			height: ($base-size-tilegrid / 2);
-			@include mappy-bp(max-width small) {
-				width: $mobile-base-size-tilegrid;
-				height: ($mobile-base-size-tilegrid / 2);
-
-			}	
-				figure{
-					p{
-						display: none;
-					}
-				}
-		}
-		&.small{
-			width: ($base-size-tilegrid / 2);
-			height: ($base-size-tilegrid / 2);
-			@include mappy-bp(max-width small) {
-				width: ($mobile-base-size-tilegrid / 2);
-				height: ($mobile-base-size-tilegrid / 2);
-
-			}
-				figure{
-					h6{
-						font-size: 12px !important;
-					}
-					p{
-						display: none;
-					}
-				}
-		}
-		figure{
-			display: table;
-			height: inherit;
-			.image__wrapper{
-				display: table-cell;
-				width: 100%;
-				vertical-align: middle;
-				img{
-					width: 100%;
-				}
-			}
-			.caption__wrapper{
-				opacity: 0;	
-				background-color: rgba($primary-color, 0.9);
-				position: absolute;
-				width: 100%;
-				top: 0;
-				left: 0;
-				height: 100%;
-				padding: 20px 10px;
-				text-align: center;	
-				@include transition(all, 500ms);
-				color: $white;
-				display: table;
-					.caption{
-						h6{
-							color: $white;
-							font-size: 16px;
-							margin-bottom: 10px;
-						}
-						display: table-cell;
-						vertical-align: middle;
-					}
-			}						
-		}
-
-				&:hover{
-					figure{
-						.caption__wrapper{
-							opacity: 1;		
-						}						
-					}
-				}
-	}
-
-
-.tilegrid__arrow--prev{
-	@extend .slick-prev;
-	top: 60% !important;
-}
-
-.tilegrid__arrow--next{
-	@extend .slick-next;
-	top: 60% !important;
 }
