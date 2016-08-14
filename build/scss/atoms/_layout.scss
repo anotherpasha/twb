@@ -61,6 +61,14 @@ $gallery: (
 	{
 		@include container(1024px);
 	}
+      .container
+      {
+        @include container(1024px);
+          @include mappy-bp(max-width small)
+          {
+            @include container(90%);
+          }
+      }
 
 			#section--main 
 			{
@@ -88,6 +96,11 @@ $gallery: (
                    padding-bottom: 68px;
                   }
 
+                  .section--subpage
+                  {
+                    padding: 40px 0;
+                  }
+
 .content--vertical-middle 
   {
 	display: table-cell;
@@ -111,9 +124,14 @@ $gallery: (
           @include span(2);
         }
 
+        &__span-3-desktop
+        {
+          @include span(3);
+        }
         &__span-3
         {
           @include span(3);
+
         }
 
         &__span-4
@@ -132,9 +150,23 @@ $gallery: (
         }
 
 
+
+        &__span-6-mobile
+        {
+            @include mappy-bp(max-width small)
+            {
+              @include span(6);
+            }
+        }
+
         &__offset-3
         {
-          @include push(3)
+          @include push(3);
+          @include mappy-bp(max-width small)
+          {
+            @include push(0);
+          }
+
         }
 
 

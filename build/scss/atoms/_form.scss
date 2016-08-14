@@ -1,10 +1,30 @@
-input
+input[type], textarea
 {
 	padding: 5px 10px;
 	background-color: $grey-default;
 	@include vendor((border-radius: 10px), webkit moz  ms o);
 	font-size: 14px;
 	width: 100%;
+	color: scale-color($grey-default, $lightness: -20%);
+		&:focus
+		{
+			outline: none;
+			border: solid 1px scale-color($grey-default, $lightness: -5%);
+			@include vendor((box-shadow: 0 2px 2px rgba($black, .3)), webkit moz ms o);
+		}
+}
+label
+{
+	font-size: 14px;
+	color: scale-color($grey-default, $lightness: -20%);
+}
+
+textarea
+{
+	height: 150px;
+	color: $grey-default;
+	color: scale-color($grey-default, $lightness: -20%);
+
 }
 .form--login{
 	max-width: 70%;
@@ -27,4 +47,15 @@ input
 	display: inline-block;
 	width: 100%;
 	margin-bottom: 15px;
+	position: relative;
+		&.required
+		{
+			&:before{
+				position: absolute;
+				content: '*';
+				color: $red;
+				top: 0;
+				right: -10px;
+			}
+		}
 }
