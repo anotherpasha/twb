@@ -14,38 +14,52 @@ $font-path: '../fonts/';
 
 $paragraph-margin-bottom: 10px;
 
-$gotham-book	: 'GothamRounded-Book'	;
-$gotham-medium  : 'GothamRounded-Medium';
-$gotham-bold	: 'GothamRounded-Bold'	;
 
-$primary-font-family: $gotham-book, 'Helvetica', sans-serif;
+$font-path: '../fonts/';
 
+$montserrat: 'Montserrat-Regular';
+$oduda: 'Oduda-Bold';
+
+$body-font-family: $montserrat , helvetica, sans-serif;
+$heading-font-family: $oduda , helvetica, sans-serif;
 
 /* ======================== *\
 	FONT EMBED
 \* ======================== */
 
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('#{$font-path}Montserrat-Regular.eot?#iefix') format('embedded-opentype'),  
+  	   url('#{$font-path}Montserrat-Regular.otf')  format('opentype'),
+	   url('#{$font-path}Montserrat-Regular.woff') format('woff'),
+	   url('#{$font-path}Montserrat-Regular.ttf')  format('truetype'),
+	   url('#{$font-path}Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oduda-Bold';
+  src: url('#{$font-path}Oduda-Bold.eot?#iefix') format('embedded-opentype'),
+  	   url('#{$font-path}Oduda-Bold.otf')  format('opentype'),
+	   url('#{$font-path}Oduda-Bold.woff') format('woff'),
+	   url('#{$font-path}Oduda-Bold.ttf')  format('truetype'),
+	   url('#{$font-path}Oduda-Bold.svg#Oduda-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
-.text-color-{
-	&-black{
-		color: $black;
-	}
-	&-darkgrey{
-		color: scale-color($black, $lightness: 10%);
-	}
-	&-grey{
-		color: scale-color($black, $lightness: 30%);
-	}
-	&-light-grey{
-		color: scale-color($white, $lightness: -20%);
-	}
+
+
+.text-{
 	&-primary{
 		color: $primary-color;
 	}
-	&-white{
-		color: $white;
+	&-red{
+		color: $red;
 	}
+
 }
 .text-{
 	&-light{
@@ -53,13 +67,25 @@ $primary-font-family: $gotham-book, 'Helvetica', sans-serif;
 	}
 }
 
+
+h1,h2,h3,h4,h5,h6
+{
+	font-family: $heading-font-family;
+	color: $primary-color;
+
+}
+a,p,ul,ol,li,span,small
+{
+	font-family: $body-font-family;
+}
+
 p{
 	font-size: $base-font-size;
 	display: block;
 	margin-bottom: $paragraph-margin-bottom;
 	font-style: normal;
-	font-family: $primary-font-family;
 	display: block;
+	font-family: $body-font-family;
 	@include mappy-bp(max-width small) {
 		font-size: 12px;
 		margin-bottom: 5px;
@@ -68,30 +94,10 @@ p{
 
 a{
 	cursor: pointer;
-	font-family: $primary-font-family;
 	font-size: $base-font-size;
 	display: inline-block;
 }
-ul{
-	&.no-dot{
-		list-style: none;
-	}
-	&.inline-list{
-		display: inline-block;
-		list-style: none;
-		li{
-			float: left;
-		}
-	}
-}
 
-
-
-
-h1,h2,h3,h4,h5,h6{
-	font-family : $gotham-bold;
-	color 	    : $heading-color;
-}
 
 h1{
 	font-size: $h1-font-size;
@@ -114,38 +120,4 @@ h6{
 
 h1,h2,h3,h4,h5,h6,p,a,ul,ol,li,span{
 	text-rendering: optimizeLegibility;
-}
-strong{
-	font-family: $gotham-bold;
-
-}
-
-.font_{
-	&_weight-{
-		&-light{
-			font-family: $gotham-book;
-		}
-		&-medium{
-			font-family: $gotham-medium;
-		}
-		&-bold{
-			font-family: $gotham-bold;
-		}		
-	}
-
-	&_color-{
-		&-white{
-			color: $white;
-		}
-	}
-
-}
-
-
-
-.slider--title{
-	@include mappy-bp(max-width small) {
-		font-size: 28px;
-		margin-top: 5px;
-	}
 }
