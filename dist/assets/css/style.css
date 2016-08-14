@@ -647,6 +647,11 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, span {
   height: 11px;
   background-position: 0 0; }
 
+.icon--close {
+  width: 20px;
+  height: 20px;
+  background-position: 0 -31px; }
+
 .button {
   display: inline-block;
   text-decoration: none;
@@ -994,29 +999,26 @@ header {
   width: 100%;
   height: 100%;
   display: none;
-  background-color: rgba(255, 255, 255, 0.4);
-  z-index: 100000000; }
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100000000;
+  text-align: center; }
 
 .modal__dialog {
   max-width: 80%;
   width: 100%;
   text-align: center;
-  margin-top: 50px;
+  display: inline-block;
+  margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
   height: 80%;
-  padding: 20px; }
-  .modal__dialog figure img {
-    margin-bottom: 20px;
-    max-width: 300px; }
-    @media all and (max-width: 39.9375em) {
-      .modal__dialog figure img {
-        width: 100%; } }
-  .modal__dialog figure .caption h6 {
-    margin-bottom: 10px; }
-  @media all and (max-width: 88.6875em) {
-    .modal__dialog {
-      margin-top: 20px; } }
+  padding: 20px;
+  background-color: #ffffff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px; }
   @media all and (max-width: 63.9375em) {
     .modal__dialog {
       margin-top: 20px; } }
