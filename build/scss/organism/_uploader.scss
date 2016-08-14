@@ -1,0 +1,75 @@
+.uploader__wrapper
+{
+	display: inline-block;
+	width: 100%;
+	height: 250px;
+	margin: 25px 0;
+	position: relative;
+		@include mappy-bp(max-width small)
+		{
+			margin: 0;
+			border-right: solid 1px $grey-default;
+			border-left: solid 1px $grey-default;
+			height: 150px;
+			margin-bottom: 20px;
+		}
+}
+#uploader
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
+.uploader--label
+{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+	.upload--label
+	{
+		font-family: $oduda;
+		font-size: 18px;
+		background-color: scale-color($grey-default, $lightness: -20%);
+		padding: 5px 20px;
+		color: $grey-default;
+		@include vendor((border-radius: 10px), webkit moz ms o);
+	}
+.dz-preview 
+{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.wrapper--img-preview
+{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+		img
+		{
+			max-width: 100%;
+		}
+}
+
+.dz-details
+{
+	position: absolute;
+	padding: 10px;
+	background-color: $grey-default;
+	z-index: 10;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: left;
+		.remove
+		{
+			float: right;
+		}
+}

@@ -59,6 +59,14 @@ $heading-font-family: $oduda , helvetica, sans-serif;
 	&-red{
 		color: $red;
 	}
+	&-grey
+	{
+		color: $grey-default;
+	}
+	&-grey-darker
+	{
+		color: scale-color($grey-default, $lightness: -20%);
+	}
 
 }
 .text-{
@@ -78,7 +86,10 @@ a,p,ul,ol,li,span,small
 {
 	font-family: $body-font-family;
 }
-
+small
+{
+	color: $grey-default;
+}
 p{
 	font-size: $base-font-size;
 	display: block;

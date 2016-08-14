@@ -33,7 +33,12 @@ window.onload = function () {
 	//  var controller =  new ScrollMagic.Controller();
 
 
-
+var uploader = new Dropzone("#uploader", { 
+									url: "/file/post",
+									thumbnailWidth: 720,
+									thumbnailHeight: 480,
+									previewTemplate: document.getElementById('preview-template').innerHTML
+								});
 
 
 	// // Tested get offset top each section

@@ -176,4 +176,8 @@ $gallery: (
    .bordered--left
    {
     border-left: solid 1px scale-color($grey-default, $lightness: -10%);
+        @include mappy-bp(max-width small)
+        {
+          border-left: none;
+        }
    }

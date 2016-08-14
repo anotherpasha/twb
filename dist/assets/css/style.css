@@ -614,6 +614,9 @@ img.fluid {
 
 .bordered--left {
   border-left: solid 1px #cfcfcf; }
+  @media all and (max-width: 39.9375em) {
+    .bordered--left {
+      border-left: none; } }
 
 /* ======================== *\
 	FONT EMBED
@@ -632,6 +635,10 @@ img.fluid {
   color: #1e419b; }
 .text--red {
   color: #ec1c24; }
+.text--grey {
+  color: #e6e6e6; }
+.text--grey-darker {
+  color: #b8b8b8; }
 
 .text--light {
   font-weight: light; }
@@ -642,6 +649,9 @@ h1, h2, h3, h4, h5, h6 {
 
 a, p, ul, ol, li, span, small {
   font-family: "Montserrat-Regular", helvetica, sans-serif; }
+
+small {
+  color: #e6e6e6; }
 
 p {
   font-size: 14px;
@@ -1051,6 +1061,69 @@ footer {
   z-index: 3;
   background: url(../images/headlne-background.png) no-repeat top left;
   background-size: 100% 100%; }
+
+.uploader__wrapper {
+  display: inline-block;
+  width: 100%;
+  height: 250px;
+  margin: 25px 0;
+  position: relative; }
+  @media all and (max-width: 39.9375em) {
+    .uploader__wrapper {
+      margin: 0;
+      border-right: solid 1px #e6e6e6;
+      border-left: solid 1px #e6e6e6;
+      height: 150px;
+      margin-bottom: 20px; } }
+
+#uploader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.uploader--label {
+  display: table;
+  width: 100%;
+  height: 100%; }
+
+.upload--label {
+  font-family: "Oduda-Bold";
+  font-size: 18px;
+  background-color: #b8b8b8;
+  padding: 5px 20px;
+  color: #e6e6e6;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px; }
+
+.dz-preview {
+  position: absolute;
+  height: 100%;
+  width: 100%; }
+
+.wrapper--img-preview {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  .wrapper--img-preview img {
+    max-width: 100%; }
+
+.dz-details {
+  position: absolute;
+  padding: 10px;
+  background-color: #e6e6e6;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: left; }
+  .dz-details .remove {
+    float: right; }
 
 header {
   position: absolute;
