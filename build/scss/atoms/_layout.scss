@@ -39,7 +39,7 @@ $gallery: (
   gutter-position: inside,
   container: auto,
   container-position: center,
-  columns: 6,
+  columns: 4,
   gutters: 1/8,
   column-width: false,
   global-box-sizing: content-box,
@@ -70,16 +70,22 @@ $gallery: (
                   #section--prize 
                   {
                     background-color: $querniry-color;
+                    padding-top: 40px;
+                    padding-bottom: 90px; 
                   }
 
                   #section--howto 
                   {
                     background-color: $white;
+                    padding-bottom: 65px;
+                    padding-top: 75px;
                   }
 
                   #section--gallery 
                   {
-                   background-color: scale-color($white, $lightness: -10%)
+                   background-color: scale-color($white, $lightness: -10%);
+                   padding-top: 66px;
+                   padding-bottom: 68px;
                   }
 
 .content--vertical-middle 
