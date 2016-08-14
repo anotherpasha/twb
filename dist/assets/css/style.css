@@ -612,6 +612,9 @@ img.fluid {
     .column__offset-3 {
       margin-left: 0%; } }
 
+.bordered--left {
+  border-left: solid 1px #cfcfcf; }
+
 /* ======================== *\
 	FONT EMBED
 \* ======================== */

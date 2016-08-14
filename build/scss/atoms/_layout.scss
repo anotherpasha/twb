@@ -172,3 +172,8 @@ $gallery: (
 
 
    }
+
+   .bordered--left
+   {
+    border-left: solid 1px scale-color($grey-default, $lightness: -10%);
+   }
