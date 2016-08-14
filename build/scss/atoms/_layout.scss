@@ -104,7 +104,7 @@ $gallery: (
                   .section--subpage
                   {
                     padding: 40px 0;
-                    min-height: 80vh;
+                    min-height: 100vh;
                   }
 
 .content--vertical-middle 
@@ -114,6 +114,17 @@ $gallery: (
 
   }
 
+.row
+{
+    margin-left: -15px;
+    margin-right: -15px;
+    display: block;
+    @include mappy-bp(max-width small)
+    {
+      margin-left: 0;
+      margin-right: 0;
+    }
+}
 
   /**
    ** Column 

@@ -200,3 +200,17 @@ h1,h2,h3,h4,h5,h6,p,a,ul,ol,li,span{
 		color: scale-color($white, $lightness: -30%);
 	}
 }
+
+.username
+{
+	font-family: $oduda;
+	padding: 10px 20px;
+	display: inline-block;
+	min-width: 200px;
+	background-color: $grey-default;
+	color: scale-color($black, $lightness: 20%);
+}
+.rounded
+{
+	@include vendor((border-radius: 10px), webkit moz ms o);
+}
