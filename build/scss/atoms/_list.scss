@@ -1,6 +1,21 @@
-.inline-list{
+.list__inline{
 	display: inline-block;
+	list-style: none;
 		li{
 			float: left;
 		}
 }
+
+	.list__undot
+	{
+		list-style: none
+	}
+
+	.list--prize
+	{
+		text-align: left;
+			li
+			{
+				margin-bottom: 10px;
+			}
+	}
