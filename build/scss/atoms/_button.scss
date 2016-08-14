@@ -120,6 +120,17 @@ $large-button-padding: 16px 26px;
 	{
 		width: 100%;
 	}
+
+	.button__back
+	{
+		color: scale-color($grey-default, $lightness: -30%);
+		@include transition(all, 500ms);
+			&:hover
+			{
+				color: scale-color($grey-default, $lightness: -60%);
+			}
+
+	}
 		.button--small
 		{
 			padding: $small-button-padding;

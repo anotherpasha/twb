@@ -531,7 +531,8 @@ img.fluid {
   padding-bottom: 68px; }
 
 .section--subpage {
-  padding: 40px 0; }
+  padding: 40px 0;
+  min-height: 80vh; }
 
 .content--vertical-middle {
   display: table-cell;
@@ -833,6 +834,16 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, span {
 
 .button--expand {
   width: 100%; }
+
+.button__back {
+  color: #a1a1a1;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease; }
+  .button__back:hover {
+    color: #5c5c5c; }
 
 .button--small {
   padding: 3px 18px;
