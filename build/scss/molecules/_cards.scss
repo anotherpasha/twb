@@ -24,6 +24,11 @@
 		background-color: $grey-default;
 		padding: 36px 10px;
 		@include vendor((border-radius: 10px), webkit moz ms o);
+		min-height: 380px;
+		@include mappy-bp(max-width small)
+		{
+			min-height: auto;
+		}
 			li
 			{
 				font-family: $oduda;
@@ -33,12 +38,20 @@
 				font-size: 23px;
 				color: $red;
 				margin-bottom: 10px;
+					@include mappy-bp(max-width small)
+					{
+						font-size: 20px;
+					}
 			}
 			.description
 			{
 				font-size: 19px;
 				color: $primary-color;
 				margin-bottom: 15px;
+					@include mappy-bp(max-width small)
+					{
+						font-size: 18px;
+					}
 
 			}
 	}
@@ -65,6 +78,10 @@
 			height: 150px;
 			overflow: hidden;
 			background-color: $black;
+			@include mappy-bp(max-width small)
+			{
+				height: 110px;
+			}
 				figure
 				{
 					margin:  0 -10px;

@@ -8,9 +8,10 @@
 	max-height: 500px;
 	height: 100%;
 	overflow: hidden;
-		@include mappy-bp(min-width large)
+	z-index: 0;
+		@include mappy-bp(max-width small)
 		{
-			max-width: 800px;
+			display: none;
 		} 
 }
 	.decoration--land

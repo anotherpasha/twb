@@ -1,43 +1,10 @@
-.headline__primary{
+.headline--home
+{
 	display: inline-block;
-	text-align: center;
-	max-width: 668px;
-	margin: {
-		top: 60px;
-		bottom: 0;
-		left: auto;
-		right: auto;
-	};
-	@include mappy-bp(max-width small) {
-		margin: {
-			top: 120px;
-			bottom: 0;
-			left: auto;
-			right: auto;
-		};
-		padding: 10px ;
-		img{
-			max-width: 80%;
+	width: 100%;
+	margin-top: 10px;
+		@include mappy-bp(max-width small)
+		{
+			text-align: center;
 		}
-		p{
-			font-size: 14px;
-
-		}
-	}
-	@include mappy-bp(max-width small h max-height 490px ) {
-		margin: {
-			top: 120px;
-			bottom: 0;
-			left: auto;
-			right: auto;
-		};
-	}
-}
-.headline--gallery{
-	position: relative;
-	z-index: 3;
-
-	background: url(../images/headlne-background.png)no-repeat top left;
-	background-size: 100% 100%;
-		
 }
