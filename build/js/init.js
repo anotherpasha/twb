@@ -30,6 +30,7 @@ window.onload = function () {
 	 ** added auto scroll to section prizes
 	 */
 	 var toggle_scroll = document.getElementById('scroll-bottom'),
+	 	arrow		   = document.getElementById('arrow-down'),
 	 	prize_offset ;
 	 	console.log(toggle_scroll)
 
@@ -44,6 +45,13 @@ window.onload = function () {
 	 			},
 	 			ease: Circ.easeOut
 	 		})
+	 	})
+
+	 	TweenMax.to(arrow, 0.5, {
+	 		y: 5,
+	 		repeat: 100,
+	 		yoyo: true,
+	 		delay: 0.4
 	 	})
 	/**
 	 ** Scroll to section
