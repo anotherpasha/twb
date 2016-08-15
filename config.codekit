@@ -21,7 +21,7 @@
 		"outputAbbreviatedPath": "\/dist\/assets\/js\/init.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
+		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/build\/js\/libs.js": {
@@ -98,7 +98,7 @@
 		"outputAbbreviatedPath": "\/dist\/assets\/js\/plugins.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/build\/scss\/_vars.scss": {
@@ -3815,7 +3815,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 11878,
+		"initialSize": 60005,
 		"inputAbbreviatedPath": "\/dist\/assets\/images\/decoration-mobile.png",
 		"outputAbbreviatedPath": "\/dist\/assets\/images\/decoration-mobile.png",
 		"outputPathIsOutsideProject": 0,
