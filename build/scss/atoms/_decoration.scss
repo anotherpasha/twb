@@ -22,6 +22,7 @@
 		height: 370px;
 		bottom: 0;
 		left: 0;
+		z-index: 10;
 		background: url(../images/characters/land.png)no-repeat bottom left;
 		background-size: contain;
 			@include mappy-bp(h max-height small) 
@@ -35,6 +36,14 @@
 
 			}
 
+	}
+	.decoration
+	{
+		position: absolute;
+		width: 100%;
+		height: 370px;
+		bottom: 0;
+		left: 0;		
 	}
 		.decoration__character
 		{
@@ -78,14 +87,16 @@
 			{
 				&--tree-small
 				{
-					top: 14%;
+					top: 20%;
 					right: 38%;
+					z-index: 2;
 				}
 
 				&--tree-grass
 				{
 					bottom: 22%;
 					right: 0;
+					z-index: 2;
 				}
 				&--tree-big
 				{
@@ -103,20 +114,22 @@
 				&--tree-grass
 				{
 					bottom: 25%;
-					right: 0;
-					z-index: 10;
+					right: 10%;
+					z-index: 4;
 				}
 
 				&--flower-white
 				{
 					top: -4%;
 					left: 5%;
+					z-index: 2;
 				}
 
 				&--cloud-01
 				{
 					bottom: 30%;
 					right: 0;
+					z-index: 2;
 				}
 				&--cloud-02
 				{
@@ -128,17 +141,19 @@
 				{
 					top: -30%;
 					left: 30%;
+					z-index: 2;
 				}
 
 				&--flower-red-small
 				{
-					top: 27%;
+					top: 34%;
 					right: 35%;
+					z-index: 2;
 				}
 				&--flower-red-big
 				{
-					bottom: 10%;
-					right: -5%;
+					bottom: 0;
+					right: 1%;
 					z-index: 3;
 				}
 

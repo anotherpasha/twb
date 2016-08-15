@@ -10,16 +10,26 @@ window.onload = function () {
 			grass: '#tree-grass',
 			big: '#tree-big'
 		},
-		cloud: "#cloud"
+		cloud: "#cloud",
+		grass: '#grass',
+		flower:{
+			white: '#flower-white',
+			big: '#flower-red-big',
+			small: '#flower-red-small'
+		}
 	};
 
 	
 
 
 	timeline.add(animated(decor.land).bounce(-200, 200))
-			.add(animated(decor.tree.small).bounce(-50, 50), 1)
-			.add(animated(decor.tree.grass).bounce(-50, 50), 1.5)
-			.add(animated(decor.tree.big).bounce(-50, 50), 2)
+			.add(animated(decor.tree.big).bounce(-200, 200), 1)
+			.add(animated(decor.grass).bounce(-200, 200), 1.5)
+			.add(animated(decor.tree.small).bounce(-200, 200), 2)
+			.add(animated(decor.tree.grass).bounce(-200, 200), 2)
+			.add(animated(decor.flower.white).bounce(-200, 200), 3)
+			.add(animated(decor.flower.big).bounce(-200, 200), 3)
+			.add(animated(decor.flower.small).bounce(-200, 200), 4)
 
 	timeline.add(animated(decor.cloud).fading(1))
 

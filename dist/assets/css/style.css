@@ -1152,6 +1152,7 @@ textarea {
   height: 370px;
   bottom: 0;
   left: 0;
+  z-index: 10;
   background: url(../images/characters/land.png) no-repeat bottom left;
   background-size: contain; }
   @media all and (max-height: 39.9375em) {
@@ -1161,6 +1162,13 @@ textarea {
   @media all and (max-width: 39.9375em) {
     .decoration--land--desktop {
       background: url(../images/decoration--land); } }
+
+.decoration {
+  position: absolute;
+  width: 100%;
+  height: 370px;
+  bottom: 0;
+  left: 0; }
 
 .decoration__character {
   position: absolute;
@@ -1183,11 +1191,13 @@ textarea {
   right: 20%; }
 
 .decoration--tree-small {
-  top: 14%;
-  right: 38%; }
+  top: 20%;
+  right: 38%;
+  z-index: 2; }
 .decoration--tree-grass {
   bottom: 22%;
-  right: 0; }
+  right: 0;
+  z-index: 2; }
 .decoration--tree-big {
   top: -16%;
   left: 13%;
@@ -1198,27 +1208,31 @@ textarea {
   z-index: 2; }
 .decoration--tree-grass {
   bottom: 25%;
-  right: 0;
-  z-index: 10; }
+  right: 10%;
+  z-index: 4; }
 .decoration--flower-white {
   top: -4%;
-  left: 5%; }
+  left: 5%;
+  z-index: 2; }
 .decoration--cloud-01 {
   bottom: 30%;
-  right: 0; }
+  right: 0;
+  z-index: 2; }
 .decoration--cloud-02 {
   top: -35%;
   left: 5%;
   z-index: 1; }
 .decoration--cloud-03 {
   top: -30%;
-  left: 30%; }
+  left: 30%;
+  z-index: 2; }
 .decoration--flower-red-small {
-  top: 27%;
-  right: 35%; }
+  top: 34%;
+  right: 35%;
+  z-index: 2; }
 .decoration--flower-red-big {
-  bottom: 10%;
-  right: -5%;
+  bottom: 0;
+  right: 1%;
   z-index: 3; }
 
 .list__inline {
