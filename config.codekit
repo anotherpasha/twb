@@ -3767,6 +3767,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/dist\/assets\/images\/characters\/decoration-mobile.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11878,
+		"inputAbbreviatedPath": "\/dist\/assets\/images\/characters\/decoration-mobile.png",
+		"outputAbbreviatedPath": "\/dist\/assets\/images\/characters\/decoration-mobile.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/dist\/assets\/images\/characters\/land.png": {
 		"fileType": 32768,
 		"ignore": 0,

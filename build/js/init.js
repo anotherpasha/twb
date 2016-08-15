@@ -1,8 +1,15 @@
 
-window.onload = function () {
+
+Pace.on('done', function() {
+
+	var timeline_loader = new TimelineMax();
+	var loader = document.getElementById('loader'),
+		logo    = document.getElementById('logo-loader')
 
 
-	var timeline = new TimelineMax();
+ 	timeline_loader.to(loader, 1, {top: "-100%"}, 1);
+
+	var timeline = new TimelineMax({delay: 2});
 	var decor = {
 		land : "#land",
 		tree: {
@@ -19,17 +26,15 @@ window.onload = function () {
 		}
 	};
 
-	
 
-
-	timeline.add(animated(decor.land).bounce(-200, 200))
+	timeline.add(animated(decor.land).bounce(-100, 100))
 			.add(animated(decor.tree.big).bounce(-200, 200), 1)
 			.add(animated(decor.grass).bounce(-200, 200), 1.5)
 			.add(animated(decor.tree.small).bounce(-200, 200), 2)
-			.add(animated(decor.tree.grass).bounce(-200, 200), 2)
-			.add(animated(decor.flower.white).bounce(-200, 200), 3)
-			.add(animated(decor.flower.big).bounce(-200, 200), 3)
-			.add(animated(decor.flower.small).bounce(-200, 200), 4)
+			.add(animated(decor.tree.grass).bounce(-200, 200), 3)
+			.add(animated(decor.flower.white).bounce(-200, 200), 3.8)
+			.add(animated(decor.flower.big).bounce(-200, 200), 3.8)
+			.add(animated(decor.flower.small).bounce(-200, 200),4)
 
 	timeline.add(animated(decor.cloud).fading(1))
 
@@ -43,6 +48,10 @@ window.onload = function () {
 	 	arrow		   = document.getElementById('arrow-down'),
 	 	prize_offset ;
 	 	console.log(toggle_scroll)
+
+	 	if(toggle_scroll != null)
+	 	{
+
 
 	 	toggle_scroll.addEventListener('click', function(e) {
 	 		e.preventDefault();
@@ -63,6 +72,7 @@ window.onload = function () {
 	 		yoyo: true,
 	 		delay: 0.4
 	 	})
+	 	}
 	/**
 	 ** Scroll to section
 	 ** added auto scroll to section, when window contain section
@@ -70,14 +80,17 @@ window.onload = function () {
 
 	//  var controller =  new ScrollMagic.Controller();
 
+	var uploader = document.getElementById('uploader')
 
-// var uploader = new Dropzone("#uploader", { 
-// 									url: "/file/post",
-// 									thumbnailWidth: 720,
-// 									thumbnailHeight: 480,
-// 									previewTemplate: document.getElementById('preview-template').innerHTML
-// 								});
-
+	if(uploader != null){
+var uploader = new Dropzone("#uploader", { 
+									url: "/file/post",
+									thumbnailWidth: 720,
+									thumbnailHeight: 480,
+									previewTemplate: document.getElementById('preview-template').innerHTML
+								});
+		
+	}
 
 	// // Tested get offset top each section
 	// var sections = document.querySelectorAll('section');
@@ -92,5 +105,5 @@ window.onload = function () {
 	// 						})
 	// })
 
-}
+})
 

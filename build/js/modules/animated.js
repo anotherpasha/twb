@@ -7,7 +7,7 @@
 	 };
 
 	Animated.prototype.bounce = function(coorX, coorY) {
-		var tween =TweenMax.from(this.selector, 1, {
+		var tween =TweenMax.from(this.selector, 1.5, {
 			x: coorX,
 			y: coorY,
 			ease: Bounce.easeOut
@@ -26,6 +26,10 @@
 
 	};
 
+
+	Animated.prototype.svg = function() {
+
+	};
 
 	var animated = function(selector, context) {
 		return new Animated(selector, context);

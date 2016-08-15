@@ -12,19 +12,36 @@ header
 			padding: 10px 50px;
 			position: relative;
 			border-bottom: solid 1px $grey-default;
+			@include mappy-bp(max-width small) {
+				padding: 10px 0;
+			}
 		}
 		@include mappy-bp(max-width small)
 		{
 			padding: 10px;
-			text-align: center;
 		}
 }
 
+	.navbar--logo
+	{
+		@include mappy-bp(max-width small)
+		{
+			display: none;
+		}		
+	}
 	.navigation--home
 	{
 		padding: 10px 0;
 		float: right;
 		display: inline-block;
+			@include mappy-bp(max-width small)
+			{
+				width: 100%;
+				ul
+				{
+					width: 100%;
+				}
+			}
 		&.subpage
 		{
 			padding: 5px;
@@ -37,13 +54,40 @@ header
 					margin-right: 0;
 				}
 		}
-		@include mappy-bp(max-width small)
-		{
-			display: none;
-		}
+
 	}
 	
 		.navigation--link
 		{
 			margin-top: 30px;
+			@include mappy-bp(max-width small)
+			{
+				margin-top: 10px;
+			}
+				&.black
+				{
+					color: $black;
+					@include transition(all, 500ms);
+						&:hover
+						{
+							color: scale-color($black, $lightness: 30%)
+						}
+				}
+				&.white
+				{
+					color: $white;
+					@include transition(all, 500ms);
+						&:hover
+						{
+							color: scale-color($white, $lightness: -10%)
+						}
+				}
+		}
+		.navigation--button
+		{
+			@include mappy-bp(max-width small)
+			{
+				margin-top: 5px !important;
+				float: right;
+			}
 		}

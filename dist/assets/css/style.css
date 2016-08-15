@@ -1394,27 +1394,61 @@ header {
     padding: 10px 50px;
     position: relative;
     border-bottom: solid 1px #e6e6e6; }
+    @media all and (max-width: 39.9375em) {
+      header.navbar__subpage {
+        padding: 10px 0; } }
   @media all and (max-width: 39.9375em) {
     header {
-      padding: 10px;
-      text-align: center; } }
+      padding: 10px; } }
+
+@media all and (max-width: 39.9375em) {
+  .navbar--logo {
+    display: none; } }
 
 .navigation--home {
   padding: 10px 0;
   float: right;
   display: inline-block; }
+  @media all and (max-width: 39.9375em) {
+    .navigation--home {
+      width: 100%; }
+      .navigation--home ul {
+        width: 100%; } }
   .navigation--home.subpage {
     padding: 5px; }
   .navigation--home li {
     margin-right: 20px; }
     .navigation--home li:last-child {
       margin-right: 0; }
-  @media all and (max-width: 39.9375em) {
-    .navigation--home {
-      display: none; } }
 
 .navigation--link {
   margin-top: 30px; }
+  @media all and (max-width: 39.9375em) {
+    .navigation--link {
+      margin-top: 10px; } }
+  .navigation--link.black {
+    color: #000000;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease; }
+    .navigation--link.black:hover {
+      color: #4d4d4d; }
+  .navigation--link.white {
+    color: #ffffff;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease; }
+    .navigation--link.white:hover {
+      color: #e6e6e6; }
+
+@media all and (max-width: 39.9375em) {
+  .navigation--button {
+    margin-top: 5px !important;
+    float: right; } }
 
 .subscribe {
   max-width: 670px;
