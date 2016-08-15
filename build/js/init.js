@@ -26,6 +26,26 @@ window.onload = function () {
 
 
 	/**
+	 ** Scroll to bottom
+	 ** added auto scroll to section prizes
+	 */
+	 var toggle_scroll = document.getElementById('scroll-bottom'),
+	 	prize_offset ;
+	 	console.log(toggle_scroll)
+
+	 	toggle_scroll.addEventListener('click', function(e) {
+	 		e.preventDefault();
+
+	 		prize_offset = document.getElementById('section--prize')
+
+	 		TweenMax.to(window, 1, {
+	 			scrollTo:{
+	 				y: prize_offset.offsetTop
+	 			},
+	 			ease: Circ.easeOut
+	 		})
+	 	})
+	/**
 	 ** Scroll to section
 	 ** added auto scroll to section, when window contain section
 	 */
@@ -33,12 +53,12 @@ window.onload = function () {
 	//  var controller =  new ScrollMagic.Controller();
 
 
-var uploader = new Dropzone("#uploader", { 
-									url: "/file/post",
-									thumbnailWidth: 720,
-									thumbnailHeight: 480,
-									previewTemplate: document.getElementById('preview-template').innerHTML
-								});
+// var uploader = new Dropzone("#uploader", { 
+// 									url: "/file/post",
+// 									thumbnailWidth: 720,
+// 									thumbnailHeight: 480,
+// 									previewTemplate: document.getElementById('preview-template').innerHTML
+// 								});
 
 
 	// // Tested get offset top each section
