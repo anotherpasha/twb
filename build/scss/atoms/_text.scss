@@ -119,6 +119,10 @@ a{
 
 h1{
 	font-size: $h1-font-size;
+		@include mappy-bp(max-width small)
+		{
+			font-size: ($h1-font-size - 6px)
+		}
 }
 h2{
 	font-size: $h2-font-size;

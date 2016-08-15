@@ -3,7 +3,7 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	max-width: 650px;
+	max-width: 660px;
 	width: 100%;
 	max-height: 500px;
 	height: 100%;
@@ -18,12 +18,12 @@
 	.decoration--land
 	{
 		position: absolute;
-		width: 100%;
+		width: 90%;
 		height: 370px;
 		bottom: 0;
 		left: 0;
 		background: url(../images/characters/land.png)no-repeat bottom left;
-		background-size: 100%;
+		background-size: contain;
 			@include mappy-bp(h max-height small) 
 			{
 				width: 80%;
@@ -32,6 +32,7 @@
 			@include mappy-bp(max-width small)
 			{
 				background: url(../images/decoration--land);
+
 			}
 
 	}
@@ -45,18 +46,18 @@
 				{
 					&--duck
 					{
-						top: 25%;
+						top: 35%;
 						left: 15%;
 					}
 					&--elephant
 					{
-						top: 10%;
+						top: 18%;
 						left: 35%;
 					}
 
 					&--fish
 					{
-						bottom: 10%;
+						bottom: 14%;
 						right: 38%;
 					}
 
@@ -77,7 +78,7 @@
 			{
 				&--tree-small
 				{
-					top: 7%;
+					top: 14%;
 					right: 38%;
 				}
 
@@ -88,33 +89,33 @@
 				}
 				&--tree-big
 				{
-					top: -30%;
+					top: -16%;
 					left: 13%;
 					z-index: 2;
 				}
 				&--grass
 				{
-					top: -5%;
+					top: 8%;
 					left: 23%;
 					z-index: 2;
 				}
 
 				&--tree-grass
 				{
-					bottom: 22%;
+					bottom: 25%;
 					right: 0;
 					z-index: 10;
 				}
 
 				&--flower-white
 				{
-					top: -17%;
+					top: -4%;
 					left: 5%;
 				}
 
 				&--cloud-01
 				{
-					bottom: 20%;
+					bottom: 30%;
 					right: 0;
 				}
 				&--cloud-02
@@ -131,12 +132,12 @@
 
 				&--flower-red-small
 				{
-					top: 20%;
+					top: 27%;
 					right: 35%;
 				}
 				&--flower-red-big
 				{
-					bottom: 5%;
+					bottom: 10%;
 					right: -5%;
 					z-index: 3;
 				}

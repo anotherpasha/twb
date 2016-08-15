@@ -730,6 +730,9 @@ a {
 
 h1 {
   font-size: 37px; }
+  @media all and (max-width: 39.9375em) {
+    h1 {
+      font-size: 31px; } }
 
 h2 {
   font-size: 31px; }
@@ -1120,7 +1123,7 @@ textarea {
   position: absolute;
   bottom: 0;
   left: 0;
-  max-width: 650px;
+  max-width: 660px;
   width: 100%;
   max-height: 500px;
   height: 100%;
@@ -1132,12 +1135,12 @@ textarea {
 
 .decoration--land {
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 370px;
   bottom: 0;
   left: 0;
   background: url(../images/characters/land.png) no-repeat bottom left;
-  background-size: 100%; }
+  background-size: contain; }
   @media all and (max-height: 39.9375em) {
     .decoration--land {
       width: 80%;
@@ -1151,13 +1154,13 @@ textarea {
   display: inline-block; }
 
 .character--duck {
-  top: 25%;
+  top: 35%;
   left: 15%; }
 .character--elephant {
-  top: 10%;
+  top: 18%;
   left: 35%; }
 .character--fish {
-  bottom: 10%;
+  bottom: 14%;
   right: 38%; }
 .character--turtle {
   top: 45%;
@@ -1167,28 +1170,28 @@ textarea {
   right: 20%; }
 
 .decoration--tree-small {
-  top: 7%;
+  top: 14%;
   right: 38%; }
 .decoration--tree-grass {
   bottom: 22%;
   right: 0; }
 .decoration--tree-big {
-  top: -30%;
+  top: -16%;
   left: 13%;
   z-index: 2; }
 .decoration--grass {
-  top: -5%;
+  top: 8%;
   left: 23%;
   z-index: 2; }
 .decoration--tree-grass {
-  bottom: 22%;
+  bottom: 25%;
   right: 0;
   z-index: 10; }
 .decoration--flower-white {
-  top: -17%;
+  top: -4%;
   left: 5%; }
 .decoration--cloud-01 {
-  bottom: 20%;
+  bottom: 30%;
   right: 0; }
 .decoration--cloud-02 {
   top: -35%;
@@ -1198,10 +1201,10 @@ textarea {
   top: -30%;
   left: 30%; }
 .decoration--flower-red-small {
-  top: 20%;
+  top: 27%;
   right: 35%; }
 .decoration--flower-red-big {
-  bottom: 5%;
+  bottom: 10%;
   right: -5%;
   z-index: 3; }
 
