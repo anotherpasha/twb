@@ -27,9 +27,6 @@
 	};
 
 
-	Animated.prototype.svg = function() {
-
-	};
 
 	var animated = function(selector, context) {
 		return new Animated(selector, context);

@@ -9,11 +9,10 @@
 	height: 100%;
 	overflow: hidden;
 	z-index: 0;
-		@include mappy-bp(max-width small)
-		{
-			display: none;
-
-		} 
+	@include mappy-bp(max-width small)
+	{
+		display: none;
+	}
 }
 	.decoration--land--desktop
 	{
@@ -32,11 +31,26 @@
 			}
 			@include mappy-bp(max-width small)
 			{
-				background: url(../images/decoration--land);
-
+				display: none;
 			}
 
 	}
+	@include mappy-bp(max-width small)
+	{
+		.decoration--land-mobile
+		{
+			position: absolute;
+			display: inline-block;
+			width: 100%;
+			height: 250px;
+			bottom: 0;
+			left: 0;
+			z-index: 10;
+			background: url(../images/decoration-mobile.png)no-repeat bottom left;
+			background-size: 100%;
+		}		
+	}
+
 	.decoration
 	{
 		position: absolute;
@@ -44,11 +58,19 @@
 		height: 370px;
 		bottom: 0;
 		left: 0;		
+			@include mappy-bp(max-width small) 
+			{
+				height: 0px;
+			}
 	}
 		.decoration__character
 		{
 			position: absolute;
 			display: inline-block;
+				@include mappy-bp(max-width small)
+				{
+					display: none;
+				}
 		}
 
 			.character

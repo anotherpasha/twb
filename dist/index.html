@@ -62,9 +62,9 @@
 				<li class=""><a href="javascript:;" class="button button__tertiary  button--small toggle--modal" data-target="login">Login</a></li>
 				<li><a href=""><img src="assets/images/logo-twb.png"></a></li>
 			</ul-->			
-			<ul class="list__inline">
-				<li class=""><a href="javascript:;" class="button button__tertiary  button--small toggle--modal" data-target="login">Login</a></li>
-				<li><a href=""><img src="assets/images/logo-twb.png"></a></li>
+			<ul class="list__inline ">
+				<li class="login--link"><a href="javascript:;" class="button button__tertiary  button--small toggle--modal navigation--button" data-target="login">Login</a></li>
+				<li><a href="" class="hidden-on-small"><img src="assets/images/logo-twb.png"></a></li>
 			</ul>
 		</nav>
 	</div>
@@ -82,47 +82,52 @@
 			<div class="section__container">
 				
 				<div class="column__span-3-desktop column__span-6-mobile column__offset-3 text--left">
-					<div class="headline--home">					
+					<div class="headline--home">	
+						<figure class="hidden-on-large"><img class="image--responsive" src="assets/images/logo.png"></figure>			
 						<h2 class="">Ikuti kompetisi foto kreatif Dunia Tini Wini Biti, dan dapatkan puluhan <strong class="text--red">hadiah menarik!</strong></h2>
 						<br>
 						<button data-target="login" class="toggle--modal button button__primary button--small ">Ikutan Sekarang</button>
+						<br>
 					</div>
 
 				</div>
 
 
 			</div>
-			<div class="scroll--down">
+			<div class="scroll--down hidden-on-small">
 				<button id="scroll-bottom" class="button button__querniry button--small scroll--to-bottom">more &nbsp;&nbsp;<i id="arrow-down" class="icon icon--arrow-bottom"></i></button>
 			</div>
 		</div>
 
+			<div id="land-mobile" class="decoration--land-mobile">
+			</div>
 
 		<div class="decoration__wrapper--main">
 			
 			<div class="decoration">
+
 			<div id="land" class="decoration--land--desktop">
 			</div>
 
 				<!-- start character icon positioning-->
-				<object  class="decoration__character character--duck animated" type="image/svg+xml" data="assets/images/characters/duck.svg">
+				<div id="duck"  class="decoration__character character--duck animated">
 					<img src="assets/images/fallbacks/duck.png" alt="[duck]" />
-				</object>
+				</div>
 
-				<object class="decoration__character character--elephant animated" type="image/svg+xml" data="assets/images/characters/elephant.svg">
+				<div id="elephant" class="decoration__character character--elephant animated">
 					<img src="assets/images/fallbacks/elephant.png" alt="[elephant]" />
-				</object>
+				</div>
 
-				<object class="decoration__character character--turtle animated" type="image/svg+xml" data="assets/images/characters/turtle.svg">
+				<div id="turtle" class="decoration__character character--turtle animated">
 					<img src="assets/images/fallbacks/turtle.png" alt="[turtle]" />
-				</object>
+				</div>
 
-				<object class="decoration__character character--fish" type="image/svg+xml" data="assets/images/characters/fish.svg">
+				<div id="fish" class="decoration__character character--fish">
 					<img src="assets/images/fallbacks/fish.png" alt="[fish]" />
-				</object>
-				<object class="decoration__character character--butterfly" type="image/svg+xml" data="assets/images/characters/butterfly.svg">
+				</div>
+				<div id="butterfly" class="decoration__character character--butterfly" >
 					<img src="assets/images/fallbacks/butterfly.png" alt="[butterfly]" />
-				</object>
+				</div>
 				
 
 				<!-- start decoration positioning-->
@@ -214,7 +219,7 @@
 			</div>
 
 			<div class="column__span-6 text--center" >
-				<button class="button button__secondary button--small">Selengkapnya</button>
+				<a href="prize.html" class="button button__secondary button--small">Selengkapnya</a>
 			</div>
 		</div>
 

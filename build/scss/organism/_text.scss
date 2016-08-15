@@ -3,8 +3,26 @@
 	display: inline-block;
 	width: 100%;
 	margin-top: 10px;
+	figure
+	{
+		display: none;
+
+	}
 		@include mappy-bp(max-width small)
 		{
 			text-align: center;
+			padding-bottom: 70px;
+			figure
+			{
+				display: block;
+					img
+					{
+						max-width: 70%;
+					}
+			}
+			h2
+			{
+				font-size: 18px;
+			}
 		}
 }

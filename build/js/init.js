@@ -1,6 +1,9 @@
+	window.onload = function() {
 
+	}
 
 Pace.on('done', function() {
+
 
 	var timeline_loader = new TimelineMax();
 	var loader = document.getElementById('loader'),
@@ -23,6 +26,13 @@ Pace.on('done', function() {
 			white: '#flower-white',
 			big: '#flower-red-big',
 			small: '#flower-red-small'
+		},
+		characters: {
+			duck: '#duck',
+			fish: '#fish',
+			butterfly: '#butterfly',
+			turtle: '#turtle',
+			elephant: '#elephant'
 		}
 	};
 
@@ -37,6 +47,16 @@ Pace.on('done', function() {
 			.add(animated(decor.flower.small).bounce(-200, 200),4)
 
 	timeline.add(animated(decor.cloud).fading(1))
+
+	timeline.add(animated(decor.characters.duck).fading(1))
+			.add(animated(decor.characters.fish).fading(1))
+			.add(animated(decor.characters.butterfly).fading(1))
+			.add(animated(decor.characters.turtle).fading(1))
+			.add(animated(decor.characters.elephant).fading(1))
+
+
+	// SVG Animation
+
 
 
 
@@ -81,14 +101,15 @@ Pace.on('done', function() {
 	//  var controller =  new ScrollMagic.Controller();
 
 	var uploader = document.getElementById('uploader')
-
-	if(uploader != null){
+	console.log(uploader)
 var uploader = new Dropzone("#uploader", { 
 									url: "/file/post",
 									thumbnailWidth: 720,
 									thumbnailHeight: 480,
 									previewTemplate: document.getElementById('preview-template').innerHTML
 								});
+	if(uploader != null){
+
 		
 	}
 

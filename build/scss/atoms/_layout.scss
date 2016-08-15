@@ -136,6 +136,8 @@ $gallery: (
   {
 	display: table-cell;
 	vertical-align: middle;
+      position: relative;
+      z-index: 10;
 
   }
 

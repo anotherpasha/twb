@@ -8,9 +8,8 @@
 		@include mappy-bp(max-width small)
 		{
 			margin: 0;
-			border-right: solid 1px $grey-default;
-			border-left: solid 1px $grey-default;
-			height: 150px;
+			border-bottom: solid 1px $grey-default;
+			height: 100px;
 			margin-bottom: 20px;
 		}
 }
