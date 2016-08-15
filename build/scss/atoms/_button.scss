@@ -69,6 +69,17 @@ $large-button-padding: 16px 26px;
 				color: $primary-color;
 			}
 	}
+	.button__querniry
+	{
+		border: solid 3px $primary-color;
+		color:$primary-color;
+			&:hover
+			{
+				background-color: $white;
+				color: $primary-color;
+			}
+	}
+
 	.button__split
 	{
 		.button--icon
@@ -206,3 +217,9 @@ $large-button-padding: 16px 26px;
 			font-size: $large-button-font-size;
 		}		
 
+		.scroll--down
+		{
+			position: absolute;
+			right: 150px;
+			bottom: 5%;
+		}

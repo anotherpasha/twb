@@ -486,7 +486,8 @@ img.fluid {
 .section__container {
   max-width: 1024px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative; }
   .section__container:after {
     content: " ";
     display: block;
@@ -912,6 +913,13 @@ hr {
     background-color: #ffffff;
     color: #1e419b; }
 
+.button__querniry {
+  border: solid 3px #1e419b;
+  color: #1e419b; }
+  .button__querniry:hover {
+    background-color: #ffffff;
+    color: #1e419b; }
+
 .button__split .button--icon {
   display: inline-block;
   padding: 15px 25px;
@@ -1038,6 +1046,11 @@ hr {
   padding: 16px 26px;
   font-size: 18px; }
 
+.scroll--down {
+  position: absolute;
+  right: 150px;
+  bottom: 5%; }
+
 input[type], textarea {
   padding: 5px 10px;
   background-color: #e6e6e6;
@@ -1133,7 +1146,7 @@ textarea {
     .decoration__wrapper--main {
       display: none; } }
 
-.decoration--land {
+.decoration--land--desktop {
   position: absolute;
   width: 90%;
   height: 370px;
@@ -1142,11 +1155,11 @@ textarea {
   background: url(../images/characters/land.png) no-repeat bottom left;
   background-size: contain; }
   @media all and (max-height: 39.9375em) {
-    .decoration--land {
+    .decoration--land--desktop {
       width: 80%;
       height: 300px; } }
   @media all and (max-width: 39.9375em) {
-    .decoration--land {
+    .decoration--land--desktop {
       background: url(../images/decoration--land); } }
 
 .decoration__character {

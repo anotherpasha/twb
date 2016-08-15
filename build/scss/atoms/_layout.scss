@@ -60,6 +60,7 @@ $gallery: (
 	.section__container
 	{
 		@include container(1024px);
+            position: relative;
                 @include mappy-bp(max-width small)
                 {
                   @include container(95%);
