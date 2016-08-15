@@ -24,6 +24,12 @@ $large-button-padding: 16px 26px;
 	cursor: pointer;
 	margin-top: 20px;
 	font-family: $oduda;
+		&.disabled
+		{
+			background-color: scale-color($grey-default, $lightness: -20%);
+			color: scale-color($grey-default, $lightness: 10%);
+			border-color: scale-color($grey-default, $lightness: -50%);
+		}
 }
 
 	.button__primary

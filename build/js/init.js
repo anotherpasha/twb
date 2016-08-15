@@ -102,15 +102,15 @@ Pace.on('done', function() {
 
 	var uploader = document.getElementById('uploader')
 	console.log(uploader)
+
+	if(uploader != null){
+
 var uploader = new Dropzone("#uploader", { 
 									url: "/file/post",
 									thumbnailWidth: 720,
 									thumbnailHeight: 480,
 									previewTemplate: document.getElementById('preview-template').innerHTML
-								});
-	if(uploader != null){
-
-		
+								});		
 	}
 
 	// // Tested get offset top each section
