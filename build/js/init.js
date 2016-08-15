@@ -59,7 +59,7 @@ window.onload = function () {
 
 	 	TweenMax.to(arrow, 0.5, {
 	 		y: 5,
-	 		repeat: 100,
+	 		repeat: 1000,
 	 		yoyo: true,
 	 		delay: 0.4
 	 	})

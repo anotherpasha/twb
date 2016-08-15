@@ -1175,20 +1175,25 @@ textarea {
   display: inline-block; }
 
 .character--duck {
-  top: 35%;
-  left: 15%; }
+  bottom: 35%;
+  left: 15%;
+  z-index: 11; }
 .character--elephant {
-  top: 18%;
-  left: 35%; }
+  top: 28%;
+  left: 35%;
+  z-index: 11; }
 .character--fish {
-  bottom: 14%;
-  right: 38%; }
+  bottom: 4%;
+  right: 52%;
+  z-index: 11; }
 .character--turtle {
-  top: 45%;
-  right: 25%; }
+  top: 55%;
+  right: 25%;
+  z-index: 11; }
 .character--butterfly {
-  top: 5%;
-  right: 20%; }
+  top: 15%;
+  right: 20%;
+  z-index: 11; }
 
 .decoration--tree-small {
   top: 20%;

@@ -55,31 +55,36 @@
 				{
 					&--duck
 					{
-						top: 35%;
+						bottom: 35%;
 						left: 15%;
+						z-index: 11;
 					}
 					&--elephant
 					{
-						top: 18%;
+						top: 28%;
 						left: 35%;
+						z-index: 11;
 					}
 
 					&--fish
 					{
-						bottom: 14%;
-						right: 38%;
+						bottom: 4%;
+						right: 52%;
+						z-index: 11;
 					}
 
 					&--turtle
 					{
-						top: 45% ;
+						top: 55% ;
 						right: 25%;
+						z-index: 11;
 					}
 
 					&--butterfly
 					{
-						top: 5%;
+						top: 15%;
 						right: 20%;
+						z-index: 11;
 					}
 
 				}
