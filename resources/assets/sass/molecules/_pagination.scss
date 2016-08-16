@@ -1,0 +1,29 @@
+.pagination
+{
+	display: inline-block;
+	margin-top: 20px;
+	li
+	{
+		margin-right: 5px;
+		&:last-child
+		{
+			margin-right: 0;
+		}
+		a
+		{
+			padding: 5px 10px;
+			color: $white;
+			background-color: $primary-color;
+			@include vendor((border-radius: 3px), webkit moz ms o);
+			@include transition(all, 500ms);
+				&:hover
+				{
+					background-color: $red;
+				}
+		}
+			&:last-child
+			{
+				margin-right: 0;
+			}
+	}
+}

@@ -1,0 +1,249 @@
+$primary-button-color: $secondary-color;
+$secondary-button-color: $quartiery-color;
+$primary-button-border-color: $primary-color;
+
+
+$small-button-font-size: 12px;
+$medium-button-font-size: ($small-button-font-size + 2px);
+$large-button-font-size: ($medium-button-font-size + 4px);
+
+
+
+$small-button-padding: 3px 18px;
+$medium-button-padding: 12px 22px;
+$large-button-padding: 16px 26px;
+
+
+.button
+{
+	display: inline-block;
+	text-decoration: none;
+	@include vendor((border-radius: 10px), webkit moz ms o);
+	@include transition(all, 600ms);
+	font-weight: bolder;
+	cursor: pointer;
+	margin-top: 20px;
+	font-family: $oduda;
+		&.disabled
+		{
+			background-color: scale-color($grey-default, $lightness: -20%);
+			color: scale-color($grey-default, $lightness: 10%);
+			border-color: scale-color($grey-default, $lightness: -50%);
+		}
+}
+
+	.button__primary
+	{
+		background-color: $primary-button-color;
+		border: solid 3px $primary-button-border-color;
+		color: $white;
+			&:hover
+			{
+				background-color: scale-color($primary-button-color, $lightness: -20%);
+			}
+	}
+
+	.button__secondary
+	{
+		background-color: $secondary-button-color;
+		border: solid 3px $primary-button-border-color;
+		color: $primary-color;
+			&:hover
+			{
+				background-color: scale-color($secondary-button-color, $lightness: -20%);
+			}
+	}
+
+	.button__tertiary
+	{
+		border: solid 3px $white;
+		color: $white;
+			&:hover
+			{
+				background-color: $white;
+				color: $primary-color;
+			}
+	}
+
+	.button__quertiary
+	{
+		border: solid 3px scale-color($black, $lightness: 15%);
+		color: scale-color($black, $lightness: 15%);
+			&:hover
+			{
+				background-color: $white;
+				color: $primary-color;
+			}
+	}
+	.button__querniry
+	{
+		border: solid 3px $primary-color;
+		color:$primary-color;
+			&:hover
+			{
+				background-color: $white;
+				color: $primary-color;
+			}
+	}
+
+	.button__split
+	{
+		.button--icon
+		{
+			display: inline-block;
+			padding:  15px 25px;
+			float: left;
+			@include transition(all, 500ms);
+		}
+		.button--text
+		{
+			display: inline-block;
+			padding: 15px 25px;
+			@include transition(all, 500ms);
+		}
+	}
+
+
+
+	.button--facebook
+	{
+		background-color: #4f6fb3;
+		color: $white;
+		@include vendor((border-radius: 0 !Important), webkit moz  ms o);
+			.button--icon
+			{
+				background-color: scale-color( #4f6fb3, $lightness: -20%);
+			}
+
+			&:hover
+			{
+				background-color: scale-color( #4f6fb3, $lightness: -20%);
+
+				.button--icon
+				{
+					background-color: scale-color( #4f6fb3, $lightness: -30%);
+				}
+
+			}
+	}
+	.button--facebook-share
+	{
+		background-color: #4f6fb3;
+		color: $white;
+		@include vendor((border-radius: 10px ), webkit moz  ms o);
+			.button--icon
+			{
+				background-color: scale-color( #4f6fb3, $lightness: -20%);
+				padding: 5px 10px;
+				@include vendor((border-top-left-radius: 10px !important), webkit moz ms o);
+				@include vendor((border-bottom-left-radius: 10px !important), webkit moz ms o);
+				line-height: 1;
+			}
+			.button--text
+			{
+				padding: 5px 20px;
+			}
+			&:hover
+			{
+				background-color: scale-color( #4f6fb3, $lightness: -20%);
+
+				.button--icon
+				{
+					background-color: scale-color( #4f6fb3, $lightness: -30%);
+				}
+
+			}
+	}	
+	.button--tweet
+	{
+		background-color: #5ea9dd;
+		color: $white;
+		@include vendor((border-radius: 10px ), webkit moz  ms o);
+			.button--icon
+			{
+				background-color: scale-color( #5ea9dd, $lightness: -20%);
+				padding: 5px 10px;
+				@include vendor((border-top-left-radius: 10px !important), webkit moz ms o);
+				@include vendor((border-bottom-left-radius: 10px !important), webkit moz ms o);
+				line-height: 1;
+			}
+			.button--text
+			{
+				padding: 5px 20px;
+			}
+			&:hover
+			{
+				background-color: scale-color( #5ea9dd, $lightness: -20%);
+
+				.button--icon
+				{
+					background-color: scale-color( #5ea9dd, $lightness: -30%);
+				}
+
+			}
+	}	
+	
+	.button__form
+	{
+		background-color: $red;
+		@include vendor((border-radius: 0 !Important), webkit moz  ms o);
+		color: $white;
+		padding: 17px 25px;
+		font-family: $montserrat;	
+	}
+	.button--expand
+	{
+		width: 100%;
+	}
+
+	.button__back
+	{
+		color: scale-color($grey-default, $lightness: -30%);
+		@include transition(all, 500ms);
+			&:hover
+			{
+				color: scale-color($grey-default, $lightness: -60%);
+			}
+
+	}
+		.button--small
+		{
+			padding: $small-button-padding;
+			font-size: $small-button-font-size;
+			font-size: 18px;
+		}
+
+		.button--medium
+		{
+			padding: $medium-button-padding;
+			font-size: $medium-button-font-size;
+		}
+
+		.button--large
+		{
+			padding: $large-button-padding;
+			font-size: $large-button-font-size;
+		}		
+
+		.scroll--down
+		{
+			position: absolute;
+			right: 150px;
+			bottom: 5%;
+		}
+		.likes--counter
+		{
+			padding: 5px 10px;
+			background-color: $grey-default;
+			color: $black;
+			float: right;
+			@include vendor((border-radius: 5px), webkit moz ms o);	
+			font-size: 14px;
+				display: inline-block;
+			@include mappy-bp(max-width small)
+			{
+				float: none;
+				margin: 10px 0;
+
+			}		
+		}

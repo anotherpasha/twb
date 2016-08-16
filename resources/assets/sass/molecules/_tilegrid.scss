@@ -1,0 +1,19 @@
+@include with-layout($gallery)
+{
+	.wrapper__thumb
+	{
+		@include span(1);
+		margin-bottom: 20px;
+			@include mappy-bp(max-width small)
+			{
+				@include span(2);
+				margin-bottom: 20px;
+			}
+	}
+}
+
+.thumb--gallery
+{
+	display: inline-block;
+	width: 100%;
+}

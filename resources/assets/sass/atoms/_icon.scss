@@ -1,0 +1,51 @@
+.icon
+{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	background: url(../images/icon.png)no-repeat top left;
+}
+
+	.icon--likes
+	{
+		width: 14px;
+		height: 11px;
+		background-position: 0 0;
+
+	}
+
+	.icon--facebook
+	{
+		width: 19px;
+		height: 20px;
+		background-position: 0 -11px;
+	}
+	.icon--twitter
+	{
+		width: 19px;
+		height: 20px;
+		background-position: -19px -11px;
+	}
+
+	.icon--arrow-bottom
+	{	
+		width: 19px;
+		height: 17px;
+		background-position: 0 -51px;
+	}
+	.icon--close
+	{
+		width: 20px;
+		height: 20px;
+		background-position: 0 -31px;
+			&:hover
+			{
+				background-position: -20px -31px;
+			}
+	}
+	.icon--search
+	{
+		width: 20px;
+		height: 20px;
+		background-position: 0 -68px;
+	}
