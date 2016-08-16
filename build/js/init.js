@@ -37,14 +37,7 @@ Pace.on('done', function() {
 	};
 
 
-	timeline.add(animated(decor.land).bounce(-100, 100))
-			.add(animated(decor.tree.big).bounce(-200, 200), 1)
-			.add(animated(decor.grass).bounce(-200, 200), 1.5)
-			.add(animated(decor.tree.small).bounce(-200, 200), 2)
-			.add(animated(decor.tree.grass).bounce(-200, 200), 3)
-			.add(animated(decor.flower.white).bounce(-200, 200), 3.8)
-			.add(animated(decor.flower.big).bounce(-200, 200), 3.8)
-			.add(animated(decor.flower.small).bounce(-200, 200),4)
+	timeline.add(animated(decor.land).bounce(-100, 100));
 
 	timeline.add(animated(decor.cloud).fading(1))
 

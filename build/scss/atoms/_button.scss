@@ -137,6 +137,7 @@ $large-button-padding: 16px 26px;
 				padding: 5px 10px;
 				@include vendor((border-top-left-radius: 10px !important), webkit moz ms o);
 				@include vendor((border-bottom-left-radius: 10px !important), webkit moz ms o);
+				line-height: 1;
 			}
 			.button--text
 			{
@@ -164,6 +165,7 @@ $large-button-padding: 16px 26px;
 				padding: 5px 10px;
 				@include vendor((border-top-left-radius: 10px !important), webkit moz ms o);
 				@include vendor((border-bottom-left-radius: 10px !important), webkit moz ms o);
+				line-height: 1;
 			}
 			.button--text
 			{
@@ -228,4 +230,20 @@ $large-button-padding: 16px 26px;
 			position: absolute;
 			right: 150px;
 			bottom: 5%;
+		}
+		.likes--counter
+		{
+			padding: 5px 10px;
+			background-color: $grey-default;
+			color: $black;
+			float: right;
+			@include vendor((border-radius: 5px), webkit moz ms o);	
+			font-size: 14px;
+				display: inline-block;
+			@include mappy-bp(max-width small)
+			{
+				float: none;
+				margin: 10px 0;
+
+			}		
 		}

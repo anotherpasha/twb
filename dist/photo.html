@@ -54,7 +54,7 @@
 <header class="navbar__subpage">
 	<div class="container">
 		
-	<a href="" class="navbar--logo push-half--top"><img src="assets/images/logo-small.png"></a>
+	<a href="index.html" class="navbar--logo push-half--top"><img src="assets/images/logo-small.png"></a>
 
 	<nav class="navigation--home hard">
 		<ul class="list__inline">
@@ -74,7 +74,7 @@
 	<!-- start gallery section -->
 	<section id="section--photo-detail" class="  section  section--subpage">
 		<div class="container">			
-			<a href="index.html" class="text--white">< Kembali ke beranda</a>
+			<a href="gallery.html" class="text--white">< Kembali ke gallery</a>
 		
 			<div class="container__photo-detail">
 					<div class="column__span-6 text--center">
@@ -83,7 +83,11 @@
 						</figure>
 
 						<div class="photo--detail text--left">
-							<h2>Judul Foto Disini</h2>
+							<div class="caption--header">							
+								<h2 class="title">Judul Foto Disini</h2>
+								<span class="likes--counter"><i class="icon--likes icon"></i> Likes</span>
+							</div>
+
 							<p class="text--primary">oleh Jane Doe</p>
 							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus!</p>							
 						</div>
@@ -110,8 +114,9 @@
 								</figure>
 							</div>
 							<div class="block__comment--form">
-								<form>
+								<form class="form--comment">
 									<textarea placeholder="beri komentar"></textarea>
+									<button type="submit" class="button button__primary button--small">Submit</button>
 								</form>
 							</div>
 						</div>

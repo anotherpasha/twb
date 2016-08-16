@@ -875,6 +875,11 @@ hr {
   .icon--close:hover {
     background-position: -20px -31px; }
 
+.icon--search {
+  width: 20px;
+  height: 20px;
+  background-position: 0 -68px; }
+
 .button {
   display: inline-block;
   text-decoration: none;
@@ -985,7 +990,8 @@ hr {
     -moz-border-bottom-left-radius: 10px !important;
     -ms-border-bottom-left-radius: 10px !important;
     -o-border-bottom-left-radius: 10px !important;
-    border-bottom-left-radius: 10px !important; }
+    border-bottom-left-radius: 10px !important;
+    line-height: 1; }
   .button--facebook-share .button--text {
     padding: 5px 20px; }
   .button--facebook-share:hover {
@@ -1013,7 +1019,8 @@ hr {
     -moz-border-bottom-left-radius: 10px !important;
     -ms-border-bottom-left-radius: 10px !important;
     -o-border-bottom-left-radius: 10px !important;
-    border-bottom-left-radius: 10px !important; }
+    border-bottom-left-radius: 10px !important;
+    line-height: 1; }
   .button--tweet .button--text {
     padding: 5px 20px; }
   .button--tweet:hover {
@@ -1063,6 +1070,23 @@ hr {
   right: 150px;
   bottom: 5%; }
 
+.likes--counter {
+  padding: 5px 10px;
+  background-color: #e6e6e6;
+  color: #000000;
+  float: right;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: inline-block; }
+  @media all and (max-width: 39.9375em) {
+    .likes--counter {
+      float: none;
+      margin: 10px 0; } }
+
 input[type], textarea {
   padding: 5px 10px;
   background-color: #e6e6e6;
@@ -1096,6 +1120,9 @@ textarea {
   max-width: 70%;
   margin: auto; }
 
+.form--comment textarea {
+  height: 100px !important; }
+
 .form__wrapper {
   display: inline-block;
   width: 100%; }
@@ -1115,6 +1142,23 @@ textarea {
     color: #ec1c24;
     top: 0;
     right: -10px; }
+
+.form--search {
+  max-width: 220px;
+  float: right;
+  width: 100%;
+  position: relative;
+  margin-bottom: 40px; }
+  @media all and (max-width: 39.9375em) {
+    .form--search {
+      max-width: 100%; } }
+
+.button--submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 0;
+  padding: 0 10px; }
 
 .image--responsive {
   max-width: 100%; }
@@ -1225,11 +1269,11 @@ textarea {
   z-index: 11; }
 
 .decoration--tree-small {
-  top: 20%;
+  top: 14%;
   right: 38%;
   z-index: 2; }
 .decoration--tree-grass {
-  bottom: 22%;
+  bottom: 14%;
   right: 0;
   z-index: 2; }
 .decoration--tree-big {
@@ -1241,7 +1285,7 @@ textarea {
   left: 23%;
   z-index: 2; }
 .decoration--tree-grass {
-  bottom: 25%;
+  top: 22%;
   right: 10%;
   z-index: 4; }
 .decoration--flower-white {
@@ -1261,11 +1305,11 @@ textarea {
   left: 30%;
   z-index: 2; }
 .decoration--flower-red-small {
-  top: 34%;
+  top: 27%;
   right: 35%;
   z-index: 2; }
 .decoration--flower-red-big {
-  bottom: 0;
+  bottom: 22%;
   right: 1%;
   z-index: 3; }
 
@@ -1309,6 +1353,12 @@ footer {
           max-width: 70%; }
       .headline--home h2 {
         font-size: 18px; } }
+
+.caption--header .title {
+  display: inline-block; }
+  @media all and (max-width: 39.9375em) {
+    .caption--header .title {
+      display: block; } }
 
 .uploader__wrapper {
   display: inline-block;
@@ -1727,3 +1777,29 @@ header {
   @media all and (max-width: 39.9375em) {
     .span--signup {
       padding: 5px 0; } }
+
+.pagination {
+  display: inline-block;
+  margin-top: 20px; }
+  .pagination li {
+    margin-right: 5px; }
+    .pagination li:last-child {
+      margin-right: 0; }
+    .pagination li a {
+      padding: 5px 10px;
+      color: #ffffff;
+      background-color: #1e419b;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      -ms-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease; }
+      .pagination li a:hover {
+        background-color: #ec1c24; }
+    .pagination li:last-child {
+      margin-right: 0; }

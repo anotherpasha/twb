@@ -26,3 +26,15 @@
 			}
 		}
 }
+
+.caption--header
+{
+	.title
+	{
+		display: inline-block;
+			@include mappy-bp(max-width small)
+			{
+				display: block;
+			}
+	}
+}
