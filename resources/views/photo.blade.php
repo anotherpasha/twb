@@ -5,33 +5,13 @@
 
 
 <div class="container__main "><!-- start main container -->
-    <header class="navbar__subpage">
-        <div class="container">
-            
-        <a href="index.html" class="navbar--logo push-half--top"><img src="{{asset('images/logo-small.png')}}"></a>
 
-        <nav class="navigation--home hard">
-            <!-- is login = true -->
-            <ul class="list__inline">
-                <li class=""><a href="javascript:;" class="navigation--link black">Logout</a></li>
-                <li class=""><a href="profile.html" class="navigation--link black">Profilku</a></li>
-                <li class="navigation--button"><a href="submission.html" class="button button__primary button--small " data-target="login">Submit</a></li>
-            </ul>
+    @include('partials.navbar')
 
-            <!-- is login = false -->
-
-            <!--ul class="list__inline">
-                <li class=""><a href="javascript:;" class="button button__quertiary  button--small toggle--modal" data-target="login">Login</a></li>
-                <li><a href=""><img class="image--responsive" src="assets/images/logo-twb-small.png"></a></li>
-            </ul-->
-        </nav>
-        </div>
-
-    </header>
     <!-- start photo detail section -->
     <section id="section--photo-detail" class="  section  section--subpage">
         <div class="container">         
-            <a href="gallery.html" class="text--white">< Kembali ke gallery</a>
+            <a href="{!! url('/gallery') !!}" class="text--white">< Kembali ke gallery</a>
         
             <div class="container__photo-detail">
                     <div class="column__span-6 text--center">
@@ -145,7 +125,4 @@
 
 
 </div><!-- end of main container -->
-
-
-
 @endsection

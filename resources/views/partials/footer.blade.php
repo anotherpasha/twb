@@ -4,11 +4,11 @@
 				
 				<ul class="list__inline list--foot">
 					<li>
-						<a href="snk.html">Terms &amp; Condition</a>
+						<a href="{!! url('/snk') !!}">Terms &amp; Condition</a>
 					</li>
 					<li class="list--divider"> | </li>
 					<li>
-						<a href="javascript:;">Copyright © 2016 Tini Wini Biti </a>
+						<a href="javascript:;">Copyright © {!! date('Y') !!} Tini Wini Biti </a>
 					</li>
 				</ul>
 

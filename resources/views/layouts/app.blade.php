@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta charset="utf-8">
-    <meta name="Description" content="a full time front-end developer, a freelancer full stack developer">
+    <meta name="Description" content="">
     <link rel="icon" sizes="192x192" href="assets/images/touch/highres-icon.png">   
 
     <meta name="twitter:card" content="summary">
@@ -54,24 +54,9 @@
 
     @yield('content')
 
-    <footer>
-        <div class="container">
-            <div class="column__span-6">
-                
-                <ul class="list__inline list--foot">
-                    <li>
-                        <a href="snk.html">Terms &amp; Condition</a>
-                    </li>
-                    <li class="list--divider"> | </li>
-                    <li>
-                        <a href="javascript:;">Copyright © 2016 Tini Wini Biti </a>
-                    </li>
-                </ul>
+    @include('partials.sign-in-popup')
 
-            </div>          
-        </div>
-
-    </footer>
+    @include('partials.footer')
 
 
 

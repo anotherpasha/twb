@@ -30,6 +30,7 @@ Route::get('/signup', function () {
 Route::get('/snk', function () {
     return view('snk');
 });
+
 Route::get('/submission', function () {
     return view('submission');
 });
@@ -37,14 +38,17 @@ Route::get('/submission', function () {
 Route::get('/success', function () {
     return view('success');
 });
+
 Route::get('/success-submission', function () {
     return view('success-submission');
 });
-Route::get('/submission', function () {
-    return view('submission');
-});
+
 Route::get('/photo', function () {
     return view('photo');
+});
+
+Route::get('/gallery', function () {
+    return view('gallery');
 });
 
 Route::get('auth/redirect/{provider}', 'SocialAuthController@redirect');

@@ -7,30 +7,27 @@
     <header>
         <div class="container">
             
-            <a href="index.html" class="navbar--logo"><img src="{{asset('/images/logo.png')}}"></a>
+            <a href="{!! url('/') !!}" class="navbar--logo"><img src="{{ asset('/images/logo.png') }}"></a>
             <nav class="navigation--home">
-                <!-- is login == true -->
-                <!--ul class="list__inline">
-                    <li class=""><a href="javascript:;" class="navigation--link white">Logout</a></li>
+                @if( Auth::check() )
+                <ul class="list__inline">
+                    <li class="{!! url('logout') !!}"><a href="javascript:;" class="navigation--link white">Logout</a></li>
                     <li class=""><a href="javascript:;" class="navigation--link white">Profilku</a></li>
-                    <li class=""><a href="javascript:;" class="button button__tertiary  button--small toggle--modal" data-target="login">Login</a></li>
-                    <li><a href=""><img src="assets/images/logo-twb.png"></a></li>
-                </ul-->         
-
+                    <li><a href="javascript:;"><img src="assets/images/logo-twb.png"></a></li>
+                </ul>
+                @else
                 <ul class="list__inline ">
                     <li class="login--link"><a href="javascript:;" class="button button__tertiary  button--small toggle--modal navigation--button" data-target="login">Login</a></li>
                 </ul>
+                @endif
             </nav>
         </div>
 
     </header>
-
-
 <!-- end of header -->
 
     <!-- start main section -->
     <section id="section--main" class=" window__fit section text--center">
-
 
         <div class="content--vertical-middle ">
             
@@ -38,7 +35,7 @@
                 
                 <div class="column__span-3-desktop column__span-6-mobile column__offset-3 text--left">
                     <div class="headline--home">    
-                        <figure class="hidden-on-large"><img class="image--responsive" src="assets/images/logo.png"></figure>           
+                        <figure class="hidden-on-large"><img class="image--responsive" src="images/logo.png"></figure>
                         <h2 class="">Ikuti kompetisi foto kreatif Dunia Tini Wini Biti, dan dapatkan puluhan <strong class="text--red">hadiah menarik!</strong></h2>
                         <br>
                         <button data-target="login" class="toggle--modal button button__primary button--small ">Ikutan Sekarang</button>
@@ -74,14 +71,14 @@
                 </div>
 
                 <div id="turtle" class="decoration__character character--turtle animated">
-                    <img src="{{asset('images/fallbacks/duck.png')}}" alt="[turtle]" />
+                    <img src="{{asset('images/fallbacks/turtle.png')}}" alt="[turtle]" />
                 </div>
 
                 <div id="fish" class="decoration__character character--fish">
-                    <img src="{{asset('images/fallbacks/duck.png')}}" alt="[fish]" />
+                    <img src="{{asset('images/fallbacks/fish.png')}}" alt="[fish]" />
                 </div>
                 <div id="butterfly" class="decoration__character character--butterfly" >
-                    <img src="{{asset('images/fallbacks/duck.png')}}" alt="[butterfly]" />
+                    <img src="{{asset('images/fallbacks/butterfly.png')}}" alt="[butterfly]" />
                 </div>
                 
 
@@ -174,7 +171,7 @@
             </div>
 
             <div class="column__span-6 text--center" >
-                <a href="prize.html" class="button button__secondary button--small">Selengkapnya</a>
+                <a href="{!! url('/prize') !!}" class="button button__secondary button--small">Selengkapnya</a>
             </div>
         </div>
 
@@ -424,7 +421,7 @@
             </div>
 
             <div class="column__span-6">
-                <a href="gallery.html" class="button button--small button__secondary">Lihat Semua</a>
+                <a href="{!! url('/gallery') !!}" class="button button--small button__secondary">Lihat Semua</a>
             </div>
 
         </div>
@@ -434,95 +431,5 @@
 
 
 </div><!-- end of main container -->
-
-<div id="login" class="container__modal modal--login">
-    
-    <div class="modal__dialog">
-        <div class="modal__header">
-            <h2>Masuk</h2>
-        </div>
-        <br>
-        <div class="modal__body">
-
-            <div class="">
-                <p>Masuk dengan Facebook</p>
-                <a href="" class="button button__split button--facebook ">
-                    <span class="button--icon"><i class="icon icon--facebook"></i></span>
-                    <span class="button--text">Facebook</span>
-                </a>
-            </div>
-
-            <div class="divider--horizontal divider--login">
-                <span>atau</span>
-            </div>
-
-            <div class="form--login">
-                <p>Masuk dengan email</p>
-                <form>
-                    <div class="form__control">
-                        <input type="email" placeholder="Email" />
-                    </div>
-                    <div class="form__control">
-                        <input type="password" placeholder="Password" />
-                    </div>
-                    <div class="form__submit">
-                        <button type="submit" class="button flush--top push--bottom button__form button--expand">Masuk</button>
-                    </div>
-
-                </form>
-                <div>
-                    <p>Belum terdaftar? <a href="" class="toggle--modal text--red" data-target="signup">Daftar disini</a></p>
-                </div>
-            </div>
-
-
-        </div>
-        <a href="" class="toggle--close"><i class="icon icon--close"></i></a>
-    </div>
-
-</div>
-
-
-
-<div id="signup" class="container__modal modal--signup">
-    <div class="modal__dialog">
-
-        <div class="modal__header">
-            <h2>Daftar</h2>
-        </div>
-        <br>
-
-        <div class="modal__body">       
-
-                <h6>Daftarkan diri kamu untuk dapat <br>berpartisipasi dalam kompetisi ini</h6>
-                <br><br>
-            <div class="modal--span span--signup">
-                <p>Daftar dengan Facebook</p>
-                <a href="" class="button button__split button--facebook flush--top button--expand">
-                    <span class="button--icon"><i class="icon icon--facebook"></i></span>
-                    <span class="button--text">Facebook</span>
-                </a>
-            </div>
-            <div class="modal--span span--signup divider--vertical divider--signup">
-                <span>atau</span>
-            </div>
-            <div class="modal--span span--signup">
-                <p>Daftar dengan Email</p>
-                <a href="signup.html" class="button flush--top push--bottom button__form button--expand">Masuk</a>
-            </div>
-            <br><br>
-        </div>
-        <div class="modal__footer">
-            <p>Sudah terdaftar? <a href="" class="text--red">Masuk disini</a></p>
-        </div>
-
-        <a href="" class="toggle--close"><i class="icon icon--close"></i></a>
-    </div>
-</div>
-
-
-
-
-
 
 @endsection
