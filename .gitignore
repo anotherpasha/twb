@@ -5,3 +5,31 @@
 .env
 .env.testing
 
+
+.DS_Store
+*.zip
+
+build/vendor/**/**/*
+build/vendor/**/*.scssc
+src/vendor/**/**/*
+
+
+build/scss/.sass-cache/**/*.scssc
+build/scss/.sass-cache/*
+
+.codekit-cache/
+
+# Laravel ignored files and dir
+
+/vendor
+/node_modules
+/public/storage
+Homestead.yaml
+Homestead.json
+.env
+.idea
+composer.lock
+/tests
+/bootstrap/cache
+/storage/logs
+/storage/framework

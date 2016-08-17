@@ -1,0 +1,252 @@
+$base-font-size: 14px;
+
+
+$h1-font-size: 37px;
+$h2-font-size: 31px;
+$h3-font-size: 28px;
+$h4-font-size: 26px;
+$h5-font-size: 22px;
+$h6-font-size: 18px;
+
+$heading-color: $primary-color;
+
+$font-path: '../fonts/';
+
+$paragraph-margin-bottom: 10px;
+
+
+$font-path: '../fonts/';
+
+$montserrat: 'Montserrat-Regular';
+$oduda: 'Oduda-Bold';
+
+$body-font-family: $montserrat , helvetica, sans-serif;
+$heading-font-family: $oduda , helvetica, sans-serif;
+
+/* ======================== *\
+	FONT EMBED
+\* ======================== */
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('#{$font-path}Montserrat-Regular.eot?#iefix') format('embedded-opentype'),  
+  	   url('#{$font-path}Montserrat-Regular.otf')  format('opentype'),
+	   url('#{$font-path}Montserrat-Regular.woff') format('woff'),
+	   url('#{$font-path}Montserrat-Regular.ttf')  format('truetype'),
+	   url('#{$font-path}Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oduda-Bold';
+  src: url('#{$font-path}Oduda-Bold.eot?#iefix') format('embedded-opentype'),
+  	   url('#{$font-path}Oduda-Bold.otf')  format('opentype'),
+	   url('#{$font-path}Oduda-Bold.woff') format('woff'),
+	   url('#{$font-path}Oduda-Bold.ttf')  format('truetype'),
+	   url('#{$font-path}Oduda-Bold.svg#Oduda-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+.text-{
+	&-white{
+		color: $white !important;
+	}
+	&-black{
+		color: $black;
+	}
+	&-primary{
+		color: $primary-color;
+	}
+	&-red{
+		color: $red;
+	}
+	&-grey
+	{
+		color: $grey-default;
+	}
+	&-grey-darker
+	{
+		color: scale-color($grey-default, $lightness: -20%);
+	}
+
+}
+.text-{
+	&-light{
+		font-weight: light;
+	}
+}
+
+
+h1,h2,h3,h4,h5,h6
+{
+	font-family: $heading-font-family;
+	color: $primary-color;
+
+}
+a,p,ul,ol,li,span,small
+{
+	font-family: $body-font-family;
+}
+small
+{
+	color: $grey-default;
+}
+p{
+	font-size: $base-font-size;
+	display: block;
+	margin-bottom: $paragraph-margin-bottom;
+	font-style: normal;
+	display: block;
+	color: scale-color($black, $lightness: 30%);
+	font-family: $body-font-family;
+	@include mappy-bp(max-width small) {
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+}
+
+a{
+	cursor: pointer;
+	font-size: $base-font-size;
+	display: inline-block;
+}
+
+
+h1{
+	font-size: $h1-font-size;
+		@include mappy-bp(max-width small)
+		{
+			font-size: ($h1-font-size - 6px)
+		}
+}
+h2{
+	font-size: $h2-font-size;
+		@include mappy-bp(max-width small)
+		{
+			font-size: ($h2-font-size - 6px);
+		}
+}
+h3{
+	font-size: $h3-font-size;
+}
+h4{
+	font-size: $h4-font-size;
+		@include mappy-bp(max-width small)
+		{
+			font-size: ($h4-font-size - 6px);
+		}
+}
+h5{
+	font-size: $h5-font-size;
+}
+h6{
+	font-size: $h6-font-size;
+}
+
+h1,h2,h3,h4,h5,h6,p,a,ul,ol,li,span{
+	text-rendering: optimizeLegibility;
+}
+strong
+{
+	text-shadow: 0px 0 $black;
+}
+
+
+.divider
+{
+	&--horizontal
+	{
+		width: auto;
+		position: relative;
+		margin: 20px 0;
+		text-align: center;
+		&:after
+		{
+			position: absolute;
+			height: 1px;
+			top: 50%;
+			left: 0;
+			content: '';
+			width: 100%;
+			background-color: $grey-default;
+		}
+	}
+	&--vertical
+	{
+		position: relative;
+		width: 100%;
+		&:after
+		{
+			position: absolute;
+			height: 100%;
+			top: 0;
+			left: 50%;
+			content: '';
+			width: 1px;
+			background-color: $grey-default;
+				@include mappy-bp(max-width small)
+				{
+					width: 100%;
+					height: 1px;
+					top: 50%;
+					left: 0;
+				}
+		}
+
+		span
+		{
+			margin: 40px 0;
+			display: inline-block;
+			background-color: $white;
+			padding: 5px 20px;
+			position: relative;
+			z-index: 3;
+			color: scale-color($white, $lightness: -30%);
+			@include mappy-bp(max-width small)
+			{
+				margin: 10px 0;
+			}
+		}
+	}
+
+}
+hr
+{
+	display: inline-block;
+	width: 100%;
+	height: 1px;
+	background-color: $grey-default;
+	margin: 20px 0;
+}
+
+.divider--login
+{
+	span
+	{
+		display: inline-block;
+		background-color: $white;
+		padding: 5px 20px;
+		position: relative;
+		z-index: 3;
+		color: scale-color($white, $lightness: -30%);
+	}
+}
+
+.username
+{
+	font-family: $oduda;
+	padding: 10px 20px;
+	display: inline-block;
+	min-width: 200px;
+	background-color: $grey-default;
+	color: scale-color($black, $lightness: 20%);
+}
+.rounded
+{
+	@include vendor((border-radius: 10px), webkit moz ms o);
+}
