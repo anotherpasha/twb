@@ -32,6 +32,8 @@ class AuthController extends Controller
      */
     protected $redirectTo = '/';
 
+    protected $registerView = 'signup';
+
     private $accountService;
 
     /**

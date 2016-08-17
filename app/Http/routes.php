@@ -19,10 +19,6 @@ Route::get('/prize', function () {
     return view('prize');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
-});
-
 Route::get('/signup', function () {
     return view('signup');
 });
@@ -31,16 +27,8 @@ Route::get('/snk', function () {
     return view('snk');
 });
 
-Route::get('/submission', function () {
-    return view('submission');
-});
-
 Route::get('/success', function () {
     return view('success');
-});
-
-Route::get('/success-submission', function () {
-    return view('success-submission');
 });
 
 Route::get('/photo', function () {
@@ -50,6 +38,25 @@ Route::get('/photo', function () {
 Route::get('/gallery', function () {
     return view('gallery');
 });
+
+Route::post( '/ajax/login', 'AjaxController@login');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::post('file/post', 'AjaxController@postImage');
+
+    Route::get('/submission', 'PostController@getPostStoryView' );
+    Route::post('/submission', 'PostController@postStory');
+
+    Route::get('/profile', function () {
+        return view('profile');
+    });
+
+    Route::get('/success-submission', function () {
+        return view('success-submission');
+    });
+});
+
+
 
 Route::get('auth/redirect/{provider}', 'SocialAuthController@redirect');
 Route::get('auth/callback/{provider}', 'SocialAuthController@callback');

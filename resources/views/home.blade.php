@@ -11,13 +11,14 @@
             <nav class="navigation--home">
                 @if( Auth::check() )
                 <ul class="list__inline">
-                    <li class="{!! url('logout') !!}"><a href="javascript:;" class="navigation--link white">Logout</a></li>
-                    <li class=""><a href="javascript:;" class="navigation--link white">Profilku</a></li>
-                    <li><a href="javascript:;"><img src="assets/images/logo-twb.png"></a></li>
+                    <li class=""><a href="{!! url('logout') !!}" class="navigation--link white">Logout</a></li>
+                    <li class=""><a href="{!! url('profile') !!}" class="navigation--link white">Profilku</a></li>
+                    <li><img src="{!! asset('images/logo-twb.png') !!}"></li>
                 </ul>
                 @else
                 <ul class="list__inline ">
                     <li class="login--link"><a href="javascript:;" class="button button__tertiary  button--small toggle--modal navigation--button" data-target="login">Login</a></li>
+                    <li><img src="{!! asset('images/logo-twb.png') !!}"></li>
                 </ul>
                 @endif
             </nav>
@@ -35,10 +36,14 @@
                 
                 <div class="column__span-3-desktop column__span-6-mobile column__offset-3 text--left">
                     <div class="headline--home">    
-                        <figure class="hidden-on-large"><img class="image--responsive" src="images/logo.png"></figure>
+                        <figure class="hidden-on-large"><img class="image--responsive" src="{!! asset('images/logo.png') !!}"></figure>
                         <h2 class="">Ikuti kompetisi foto kreatif Dunia Tini Wini Biti, dan dapatkan puluhan <strong class="text--red">hadiah menarik!</strong></h2>
                         <br>
-                        <button data-target="login" class="toggle--modal button button__primary button--small ">Ikutan Sekarang</button>
+                        @if( Auth::check() )
+                            <a class="button button__primary button--small " href="{!! url('submission') !!}">Ikutan Sekarang</a>
+                        @else
+                            <button data-target="login" class="toggle--modal button button__primary button--small ">Ikutan Sekarang</button>
+                        @endif
                         <br>
                     </div>
 

@@ -26,28 +26,6 @@ class SocialAccountService
         return false;
     }
 
-    public function createAccount(ProviderUser $providerUser, $provider)
-    {
-        $account = new SocialAccount([
-            'provider_user_id' => $providerUser->getId(),
-            'provider' => $provider
-        ]);
-
-        $user = User::whereEmail($providerUser->getEmail())->first();
-
-        if (!$user) {
-            $user = User::create([
-                'email' => $providerUser->getEmail(),
-                'name' => $providerUser->getName(),
-            ]);
-        }
-
-        $account->user()->associate($user);
-        $account->save();
-
-        return $user;
-    }
-
     public function createSocialAccountByData(User $user, array $socialUserData)
     {
         $account = new SocialAccount($socialUserData);
@@ -56,15 +34,5 @@ class SocialAccountService
         $account->save();
 
         return $account;
-    }
-
-    public function createOrGetAccount(ProviderUser $providerUser, $provider)
-    {
-        if ($account = $this->getAccount($providerUser, $provider)) {
-            return $account->user;
-        } else {
-            return $this->createAccount($providerUser, $provider);
-        }
-
     }
 }

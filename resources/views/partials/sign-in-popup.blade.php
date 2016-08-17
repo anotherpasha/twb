@@ -21,13 +21,13 @@
 
             <div class="form--login">
                 <p>Masuk dengan email</p>
-                <form action="{!! url('/login') !!}" method="post">
+                <form action="{!! url('/ajax/login') !!}" class="login-form" method="post">
                     {{ csrf_field() }}
                     <div class="form__control">
-                        <input type="email" placeholder="Email" />
+                        <input type="email" name="email" placeholder="Email" />
                     </div>
                     <div class="form__control">
-                        <input type="password" placeholder="Password" />
+                        <input type="password" name="password" placeholder="Password" />
                     </div>
                     <div class="form__submit">
                         <button type="submit" class="button flush--top push--bottom button__form button--expand">Masuk</button>
@@ -35,7 +35,8 @@
 
                 </form>
                 <div>
-                    <p>Belum terdaftar? <a href="" class="toggle--modal text--red" data-target="signup">Daftar disini</a></p>
+                    <!-- p>Belum terdaftar? <a href="" class="toggle--modal text--red" data-target="signup">Daftar disini</a></p -->
+                    <p>Belum terdaftar? <a href="{!! url('register') !!}" class="text--red">Daftar disini</a></p>
                 </div>
             </div>
 
