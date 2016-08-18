@@ -22,3 +22,13 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'phone' => $faker->phoneNumber,
     ];
 });
+
+$factory->define(App\Story::class, function (\Faker\Generator $faker) {
+    $users = \App\User::all(['id'])->toArray();
+    $userKey = array_rand($users, 1);
+    return [
+       'title'      => $faker->realText('20'),
+       'story'      => $faker->paragraph(100, true),
+       'user_id'    => $users[$userKey]['id']
+   ];
+});

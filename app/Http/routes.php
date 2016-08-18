@@ -31,9 +31,8 @@ Route::get('/success', function () {
 
 Route::get('/story/{id}', 'StoryController@showStory');
 
-Route::get('/gallery', function () {
-    return view('gallery');
-});
+Route::get('/gallery', 'StoryController@gallery');
+Route::post('/gallery', 'StoryController@gallery');
 
 Route::post( '/ajax/login', 'AjaxController@login');
 
