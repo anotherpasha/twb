@@ -21,12 +21,12 @@
 
                         <div class="photo--detail text--left">
                             <div class="caption--header">                           
-                                <h2 class="title">Judul Foto Disini</h2>
+                                <h2 class="title">{!! $story->title !!}</h2>
                                 <span class="likes--counter"><i class="icon--likes icon"></i> Likes</span>
                             </div>
 
                             <p class="text--primary">oleh Jane Doe</p>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus!</p>                          
+                            <p>{!! $story->story !!}</p>
                         </div>
 
                         <div class="share--group  text--left">

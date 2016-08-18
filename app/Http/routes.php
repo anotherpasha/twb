@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@index');
 
 Route::get('/prize', function () {
     return view('prize');
@@ -31,9 +29,7 @@ Route::get('/success', function () {
     return view('success');
 });
 
-Route::get('/photo', function () {
-    return view('photo');
-});
+Route::get('/story/{id}', 'StoryController@showStory');
 
 Route::get('/gallery', function () {
     return view('gallery');

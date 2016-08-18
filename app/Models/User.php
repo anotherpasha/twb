@@ -27,4 +27,14 @@ class User extends Authenticatable implements CanResetPassword
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function stories()
+    {
+        return $this->hasMany(Story::class);
+    }
+
+    public function likes()
+    {
+        return $this->hasMany(StoryLike::class);
+    }
 }

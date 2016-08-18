@@ -268,159 +268,22 @@
             <div class="column__span-6">
                  
                  <div class="container__gallery">
-
+                    @foreach($stories as $story)
                     <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
+                        <a href="{!! url('story/' . $story->id) !!}" class="thumb--gallery">
                             <ul class="cards cards--gallery">
                                 <li class="images">
                                     <figure></figure>
                                 </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
+                                <li class=" title">{!! $story->title !!}</li>
+                                <li class=" author">Oleh {!! $story->user->name !!}</li>
                                 <li class="likes">
                                     <i class="icon icon--likes"></i> Likes
                                 </li>
                             </ul>
                         </a>
                     </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
+                    @endforeach
                  </div>
             
             </div>
