@@ -29,6 +29,11 @@ textarea
 .form--login{
 	max-width: 70%;
 	margin: auto;
+		&.page
+		{
+			max-width: 40%;
+		}
+
 }
 
 .form--comment

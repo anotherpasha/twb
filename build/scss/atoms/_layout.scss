@@ -136,6 +136,7 @@ $gallery: (
                     min-height: 100vh;
                   }
 
+
 .content--vertical-middle 
   {
 	display: table-cell;
@@ -149,6 +150,14 @@ $gallery: (
   {
     @include container(770px);
   }
+
+      .wrapper--login
+      {
+        max-width: 400px;
+        margin: auto;
+        text-align: center;
+        margin-top: 40px;
+      }
 
 .row
 {
