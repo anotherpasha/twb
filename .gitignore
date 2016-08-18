@@ -16,6 +16,7 @@ src/vendor/**/**/*
 
 build/scss/.sass-cache/**/*.scssc
 build/scss/.sass-cache/*
+dist/
 
 .codekit-cache/
 
