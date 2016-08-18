@@ -7,30 +7,28 @@
     <header>
         <div class="container">
             
-            <a href="/" class="navbar--logo"><img src="{{asset('images/logo.png')}}"></a>
+            <a href="{!! url('/') !!}" class="navbar--logo"><img src="{{ asset('/images/logo.png') }}"></a>
             <nav class="navigation--home">
-                <!-- is login == true -->
-                <!--ul class="list__inline">
-                    <li class=""><a href="javascript:;" class="navigation--link white">Logout</a></li>
-                    <li class=""><a href="javascript:;" class="navigation--link white">Profilku</a></li>
-                    <li class=""><a href="javascript:;" class="button button__tertiary  button--small toggle--modal" data-target="login">Login</a></li>
-                    <li><a href=""><img src="assets/images/logo-twb.png"></a></li>
-                </ul-->         
-
+                @if( Auth::check() )
+                <ul class="list__inline">
+                    <li class=""><a href="{!! url('logout') !!}" class="navigation--link white">Logout</a></li>
+                    <li class=""><a href="{!! url('profile') !!}" class="navigation--link white">Profilku</a></li>
+                    <li><img src="{!! asset('images/logo-twb.png') !!}"></li>
+                </ul>
+                @else
                 <ul class="list__inline ">
                     <li class="login--link"><a href="javascript:;" class="button button__tertiary  button--small toggle--modal navigation--button" data-target="login">Login</a></li>
+                    <li><img src="{!! asset('images/logo-twb.png') !!}"></li>
                 </ul>
+                @endif
             </nav>
         </div>
 
     </header>
-
-
 <!-- end of header -->
 
     <!-- start main section -->
     <section id="section--main" class=" window__fit section text--center">
-
 
         <div class="content--vertical-middle ">
             
@@ -38,10 +36,14 @@
                 
                 <div class="column__span-3-desktop column__span-6-mobile column__offset-3 text--left">
                     <div class="headline--home">    
-                        <figure class="hidden-on-large"><img class="image--responsive" src="{{asset('images/logo.png')}}"></figure>           
+                        <figure class="hidden-on-large"><img class="image--responsive" src="{!! asset('images/logo.png') !!}"></figure>
                         <h2 class="">Ikuti kompetisi foto kreatif Dunia Tini Wini Biti, dan dapatkan puluhan <strong class="text--red">hadiah menarik!</strong></h2>
                         <br>
-                        <button data-target="login" class="toggle--modal button button__primary button--small ">Ikutan Sekarang</button>
+                        @if( Auth::check() )
+                            <a class="button button__primary button--small " href="{!! url('submission') !!}">Ikutan Sekarang</a>
+                        @else
+                            <button data-target="login" class="toggle--modal button button__primary button--small ">Ikutan Sekarang</button>
+                        @endif
                         <br>
                     </div>
 
@@ -74,14 +76,14 @@
                 </div>
 
                 <div id="turtle" class="decoration__character character--turtle animated">
-                    <img src="{{asset('images/fallbacks/duck.png')}}" alt="[turtle]" />
+                    <img src="{{asset('images/fallbacks/turtle.png')}}" alt="[turtle]" />
                 </div>
 
                 <div id="fish" class="decoration__character character--fish">
-                    <img src="{{asset('images/fallbacks/duck.png')}}" alt="[fish]" />
+                    <img src="{{asset('images/fallbacks/fish.png')}}" alt="[fish]" />
                 </div>
                 <div id="butterfly" class="decoration__character character--butterfly" >
-                    <img src="{{asset('images/fallbacks/duck.png')}}" alt="[butterfly]" />
+                    <img src="{{asset('images/fallbacks/butterfly.png')}}" alt="[butterfly]" />
                 </div>
                 
 
@@ -174,7 +176,7 @@
             </div>
 
             <div class="column__span-6 text--center" >
-                <a href="/prize" class="button button__secondary button--small">Selengkapnya</a>
+                <a href="{!! url('/prize') !!}" class="button button__secondary button--small">Selengkapnya</a>
             </div>
         </div>
 
@@ -266,165 +268,24 @@
             <div class="column__span-6">
                  
                  <div class="container__gallery">
-
+                    @foreach($stories as $story)
                     <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
+                        <a href="{!! url('story/' . $story->id) !!}" class="thumb--gallery">
                             <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
+                                <li class="images"><figure><img width="250" src="{!! asset('uploads/' . $story->image_path) !!}"></figure></li>
+                                <li class=" title">{!! $story->title !!}</li>
+                                <li class=" author">Oleh {!! $story->user->name !!}</li>
+                                <li class="likes"><i class="icon icon--likes"></i> {!! $story->likes->count() !!} Likes</li>
                             </ul>
                         </a>
                     </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="photo.html" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
+                    @endforeach
                  </div>
             
             </div>
 
             <div class="column__span-6">
-                <a href="gallery.html" class="button button--small button__secondary">Lihat Semua</a>
+                <a href="{!! url('/gallery') !!}" class="button button--small button__secondary">Lihat Semua</a>
             </div>
 
         </div>
@@ -508,12 +369,12 @@
             </div>
             <div class="modal--span span--signup">
                 <p>Daftar dengan Email</p>
-                <a href="signup.html" class="button flush--top push--bottom button__form button--expand">Email</a>
+                <a href="signup.html" class="button flush--top push--bottom button__form button--expand">Masuk</a>
             </div>
             <br><br>
         </div>
         <div class="modal__footer">
-            <p>Sudah terdaftar? <a href="/signup" class="text--red">Masuk disini</a></p>
+            <p>Sudah terdaftar? <a href="" class="text--red">Masuk disini</a></p>
         </div>
 
         <a href="" class="toggle--close"><i class="icon icon--close"></i></a>

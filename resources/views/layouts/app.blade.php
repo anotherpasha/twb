@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <title>Tini Wini Biti</title>
 
+    @section('meta')
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta charset="utf-8">
-    <meta name="Description" content="a full time front-end developer, a freelancer full stack developer">
-    <link rel="icon" sizes="192x192" href="assets/images/touch/highres-icon.png">   
+    <meta name="Description" content="">
+    <link rel="icon" sizes="192x192" href="{!! asset('images/touch/highres-icon.png') !!}">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@site_account">
@@ -22,6 +23,7 @@
     <meta property="og:description" content="">
     <meta property="og:image" content="">
     <meta name="mobile-web-app-capable" content="yes">
+    @show
     
     <link rel="apple-touch-startup-image" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" href="assets/images/touch/startup-retina.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -40,27 +42,25 @@
 
     <style type="text/css">
 #loader,.pace .pace-progress{position:fixed;width:100%;top:0}.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#ffd847;z-index:1000000001;right:100%;height:6px}#loader{display:table;height:100%;left:0;background-color:#fff;z-index:1000; position: fixed; z-index: 1000000000;}#loader figure{display:table-cell;vertical-align:middle;text-align:center;position:relative}
-
     </style>
-
 </head>
 <body id="app-layout">
 <div id="loader">
     <figure id="logo-loader" >
         <img src="{{asset('images/logo.png')}}">
-    <figure>
+    </figure>
 </div>
 
-
-    @yield('content')
-
-@include('partials/footer')
-
-
+@yield('content')
+@include('partials.sign-in-popup')
+@include('partials.footer')
 
 <script type="text/javascript" src="{{asset('js/libs.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/plugins.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('js/init.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/init.js')}}"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="{{asset('js/twb.js')}}"></script>
 
 
 </body>

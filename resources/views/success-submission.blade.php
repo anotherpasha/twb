@@ -5,7 +5,8 @@
 
 
 <div class="container__main "><!-- start main container -->
-    @include('partials/navbar')
+
+    @include('partials.navbar')
 
     <!-- start success setion -->
     <section  id="section--success-submission" class=" section   section--subpage">
@@ -13,7 +14,7 @@
         <div class="container">
             <div class="column__span-3-desktop text--left column__span-6-mobile">
 
-                 <h1 class="text--center-mobile">Berhasil</h1>
+                 <h1>Berhasil</h1>
                  <br><br>
                  <h6 class="text--white text--center-mobile">
                      Terima kasih Moms telah berpartisipasi dalam kompetisi foto kreatif Dunia Tini Wini Biti! 
@@ -28,7 +29,7 @@
                     <span class="button--text">Share</span>
                 </a>
                 <br><br>
-                <a href="index.html" class="button__back text--white">< Kembali ke beranda</a>
+                <a href="{!! url('/') !!}" class="button__back text--white">< Kembali ke beranda</a>
             </div>
         </div>
     <br><br><br><br>

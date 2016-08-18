@@ -5,49 +5,49 @@
 
 
 <div class="container__main "><!-- start main container -->
-    @include('partials/navbar')
+
+    @include('partials.navbar')
 
     <!-- start submission setion -->
     <section  class="  section  section--subpage text--center">
         
         <div class="container">
             <div class="column__span-6 text--left column__span-6-mobile">
-                <a href="index.html" class="button__back">< Kembali ke beranda</a>
-                 <h1 class="text--center-mobile">Submission Form</h1>
-                 <br><br>
-                 <form class="form__validation ">
-                    <div class="column__span-3-desktop column__span-6-mobile text--center bordered--left">  
+                <a href="{!! url('/') !!}" class="button__back">< Kembali ke beranda</a>
+                <h1 class="text--center-mobile">Submission Form</h1>
+                <br><br>
+                <form class="form__validation " method="post" action="">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="image_path" id="image_path">
+                    <div class="column__span-3-desktop column__span-6-mobile text--center bordered--left">
                         <div class="uploader__wrapper">             
-                                <div id="uploader"></div>
-
-                             <div class="uploader--label">
+                            <div id="uploader"></div>
+                            <div class="uploader--label">
                                 <div class="content--vertical-middle">
                                     <span class="upload--label">Lampirkan foto</span> <br>
                                     <small>Max 2MB</small>
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
                     <div class="column__span-3-desktop column__span-6-mobile bordered--left">   
                         <p>Ceritakan fotomu!</p>            
                         <div class="form__control ">
-                            <input type="text" placeholder="Judul Cerita Seru Moms dan si kecil"/>
+                            <input type="text" name="title" placeholder="Judul Cerita Seru Moms dan si kecil" value="{!! old('title') !!}"/>
                         </div>
                         <div class="form__control ">
-                            <textarea placeholder="Sertakan serita seru Moms dan si kecil bersama karakter Tini Wini Biti" ></textarea>
+                            <textarea name="story" placeholder="Sertakan serita seru Moms dan si kecil bersama karakter Tini Wini Biti" >{!! old('story') !!}</textarea>
                         </div>
                         <div class="form__control">
-                            <!--button type="submit" class="button button__secondary button--small disabled">Daftar</button-->
-                            <a href="/success-submission" class="button button__secondary button--small disabled">Daftar</a>
-
+                            <button type="submit" class="button button__secondary button--small disabled">Daftar</button>
                         </div>
                     </div>
 
                     <div class="column__span-3-desktop">
                         
                     </div>
-                 </form>
+                </form>
             </div>
         </div>
 

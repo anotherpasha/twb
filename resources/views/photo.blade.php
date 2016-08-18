@@ -2,37 +2,37 @@
 
 @section('content')
 
-
-
 <div class="container__main "><!-- start main container -->
-    @include('partials/navbar')
+
+    @include('partials.navbar')
+
     <!-- start photo detail section -->
     <section id="section--photo-detail" class="  section  section--subpage">
         <div class="container">         
-            <a href="gallery.html" class="text--white">< Kembali ke gallery</a>
+            <a href="{!! url('/gallery') !!}" class="text--white">< Kembali ke gallery</a>
         
             <div class="container__photo-detail">
                     <div class="column__span-6 text--center">
                         <figure class="image--figured">
-                            <img class="image--responsive" src="{{asset('images/submission-01.jpg')}}">
+                            <img class="image--responsive" src="{!! asset('uploads/' . $story->image_path) !!}">
                         </figure>
 
                         <div class="photo--detail text--left">
                             <div class="caption--header">                           
-                                <h2 class="title">Judul Foto Disini</h2>
-                                <span class="likes--counter"><i class="icon--likes icon"></i> Likes</span>
+                                <h2 class="title">{!! $story->title !!}</h2>
+                                <a href="{!! url('like/' . $story->id) !!}" class="likes--counter"><i class="icon--likes icon"></i> {!! $story->likes->count() !!} Likes</a>
                             </div>
 
-                            <p class="text--primary">oleh Jane Doe</p>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus!</p>                          
+                            <p class="text--primary">oleh {!! $story->user->name !!}</p>
+                            <p>{!! $story->story !!}</p>
                         </div>
 
                         <div class="share--group  text--left">
-                            <a href="" class="button button__split button--facebook-share  ">
+                            <a href="{!! $shareLinks['facebook'] !!}" class="button button__split button--facebook-share  ">
                                 <span class="button--icon"><i class="icon icon--facebook"></i></span>
                                 <span class="button--text">Share</span>
                             </a>
-                            <a href="" class="button button__split button--tweet  ">
+                            <a href="{!! $shareLinks['twitter'] !!}" class="button button__split button--tweet  ">
                                 <span class="button--icon"><i class="icon icon--twitter"></i></span>
                                 <span class="button--text">Tweet</span>
                             </a>                
@@ -40,7 +40,7 @@
                         <hr>
                     </div>
 
-                    <div class="column__span-6">
+                    <!-- div class="column__span-6">
                         <h4>Comments</h4>
                         <div class="block__comment">
                             <div class="block__comment--avatar small">
@@ -114,7 +114,7 @@
                             </div>
                         </div>                      
 
-                    </div>
+                    </div --> <!-- end of comment -->
             </div>
         </div>
     </section>
@@ -123,7 +123,4 @@
 
 
 </div><!-- end of main container -->
-
-
-
 @endsection

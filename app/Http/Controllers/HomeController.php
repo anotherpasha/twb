@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Auth;
+use App\Story;
 
 class HomeController extends Controller
 {
@@ -24,6 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data['stories'] = Story::all()->take(8);
+        return view('home', $data);
     }
 }

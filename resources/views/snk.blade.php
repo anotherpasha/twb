@@ -2,16 +2,16 @@
 
 @section('content')
 
-
-
 <div class="container__main "><!-- start main container -->
-    @include('partials/navbar')
+
+    @include('partials.navbar')
+
     <!-- start snk setion -->
     <section  class="  section  section--subpage">
         
         <div class="container">
             <div class="column__span-5 text--left column__span-6-mobile">
-                <a href="index.html" class="button__back">< Kembali ke beranda</a>
+                <a href="{!! url('/') !!}" class="button__back">< Kembali ke beranda</a>
                  <h1>Syarat &amp; Ketentuan</h1>
                  <br><br>
                  <p>
@@ -41,7 +41,4 @@
 
 
 </div><!-- end of main container -->
-
-
-
 @endsection

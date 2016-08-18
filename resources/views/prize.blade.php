@@ -2,14 +2,15 @@
 
 @section('content')
 <div class="container__main "><!-- start main container -->
-    @include('partials/navbar')
+
+    @include('partials.navbar')
 
 	<section id="section--prize" class=" window__fit section ">
 		<div class="content--vertical-middle">
 		
 			<div class="section__container">
-				<a href="/" class="text--primary">< Kembali ke beranda</a>
-				<h1 class="text--center-mobile">Hadiah-hadiah</h1>
+				<a href="{!! url('/') !!}" class="text--primary">< Kembali ke beranda</a>
+				<h1 >Hadiah-hadiah</h1>
 				<br>
 				<div class="column__span-3 column__span-6-mobile">
 					<figure>
