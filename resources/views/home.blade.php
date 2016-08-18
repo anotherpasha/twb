@@ -42,7 +42,7 @@
                         @if( Auth::check() )
                             <a class="button button__primary button--small " href="{!! url('submission') !!}">Ikutan Sekarang</a>
                         @else
-                            <button data-target="login" class="toggle--modal button button__primary button--small ">Ikutan Sekarang</button>
+                            <a  href="#login" data-target="login" class="toggle--modal button button__primary button--small ">Ikutan Sekarang</a>
                         @endif
                         <br>
                     </div>
