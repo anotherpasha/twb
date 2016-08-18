@@ -21,7 +21,7 @@
 
             <div class="form--login">
                 <p>Masuk dengan email</p>
-                    <form  role="form" method="POST" action="{{ url('/login') }}">
+                    <form  role="form" method="POST" action="{{ url('/login/#login') }}">
                         {{ csrf_field() }}
                         <div class="form__control{{ $errors->has('email') ? ' has-error' : '' }}">
                             <input  id="email"  type="email" placeholder="Email" value="{{ old('email') }}" />
@@ -49,14 +49,14 @@
 
                     </form>
                 <div>
-                    <!-- p>Belum terdaftar? <a href="" class="toggle--modal text--red" data-target="signup">Daftar disini</a></p -->
-                    <p>Belum terdaftar? <a href="{!! url('register') !!}" class="text--red">Daftar disini</a></p>
-                </div>
+                    <p>Belum terdaftar? <a href="#signup" class="toggle--modal text--red" data-target="signup">Daftar disini</a></p>
+<!--                     <p>Belum terdaftar? <a href="{!! url('register') !!}" class="text--red">Daftar disini</a></p>
+ -->                </div>
             </div>
 
 
         </div>
-        <a href="" class="toggle--close"><i class="icon icon--close"></i></a>
+        <a href="#" class="toggle--close"><i class="icon icon--close"></i></a>
     </div>
 
 </div>
@@ -95,6 +95,6 @@
             <p>Sudah terdaftar? <a href="" class="text--red">Masuk disini</a></p>
         </div>
 
-        <a href="" class="toggle--close"><i class="icon icon--close"></i></a>
+        <a href="#" class="toggle--close"><i class="icon icon--close"></i></a>
     </div>
 </div>

@@ -17,7 +17,7 @@
                 </ul>
                 @else
                 <ul class="list__inline ">
-                    <li class="login--link"><a href="javascript:;" class="button button__tertiary  button--small toggle--modal navigation--button" data-target="login">Login</a></li>
+                    <li class="login--link"><a href="#login" class="button button__tertiary  button--small toggle--modal navigation--button" data-target="login">Login</a></li>
                     <li><img src="{!! asset('images/logo-twb.png') !!}"></li>
                 </ul>
                 @endif
