@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class StoryLike extends Model
 {
+
+    protected $fillable = ['story_id', 'user_id'];
+
     public function story()
     {
         return $this->belongsTo(Story::class);
