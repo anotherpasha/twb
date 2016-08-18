@@ -44,6 +44,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/profile', 'UserController@profile');
 
+    Route::get('/like/{id}', 'StoryController@likeStory');
+
     Route::get('/success-submission', function () {
         return view('success-submission');
     });
