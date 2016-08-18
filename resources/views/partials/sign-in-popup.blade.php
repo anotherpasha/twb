@@ -21,19 +21,33 @@
 
             <div class="form--login">
                 <p>Masuk dengan email</p>
-                <form action="{!! url('/ajax/login') !!}" class="login-form" method="post">
-                    {{ csrf_field() }}
-                    <div class="form__control">
-                        <input type="email" name="email" placeholder="Email" />
-                    </div>
-                    <div class="form__control">
-                        <input type="password" name="password" placeholder="Password" />
-                    </div>
-                    <div class="form__submit">
-                        <button type="submit" class="button flush--top push--bottom button__form button--expand">Masuk</button>
-                    </div>
+                    <form  role="form" method="POST" action="{{ url('/login') }}">
+                        {{ csrf_field() }}
+                        <div class="form__control{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <input  id="email"  type="email" placeholder="Email" value="{{ old('email') }}" />
 
-                </form>
+                            @if ($errors->has('email'))
+                                <div class="panel--error">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </div>
+                            @endif
+                        </div>
+
+                        <div class="form__control{{ $errors->has('password') ? ' has-error' : '' }}" >
+                            <input id="password" placeholder="Password"  type="password" class="form-control" name="password">
+
+                            @if ($errors->has('password'))
+                                <div class="panel--error">
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </div>
+                            @endif
+
+                        </div>
+                        <div class="form__submit">
+                            <button type="submit" class="button flush--top push--bottom button__form button--expand">Masuk</button>
+                        </div>
+
+                    </form>
                 <div>
                     <!-- p>Belum terdaftar? <a href="" class="toggle--modal text--red" data-target="signup">Daftar disini</a></p -->
                     <p>Belum terdaftar? <a href="{!! url('register') !!}" class="text--red">Daftar disini</a></p>
