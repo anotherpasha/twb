@@ -37,7 +37,7 @@
                             <input type="text" name="title" placeholder="Judul Cerita Seru Moms dan si kecil" value="{!! old('title') !!}"/>
                         </div>
                         <div class="form__control ">
-                            <textarea name="story" placeholder="Sertakan serita seru Moms dan si kecil bersama karakter Tini Wini Biti" >{!! old('story') !!}</textarea>
+                            <textarea id="editor--story" name="story" placeholder="Sertakan serita seru Moms dan si kecil bersama karakter Tini Wini Biti" >{!! old('story') !!}</textarea>
                         </div>
                         <div class="form__control">
                             <button type="submit" class="button button__secondary button--small disabled">Daftar</button>
