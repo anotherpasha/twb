@@ -13,7 +13,7 @@
         
         <div class="container">
             <div class="column__span-3-desktop text--left column__span-6-mobile text--center-mobile">
-                <a href="{!! url('/') !!}" class="button__back">< Kembali ke beranda</a>
+                <a href="{!! url('/') !!}" class="button__back button--expand text--left">< Kembali ke beranda</a>
                 <h1>Profilku</h1>
                 <br>
                 <div class="username rounded">
