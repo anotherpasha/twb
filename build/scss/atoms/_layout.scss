@@ -71,7 +71,7 @@ $gallery: (
         @include container(1024px);
           @include mappy-bp(max-width small)
           {
-            @include container(90%);
+            @include container(95%);
           }
       }
 
@@ -104,6 +104,10 @@ $gallery: (
                   #section--success-submission
                   {
                     background: url(../images/characters.png) no-repeat bottom right,#32c0ff;
+                      @include mappy-bp(max-width small)
+                      {
+                        background-size: 100%;
+                      }
                   }
 
                   #section--photo-detail
@@ -132,6 +136,7 @@ $gallery: (
                     min-height: 100vh;
                   }
 
+
 .content--vertical-middle 
   {
 	display: table-cell;
@@ -145,6 +150,14 @@ $gallery: (
   {
     @include container(770px);
   }
+
+      .wrapper--login
+      {
+        max-width: 400px;
+        margin: auto;
+        text-align: center;
+        margin-top: 40px;
+      }
 
 .row
 {

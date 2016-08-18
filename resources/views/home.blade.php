@@ -17,7 +17,7 @@
                 </ul>
                 @else
                 <ul class="list__inline ">
-                    <li class="login--link"><a href="javascript:;" class="button button__tertiary  button--small toggle--modal navigation--button" data-target="login">Login</a></li>
+                    <li class="login--link"><a href="#login" class="button button__tertiary  button--small toggle--modal navigation--button" data-target="login">Login</a></li>
                     <li><img src="{!! asset('images/logo-twb.png') !!}"></li>
                 </ul>
                 @endif
@@ -42,7 +42,7 @@
                         @if( Auth::check() )
                             <a class="button button__primary button--small " href="{!! url('submission') !!}">Ikutan Sekarang</a>
                         @else
-                            <button data-target="login" class="toggle--modal button button__primary button--small ">Ikutan Sekarang</button>
+                            <a  href="#login" data-target="login" class="toggle--modal button button__primary button--small ">Ikutan Sekarang</a>
                         @endif
                         <br>
                     </div>
@@ -155,9 +155,9 @@
 
             <div class="column__span-3-desktop column__span-6-mobile ">
                 <br>
-                <h2>GRAND PRIZE</h2>
+                <h2 class="text--red text--center-mobile">GRAND PRIZE</h2>
                 <br>
-                <ul class="list__undot list--prize">
+                <ul class="list__undot list--prize text--center-mobile">
                     <li>
                         <h6>1 Unit</h6>
                         <h4>Nintendo Wii</h4>
@@ -295,5 +295,10 @@
 
 
 </div><!-- end of main container -->
+
+@include('partials.sign-in-popup')
+
+
+
 
 @endsection

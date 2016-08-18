@@ -68,6 +68,10 @@
 			{
 				padding: 0 10px;
 				color: $primary-color;
+					@include mappy-bp(max-width small)
+					{
+						padding: 0 5px;
+					}
 			}
 
 		.images
@@ -91,15 +95,27 @@
 		{
 			font-size: 18px;
 			font-family: $oduda;
+				@include mappy-bp(max-width small)
+				{
+					font-size: 14px;
+				}
 
 		}
 		.author
 		{
 			font-size: 12px;
+				@include mappy-bp(max-width small)
+				{
+					font-size: 10px;
+				}
 		}
 		.likes
 		{
 			font-size: 12px;
 			margin-top: 5px;
+				@include mappy-bp(max-width small)
+				{
+					font-size: 10px;
+				}
 		}
 	}

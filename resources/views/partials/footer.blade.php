@@ -4,9 +4,9 @@
 				
 				<ul class="list__inline list--foot">
 					<li>
-						<a href="{!! url('/snk') !!}">Terms &amp; Condition</a>
+						<a href="{!! url('/snk') !!}">Syarat &amp;  Ketentuan</a>
 					</li>
-					<li class="list--divider"> | </li>
+					<li class="list--divider hidden-on-small"> | </li>
 					<li>
 						<a href="javascript:;">Copyright © {!! date('Y') !!} Tini Wini Biti </a>
 					</li>

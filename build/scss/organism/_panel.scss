@@ -1,0 +1,12 @@
+.panel--error
+{
+	display: inline-block;
+	margin-top: 5px;
+	background-color: scale-color($red, $lightness: 20%);
+	padding: 10px 10px;
+	color: $white;
+	text-align: left;
+	width: 100%;
+	font-size: 12px;
+	margin-bottom: 20px;
+}

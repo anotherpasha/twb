@@ -10,7 +10,7 @@
 		
 			<div class="section__container">
 				<a href="{!! url('/') !!}" class="text--primary">< Kembali ke beranda</a>
-				<h1 >Hadiah-hadiah</h1>
+				<h1 class="text--center-mobile">Hadiah-hadiah</h1>
 				<br>
 				<div class="column__span-3 column__span-6-mobile">
 					<figure>
@@ -22,7 +22,7 @@
 
 				<div class="column__span-3 column__span-6-mobile  text--center-mobile">
 					<br>
-					<h2 class="text--red">GRAND PRIZE</h2>
+					<h2 class="text--red text--center-mobile">GRAND PRIZE</h2>
 					<br>
 					<ul class="list__undot list--prize text--center-mobile">
 						<li>

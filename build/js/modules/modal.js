@@ -7,54 +7,66 @@
 	var close_toggle   = document.querySelectorAll('.toggle--close');
 	var appear     	     = new TimelineMax();
 	var disapear 	     = new TimelineMax();
+	var hash = window.location.hash;
 
 
-	_.each(modal_toggle, function (modal) {
-		modal.addEventListener('click', function (e) {
-			e.preventDefault();
-			var target = modal.getAttribute('data-target');
-				 container = document.getElementById(target);
-				 dialog = container.children[0];
-				 close =  dialog.lastElementChild;
+	function modalShow (target)
+	{
+		 dialog = target.children[0];
+		 close =  dialog.lastElementChild;
+		target.classList.add('active');
+		 var container_appear  = TweenMax.fromTo(target, 0.3, {
+								 	display: 'none',
+								 	scale: 0
+								 },
+								 {
+								 	display: 'block',
+								 	scale: 1
+								 }
+								 );
 
-
-			container.classList.add('active');
-			 var container_appear  = TweenMax.fromTo(container, 0.3, {
-									 	display: 'none',
-									 	scale: 0
+		 var dialog_appear		= 	TweenMax.fromTo(dialog, 0.5, {
+									 	y: -300,
+									 	opacity: 0
 									 },
 									 {
-									 	display: 'block',
-									 	scale: 1
-									 }
-									 );
+									 	y: 0,
+									 	opacity: 1
 
-			 var dialog_appear		= 	TweenMax.fromTo(dialog, 0.5, {
-										 	y: -300,
-										 	opacity: 0
-										 },
-										 {
-										 	y: 0,
-										 	opacity: 1
+									 })
+		 appear.add(container_appear)
+		 		.add(dialog_appear)		
+	}	
 
-										 })
+			// triggering with hash
+			if(hash.length > 0)
+			{
+				 container = document.querySelector(hash);
 
 
-			 appear.add(container_appear)
-			 		.add(dialog_appear)
+				modalShow(container);	
+			}	
 
+	_.each(modal_toggle, function (modal) {
 
+		modal.addEventListener('click', function (e) {
+			// e.preventDefault();
 
-
+			var target = modal.getAttribute('data-target');
+				 container = document.getElementById(target);
+			modalShow(container);
 
 		});
+
 	})
+
 
 	// Close Modal
 
 	_.each(close_toggle, function (close) {
 		close.addEventListener('click', function(e) {
-			e.preventDefault();
+			// e.preventDefault();
+			
 			dialog = this.parentElement
 			container 	   = this.parentElement.parentElement
 
@@ -82,7 +94,6 @@
 
 			 disapear.add(dialog_disapear)
 			 		  .add(container_disapear)
-
 
 		})
 	});

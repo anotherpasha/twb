@@ -2,16 +2,45 @@ footer
 {
 	background-color: $primary-color;
 	padding: 24px 0;
+		@include mappy-bp(max-width small)
+		{
+			padding: 5px 0;
+		}
 }
 .list--foot
 {
-
+	@include mappy-bp(max-width small)
+	{
+		width: 100%;
+		text-align: center;
+	}
 	li
 	{
 		color: #6184cf;
-			margin-right: 10px;
+		margin-right: 10px;
+			@include mappy-bp(max-width small)
+			{
+				float: none !important;
+				width: auto;
+					&:first-child
+					{
+						a
+						{
+							border-bottom: solid 1px scale-color($primary-color, $lightness: -20%);
+
+						}
+					}
+
+			}
 		a{
 			color: #6184cf;
+				@include mappy-bp(max-width small)
+				{
+					padding: 10px;
+					width: auto;
+
+
+				}			
 		}
 	}
 }

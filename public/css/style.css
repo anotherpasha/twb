@@ -518,7 +518,7 @@ img.fluid {
     clear: both; }
   @media all and (max-width: 39.9375em) {
     .container {
-      max-width: 90%;
+      max-width: 95%;
       margin-left: auto;
       margin-right: auto; }
       .container:after {
@@ -548,6 +548,9 @@ img.fluid {
 
 #section--success-submission {
   background: url(../images/characters.png) no-repeat bottom right, #32c0ff; }
+  @media all and (max-width: 39.9375em) {
+    #section--success-submission {
+      background-size: 100%; } }
 
 #section--photo-detail {
   position: relative; }
@@ -582,6 +585,12 @@ img.fluid {
     content: " ";
     display: block;
     clear: both; }
+
+.wrapper--login {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  margin-top: 40px; }
 
 .row {
   margin-left: -15px;
@@ -1097,7 +1106,7 @@ input[type], textarea {
   border-radius: 10px;
   font-size: 14px;
   width: 100%;
-  color: #b8b8b8; }
+  color: #454545; }
   input[type]:focus, textarea:focus {
     outline: none;
     border: solid 1px #dadada;
@@ -1113,12 +1122,13 @@ label {
 
 textarea {
   height: 150px;
-  color: #e6e6e6;
-  color: #b8b8b8; }
+  color: #454545; }
 
 .form--login {
   max-width: 70%;
   margin: auto; }
+  .form--login.page {
+    max-width: 40%; }
 
 .form--comment textarea {
   height: 100px !important; }
@@ -1325,17 +1335,35 @@ textarea {
 .list--prize {
   text-align: left; }
   .list--prize li {
-    margin-bottom: 10px; }
+    margin-bottom: 15px;
+    line-height: 1; }
 
 footer {
   background-color: #1e419b;
   padding: 24px 0; }
+  @media all and (max-width: 39.9375em) {
+    footer {
+      padding: 5px 0; } }
 
+@media all and (max-width: 39.9375em) {
+  .list--foot {
+    width: 100%;
+    text-align: center; } }
 .list--foot li {
   color: #6184cf;
   margin-right: 10px; }
+  @media all and (max-width: 39.9375em) {
+    .list--foot li {
+      float: none !important;
+      width: auto; }
+      .list--foot li:first-child a {
+        border-bottom: solid 1px #18347c; } }
   .list--foot li a {
     color: #6184cf; }
+    @media all and (max-width: 39.9375em) {
+      .list--foot li a {
+        padding: 10px;
+        width: auto; } }
 
 .headline--home {
   display: inline-block;
@@ -1469,6 +1497,17 @@ footer {
     color: #8a8a8a; }
   .block__comment--content ul .time {
     color: #b8b8b8; }
+
+.panel--error {
+  display: inline-block;
+  margin-top: 5px;
+  background-color: #f04950;
+  padding: 10px 10px;
+  color: #ffffff;
+  text-align: left;
+  width: 100%;
+  font-size: 12px;
+  margin-bottom: 20px; }
 
 header {
   position: absolute;
@@ -1627,6 +1666,9 @@ header {
   .cards--gallery li {
     padding: 0 10px;
     color: #1e419b; }
+    @media all and (max-width: 39.9375em) {
+      .cards--gallery li {
+        padding: 0 5px; } }
   .cards--gallery .images {
     display: inline-block;
     width: 100%;
@@ -1642,11 +1684,20 @@ header {
   .cards--gallery .title {
     font-size: 18px;
     font-family: "Oduda-Bold"; }
+    @media all and (max-width: 39.9375em) {
+      .cards--gallery .title {
+        font-size: 14px; } }
   .cards--gallery .author {
     font-size: 12px; }
+    @media all and (max-width: 39.9375em) {
+      .cards--gallery .author {
+        font-size: 10px; } }
   .cards--gallery .likes {
     font-size: 12px;
     margin-top: 5px; }
+    @media all and (max-width: 39.9375em) {
+      .cards--gallery .likes {
+        font-size: 10px; } }
 
 .wrapper__thumb {
   -moz-box-sizing: border-box;

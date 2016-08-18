@@ -5,7 +5,7 @@ input[type], textarea
 	@include vendor((border-radius: 10px), webkit moz  ms o);
 	font-size: 14px;
 	width: 100%;
-	color: scale-color($grey-default, $lightness: -20%);
+	color: scale-color($grey-default, $lightness: -70%);
 		&:focus
 		{
 			outline: none;
@@ -22,13 +22,16 @@ label
 textarea
 {
 	height: 150px;
-	color: $grey-default;
-	color: scale-color($grey-default, $lightness: -20%);
-
+	color: scale-color($grey-default, $lightness: -70%);
 }
 .form--login{
 	max-width: 70%;
 	margin: auto;
+		&.page
+		{
+			max-width: 40%;
+		}
+
 }
 
 .form--comment
