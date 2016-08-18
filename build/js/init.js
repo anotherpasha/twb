@@ -60,7 +60,6 @@ Pace.on('done', function() {
 	 var toggle_scroll = document.getElementById('scroll-bottom'),
 	 	arrow		   = document.getElementById('arrow-down'),
 	 	prize_offset ;
-	 	console.log(toggle_scroll)
 
 	 	if(toggle_scroll != null)
 	 	{
@@ -92,7 +91,7 @@ Pace.on('done', function() {
 	 */
 
 	//  var controller =  new ScrollMagic.Controller();
-	console.log(tinymce)
+
 	tinymce.init({   
 		selector: '#editor--story',
 		height: 150
@@ -117,18 +116,6 @@ Pace.on('done', function() {
 	        });
 	}
 
-	// // Tested get offset top each section
-	// var sections = document.querySelectorAll('section');
-	// _.each(sections, function(section) {
-	// 		var autobottom = new ScrollMagic.Scene({
-	// 							triggerElement: document.querySelectorAll('section')
-	// 						})
-	// 						.addTo(controller)
-	// 						.on('enter', function(e) {
-	// 							TweenMax.to(window, 2, {scrollTo:{y:section.offsetTop}, ease:Power2.easeOut, delay: 3});
-
-	// 						})
-	// })
 
 
 })

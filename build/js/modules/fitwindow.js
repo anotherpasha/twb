@@ -31,7 +31,6 @@ var config = {
  
  	init: function() {
  		if(typeof element == undefined || element.length <= 0) {
- 			console.log('return')
  			return;
  		}
  		this.getHeight();
