@@ -7,7 +7,7 @@
     <header>
         <div class="container">
             
-            <a href="index.html" class="navbar--logo"><img src="{{asset('/images/logo.png')}}"></a>
+            <a href="/" class="navbar--logo"><img src="{{asset('images/logo.png')}}"></a>
             <nav class="navigation--home">
                 <!-- is login == true -->
                 <!--ul class="list__inline">
@@ -38,7 +38,7 @@
                 
                 <div class="column__span-3-desktop column__span-6-mobile column__offset-3 text--left">
                     <div class="headline--home">    
-                        <figure class="hidden-on-large"><img class="image--responsive" src="assets/images/logo.png"></figure>           
+                        <figure class="hidden-on-large"><img class="image--responsive" src="{{asset('images/logo.png')}}"></figure>           
                         <h2 class="">Ikuti kompetisi foto kreatif Dunia Tini Wini Biti, dan dapatkan puluhan <strong class="text--red">hadiah menarik!</strong></h2>
                         <br>
                         <button data-target="login" class="toggle--modal button button__primary button--small ">Ikutan Sekarang</button>
@@ -153,9 +153,9 @@
 
             <div class="column__span-3-desktop column__span-6-mobile ">
                 <br>
-                <h2>GRAND PRIZE</h2>
+                <h2 class="text--red text--center-mobile">GRAND PRIZE</h2>
                 <br>
-                <ul class="list__undot list--prize">
+                <ul class="list__undot list--prize text--center-mobile">
                     <li>
                         <h6>1 Unit</h6>
                         <h4>Nintendo Wii</h4>
@@ -174,7 +174,7 @@
             </div>
 
             <div class="column__span-6 text--center" >
-                <a href="prize.html" class="button button__secondary button--small">Selengkapnya</a>
+                <a href="/prize" class="button button__secondary button--small">Selengkapnya</a>
             </div>
         </div>
 
@@ -508,12 +508,12 @@
             </div>
             <div class="modal--span span--signup">
                 <p>Daftar dengan Email</p>
-                <a href="signup.html" class="button flush--top push--bottom button__form button--expand">Masuk</a>
+                <a href="signup.html" class="button flush--top push--bottom button__form button--expand">Email</a>
             </div>
             <br><br>
         </div>
         <div class="modal__footer">
-            <p>Sudah terdaftar? <a href="" class="text--red">Masuk disini</a></p>
+            <p>Sudah terdaftar? <a href="/signup" class="text--red">Masuk disini</a></p>
         </div>
 
         <a href="" class="toggle--close"><i class="icon icon--close"></i></a>

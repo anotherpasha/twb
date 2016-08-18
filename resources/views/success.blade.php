@@ -8,7 +8,7 @@
     <header class="navbar__subpage">
         <div class="container">
             
-        <a href="index.html" class="navbar--logo push-half--top"><img src="{{asset('images/logo-small.png')}}"></a>
+        <a href="/" class="navbar--logo push-half--top"><img src="{{asset('images/logo-small.png')}}"></a>
 
         <nav class="navigation--home hard">
             <!-- is login = true -->
@@ -33,7 +33,7 @@
 		
 		<div class="container">
 			<div class="column__span-3-desktop text--left column__span-6-mobile ">
-				<a href="index.html" class="button__back">< Kembali ke beranda</a>
+				<a href="/" class="button__back">< Kembali ke beranda</a>
 				 <h1 class="text--center-mobile">Pendaftaran Berhasil</h1>
 				 <br><br>
 				 <h6 class="text--center-mobile">Sekarang kamu telah terdaftar dalam kompetisi ini, ayo kirimkan foto kreatifmu!</h6>

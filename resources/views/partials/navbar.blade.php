@@ -1,7 +1,7 @@
 <header class="navbar__subpage">
     <div class="container">
         
-    <a href="index.html" class="navbar--logo push-half--top"><img src="{{ asset('images/logo.png') }}"></a>
+    <a href="/" class="navbar--logo push-half--top"><img src="{{asset('images/logo-small.png')}}"></a>
 
     <nav class="navigation--home hard">
         <ul class="list__inline">

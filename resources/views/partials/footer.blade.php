@@ -4,9 +4,9 @@
 				
 				<ul class="list__inline list--foot">
 					<li>
-						<a href="snk.html">Terms &amp; Condition</a>
+						<a href="snk.html">Syarat &amp;  Ketentuan</a>
 					</li>
-					<li class="list--divider"> | </li>
+					<li class="list--divider hidden-on-small"> | </li>
 					<li>
 						<a href="javascript:;">Copyright © 2016 Tini Wini Biti </a>
 					</li>
