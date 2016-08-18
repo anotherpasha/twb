@@ -1,12 +1,12 @@
 /* ====================== *\
-    Config Layout Section
+	Config Layout Section
 \* ====================== */
 /**
  ** a config layout for gallery section
  ** this config it's config from susy
  */
 
-$global: (
+$susy: (
   flow: ltr,
   math: fluid,
   output: float,
@@ -39,9 +39,210 @@ $gallery: (
   gutter-position: inside,
   container: auto,
   container-position: center,
-  columns: 6,
+  columns: 4,
   gutters: 1/8,
   column-width: false,
   global-box-sizing: content-box,
   last-flow: to,
 );
+
+
+/* ============================== *\
+	Container
+\* ============================== */
+
+.section
+{
+	display: table;
+	width: 100%;
+      position: relative;
+}
+	.section__container
+	{
+		@include container(1024px);
+            position: relative;
+                @include mappy-bp(max-width small)
+                {
+                  @include container(95%);
+                }
+	}
+      .container
+      {
+        @include container(1024px);
+          @include mappy-bp(max-width small)
+          {
+            @include container(95%);
+          }
+      }
+
+			#section--main 
+			{
+				@include linear-gradient($tertiary-color 0%,  $white 100%);
+			}
+
+                  #section--prize 
+                  {
+                    background-color: $querniry-color;
+                    padding-top: 40px;
+                    padding-bottom: 90px; 
+                  }
+
+                  #section--howto 
+                  {
+                    background-color: $white;
+                    padding-bottom: 65px;
+                    padding-top: 75px;
+                  }
+
+                  #section--gallery 
+                  {
+                   background-color: scale-color($white, $lightness: -10%);
+                   padding-top: 66px;
+                   padding-bottom: 68px;
+                  }
+
+                  #section--success-submission
+                  {
+                    background: url(../images/characters.png) no-repeat bottom right,#32c0ff;
+                      @include mappy-bp(max-width small)
+                      {
+                        background-size: 100%;
+                      }
+                  }
+
+                  #section--photo-detail
+                  {
+                    position: relative;
+                      &:before
+                        {
+                          position: absolute;
+                          width: 100%;
+                          content: '';
+                          height: 300px;
+                          top: 0;
+                          left: 0;
+                          background-color: #32c0ff;
+                          z-index: -1;
+                            @include mappy-bp(max-width small)
+                            {
+                              height: 180px;
+                            }
+                        }
+                  }
+
+                  .section--subpage
+                  {
+                    padding: 40px 0;
+                    min-height: 100vh;
+                  }
+
+
+.content--vertical-middle 
+  {
+	display: table-cell;
+	vertical-align: middle;
+      position: relative;
+      z-index: 10;
+
+  }
+
+  .container__photo-detail
+  {
+    @include container(770px);
+  }
+
+      .wrapper--login
+      {
+        max-width: 400px;
+        margin: auto;
+        text-align: center;
+        margin-top: 40px;
+      }
+
+.row
+{
+    margin-left: -15px;
+    margin-right: -15px;
+    display: block;
+    @include mappy-bp(max-width small)
+    {
+      margin-left: 0;
+      margin-right: 0;
+    }
+}
+
+  /**
+   ** Column 
+   */
+   .column
+   {
+        &__span-1
+        {
+          @include span(1);
+        }
+
+        &__span-2
+        {
+          @include span(2);
+        }
+        &__span-2-desktop
+        {
+          @include span(2);
+        }
+
+        &__span-3-desktop
+        {
+          @include span(3);
+        }
+        &__span-3
+        {
+          @include span(3);
+
+        }
+
+        &__span-4
+        {
+          @include span(4);
+        }
+
+        &__span-5
+        {
+          @include span(5);
+        }
+
+        &__span-6
+        {
+          @include span(6);
+        }
+
+
+
+        &__span-6-mobile
+        {
+            @include mappy-bp(max-width small)
+            {
+              @include span(6);
+            }
+        }
+
+        &__offset-3
+        {
+          @include push(3);
+          @include mappy-bp(max-width small)
+          {
+            @include push(0);
+          }
+
+        }
+
+
+   }
+
+   .bordered--left
+   {
+    border-left: solid 1px scale-color($grey-default, $lightness: -10%);
+        @include mappy-bp(max-width small)
+        {
+          border-left: none;
+        }
+   }

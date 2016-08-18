@@ -1,18 +1,121 @@
-.testimonial-content{
-	display: block;
-	width: 100%;
-	max-width: 584px;
-	margin: auto;
-	list-style: none;
-		li{
-			margin-bottom: 25px;
-		}
-		.images{
-			display: inline-block;
-			width: 120px;
-			height: 120px;
-			overflow: hidden;
-			@include vendor((border-radius: 10000px), webkit moz ms o);
-		}
-
+@include with-layout(3)
+{
+	.cards__wrapper
+	{
+		@include span(1);
+		padding: 0 10px;
+			@include mappy-bp(max-width small)
+			{
+				@include span(3);
+				margin-bottom: 20px;
+			}
+	}
 }
+
+.cards
+{
+	list-style: none;
+	display: inline-block;
+	width: 100%;
+	position: relative;
+}
+	.cards--howto
+	{
+		background-color: $grey-default;
+		padding: 36px 10px;
+		@include vendor((border-radius: 10px), webkit moz ms o);
+		min-height: 380px;
+		@include mappy-bp(max-width small)
+		{
+			min-height: auto;
+		}
+			li
+			{
+				font-family: $oduda;
+			}
+			.title
+			{
+				font-size: 23px;
+				color: $red;
+				margin-bottom: 10px;
+					@include mappy-bp(max-width small)
+					{
+						font-size: 20px;
+					}
+			}
+			.description
+			{
+				font-size: 19px;
+				color: $primary-color;
+				margin-bottom: 15px;
+					@include mappy-bp(max-width small)
+					{
+						font-size: 18px;
+					}
+
+			}
+	}
+
+	.cards--gallery
+	{
+		background-color: $white;
+		@include vendor((border-radius: 10px), webkit moz ms o);
+		overflow: hidden;
+		text-align: left;
+		padding-bottom: 10px;
+		border: solid 1px scale-color($white, $lightness: -15%);
+			li
+			{
+				padding: 0 10px;
+				color: $primary-color;
+					@include mappy-bp(max-width small)
+					{
+						padding: 0 5px;
+					}
+			}
+
+		.images
+		{
+			display: inline-block;
+			width: 100%;
+			padding: 0;
+			height: 150px;
+			overflow: hidden;
+			background-color: $black;
+			@include mappy-bp(max-width small)
+			{
+				height: 110px;
+			}
+				figure
+				{
+					margin:  0 -10px;
+				}
+		}
+		.title
+		{
+			font-size: 18px;
+			font-family: $oduda;
+				@include mappy-bp(max-width small)
+				{
+					font-size: 14px;
+				}
+
+		}
+		.author
+		{
+			font-size: 12px;
+				@include mappy-bp(max-width small)
+				{
+					font-size: 10px;
+				}
+		}
+		.likes
+		{
+			font-size: 12px;
+			margin-top: 5px;
+				@include mappy-bp(max-width small)
+				{
+					font-size: 10px;
+				}
+		}
+	}

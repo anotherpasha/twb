@@ -1,0 +1,94 @@
+input[type], textarea
+{
+	padding: 5px 10px;
+	background-color: $grey-default;
+	@include vendor((border-radius: 10px), webkit moz  ms o);
+	font-size: 14px;
+	width: 100%;
+	color: scale-color($grey-default, $lightness: -70%);
+		&:focus
+		{
+			outline: none;
+			border: solid 1px scale-color($grey-default, $lightness: -5%);
+			@include vendor((box-shadow: 0 2px 2px rgba($black, .3)), webkit moz ms o);
+		}
+}
+label
+{
+	font-size: 14px;
+	color: scale-color($grey-default, $lightness: -20%);
+}
+
+textarea
+{
+	height: 150px;
+	color: scale-color($grey-default, $lightness: -70%);
+}
+.form--login{
+	max-width: 70%;
+	margin: auto;
+		&.page
+		{
+			max-width: 40%;
+		}
+
+}
+
+.form--comment
+{
+	textarea
+	{
+		height: 100px !important;
+	}
+}
+.form__wrapper
+{
+	display: inline-block;
+	width: 100%;
+}
+
+.form__submit
+{
+	max-width: 80%;
+	margin: auto;
+}
+.form__control
+{
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+		&.required
+		{
+			&:before{
+				position: absolute;
+				content: '*';
+				color: $red;
+				top: 0;
+				right: -10px;
+			}
+		}
+}
+
+
+.form--search
+{
+	max-width: 220px;
+	float: right;
+	width: 100%;
+	position: relative;
+	margin-bottom: 40px;
+	@include mappy-bp(max-width small)
+	{
+		max-width: 100%;
+	}
+}
+
+.button--submit
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 0;
+	padding: 0 10px;
+}

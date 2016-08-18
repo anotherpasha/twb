@@ -1,0 +1,76 @@
+.block__comment
+{
+	display: block;
+	width: 100%;
+	border-bottom: solid 1px $grey-default;
+	margin: 20px 0;
+	padding: 20px 0;
+
+}
+
+
+	.block__comment--avatar
+	{
+		display: inline-block;
+		float: left;
+		background-color: $black;
+		&.small
+		{
+			width: 30px;
+			height: 30px;
+		}
+		&.large
+		{
+			width: 56px;
+			height: 56px;
+		}
+	}
+
+	.block__comment--form
+	{
+		width: 95%;
+		display: inline-block;
+		padding-left: 20px;
+			@include mappy-bp(max-width small)
+			{
+				width: 88%;
+			}
+		textarea
+		{
+			height: 30px;
+		}
+	}
+
+	.block__comment--content
+	{
+		width: 90%;
+		display: inline-block;
+		padding-left: 20px;
+			@include mappy-bp(max-width small)
+			{
+				width: 79%;
+			}
+			ul{
+				li
+				{
+					font-size: 12px;
+					margin-bottom: 4px;
+					&:last-child
+					{
+						margin-bottom: 0;
+					}
+				}
+				.user
+				{
+					color: $primary-color;
+				}
+				.content
+				{
+					color:scale-color($grey-default, $lightness: -40%) ;
+				}
+				.time
+				{
+					color:scale-color($grey-default, $lightness: -20%) ;
+				}
+			}
+	}

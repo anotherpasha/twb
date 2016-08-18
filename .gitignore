@@ -1,12 +1,22 @@
+/vendor
+/node_modules
+/storage
+/.idea
+.env
+.env.testing
+
+
 .DS_Store
 *.zip
 
-build/vendor/**/*
-src/vendor/**/*
+build/vendor/**/**/*
+build/vendor/**/*.scssc
+src/vendor/**/**/*
 
 
-build/scss/.sass-cache/
-
+build/scss/.sass-cache/**/*.scssc
+build/scss/.sass-cache/*
+dist/
 
 .codekit-cache/
 
