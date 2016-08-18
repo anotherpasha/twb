@@ -43,9 +43,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/submission', 'PostController@getPostStoryView' );
     Route::post('/submission', 'PostController@postStory');
 
-    Route::get('/profile', function () {
-        return view('profile');
-    });
+    Route::get('/profile', 'UserController@profile');
 
     Route::get('/success-submission', function () {
         return view('success-submission');

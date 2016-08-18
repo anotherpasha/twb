@@ -14,100 +14,32 @@
         <div class="container">
             <div class="column__span-3-desktop text--left column__span-6-mobile text--center-mobile">
                 <a href="{!! url('/') !!}" class="button__back">< Kembali ke beranda</a>
-                 <h1>Profilku</h1>
-                 <br>
-                 <div class="username rounded">
-                    Hello, Jane Doe!
-                 </div>
-
+                <h1>Profilku</h1>
+                <br>
+                <div class="username rounded">
+                    Hello, {!! $user->name !!}
+                </div>
             </div>
             <div class="column__span-6">
-                  <br>
-                 <h1 class="text--center-mobile">Entriku</h1>
-                 <br><br>
-                 <div class="row ">
-
-                    <div class="wrapper__thumb">
-                        <a href="" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                    <div class="wrapper__thumb">
-                        <a href="" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images">
-                                    <figure></figure>
-                                </li>
-                                <li class=" title">
-                                    Judul foto
-                                </li>
-                                <li class=" author">
-                                    oleh Jane Doe
-                                </li>
-                                <li class="likes">
-                                    <i class="icon icon--likes"></i> Likes
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-
-                 </div>
-            
-            </div>          
+                <br>
+                <h1 class="text--center-mobile">Entriku</h1>
+                <br><br>
+                <div class="row ">
+                    @foreach($user->stories as $story)
+                        <div class="wrapper__thumb">
+                            <a href="{!! url('story/' . $story->id) !!}" class="thumb--gallery">
+                                <ul class="cards cards--gallery">
+                                    <li class="images"><figure></figure></li>
+                                    <li class="title">{!! $story->title !!}</li>
+                                    <li class="author">Oleh {!! $story->user->name !!}</li>
+                                    <li class="likes"><i class="icon icon--likes"></i> Likes</li>
+                                </ul>
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
-
     </section>
     <!-- end of profile section -->
 
