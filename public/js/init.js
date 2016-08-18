@@ -98,13 +98,19 @@ Pace.on('done', function() {
 
 	if(uploader != null){
 
-var uploader = new Dropzone("#uploader", {
+	    var uploader = new Dropzone("#uploader", {
 									url: "/file/post",
 									thumbnailWidth: 720,
-									thumbnailHeight: 480,
+                                    maxFilesize: 2,
+                                    acceptedFiles: 'image/*',
 									previewTemplate: document.getElementById('preview-template').innerHTML
-								});		
+								});
+        uploader.on("success", function(file, filename) {
+            $('#image_path').val(filename);
+        });
 	}
+
+
 
 	// // Tested get offset top each section
 	// var sections = document.querySelectorAll('section');

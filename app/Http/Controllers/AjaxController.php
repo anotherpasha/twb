@@ -10,6 +10,7 @@ use Validator;
 use Response;
 use Auth;
 use Lang;
+use Image;
 
 class AjaxController extends Controller
 {
@@ -37,10 +38,17 @@ class AjaxController extends Controller
         $filename = str_random(12);
         //$filename = $file->getClientOriginalName();
         $extension =$file->getClientOriginalExtension();
-        $upload_success = $file->move($destinationPath, $filename.'.'.$extension);
-
+        $filePath = $filename.'.'.$extension;
+        // $upload_success = Image::make($file->getRealPath())->resize(200, null)->save($filePath);
+        $upload_success = $file->move($destinationPath, $filePath);
+        $imagePath = $destinationPath. '/' . $filePath;
         if( $upload_success ) {
-            return Response::json('success', 200);
+            $image = Image::make($imagePath)->resize(720, null, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            });
+            $image->save($imagePath, 90);
+            return Response::json($filePath, 200);
         } else {
             return Response::json('error', 400);
         }

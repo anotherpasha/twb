@@ -39,8 +39,8 @@ Route::post( '/ajax/login', 'AjaxController@login');
 Route::group(['middleware' => 'auth'], function () {
     Route::post('file/post', 'AjaxController@postImage');
 
-    Route::get('/submission', 'PostController@getPostStoryView' );
-    Route::post('/submission', 'PostController@postStory');
+    Route::get('/submission', 'StoryController@getPostStoryView' );
+    Route::post('/submission', 'StoryController@postStory');
 
     Route::get('/profile', 'UserController@profile');
 

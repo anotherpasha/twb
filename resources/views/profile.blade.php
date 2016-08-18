@@ -29,7 +29,7 @@
                         <div class="wrapper__thumb">
                             <a href="{!! url('story/' . $story->id) !!}" class="thumb--gallery">
                                 <ul class="cards cards--gallery">
-                                    <li class="images"><figure></figure></li>
+                                    <li class="images"><figure><img src="{!! asset('uploads/' . $story->image_path) !!}" width="250"></figure></li>
                                     <li class="title">{!! $story->title !!}</li>
                                     <li class="author">Oleh {!! $story->user->name !!}</li>
                                     <li class="likes"><i class="icon icon--likes"></i> Likes</li>

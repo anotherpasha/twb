@@ -26,9 +26,13 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Story::class, function (\Faker\Generator $faker) {
     $users = \App\User::all(['id'])->toArray();
     $userKey = array_rand($users, 1);
+
+    $ninas = ['nina-1.jpg', 'nina-2.jpg', 'nina-3.jpg'];
+    $ninaKey = array_rand($ninas, 1);
     return [
-       'title'      => $faker->realText('20'),
-       'story'      => $faker->paragraph(100, true),
-       'user_id'    => $users[$userKey]['id']
+        'title'      => $faker->realText('20'),
+        'story'      => $faker->paragraph(100, true),
+        'user_id'    => $users[$userKey]['id'],
+        'image_path'    => $ninas[$ninaKey]
    ];
 });

@@ -16,16 +16,16 @@
             <div class="container__photo-detail">
                     <div class="column__span-6 text--center">
                         <figure class="image--figured">
-                            <img class="image--responsive" src="{{asset('images/submission-01.jpg')}}">
+                            <img class="image--responsive" src="{!! asset('uploads/' . $story->image_path) !!}">
                         </figure>
 
                         <div class="photo--detail text--left">
                             <div class="caption--header">                           
                                 <h2 class="title">{!! $story->title !!}</h2>
-                                <span class="likes--counter"><i class="icon--likes icon"></i> Likes</span>
+                                <a href="javascript:;" class="likes--counter"><i class="icon--likes icon"></i> Likes</a>
                             </div>
 
-                            <p class="text--primary">oleh Jane Doe</p>
+                            <p class="text--primary">oleh {!! $story->user->name !!}</p>
                             <p>{!! $story->story !!}</p>
                         </div>
 
@@ -42,7 +42,7 @@
                         <hr>
                     </div>
 
-                    <div class="column__span-6">
+                    <!-- div class="column__span-6">
                         <h4>Comments</h4>
                         <div class="block__comment">
                             <div class="block__comment--avatar small">
@@ -116,7 +116,7 @@
                             </div>
                         </div>                      
 
-                    </div>
+                    </div --> <!-- end of comment -->
             </div>
         </div>
     </section>
