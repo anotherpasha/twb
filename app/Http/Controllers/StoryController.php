@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Validator;
 use Auth;
+use Share;
 
 class StoryController extends Controller
 {
@@ -58,7 +59,9 @@ class StoryController extends Controller
 
     public function showStory($id)
     {
-        $data['story'] = Story::find($id);
+        $story = Story::find($id);
+        $data['story'] = $story;
+        $data['shareLinks'] = Share::load(url('story/' . $story->id), $story->title)->services('facebook', 'twitter');
         return view('photo', $data);
     }
 
@@ -80,4 +83,20 @@ class StoryController extends Controller
         }
         return $stories;
     }
+
+    public function likeStory($storyId)
+    {
+        $user = Auth::user();
+        if( $user->likes()->where('story_id', $storyId)->get()->isEmpty() ) {
+            $user->likes()->create([
+                'story_id'  => $storyId,
+                'user_id'   => $user->id
+            ]);
+        } else {
+            return redirect('story/' . $storyId)->withErrors(['error' => 'You already liked this story.']);
+        }
+
+        return redirect('story/' . $storyId);
+    }
+
 }

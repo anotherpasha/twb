@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-
 <div class="container__main "><!-- start main container -->
 
     @include('partials.navbar')
@@ -22,7 +20,7 @@
                         <div class="photo--detail text--left">
                             <div class="caption--header">                           
                                 <h2 class="title">{!! $story->title !!}</h2>
-                                <a href="javascript:;" class="likes--counter"><i class="icon--likes icon"></i> Likes</a>
+                                <a href="{!! url('like/' . $story->id) !!}" class="likes--counter"><i class="icon--likes icon"></i> {!! $story->likes->count() !!} Likes</a>
                             </div>
 
                             <p class="text--primary">oleh {!! $story->user->name !!}</p>
@@ -30,11 +28,11 @@
                         </div>
 
                         <div class="share--group  text--left">
-                            <a href="" class="button button__split button--facebook-share  ">
+                            <a href="{!! $shareLinks['facebook'] !!}" class="button button__split button--facebook-share  ">
                                 <span class="button--icon"><i class="icon icon--facebook"></i></span>
                                 <span class="button--text">Share</span>
                             </a>
-                            <a href="" class="button button__split button--tweet  ">
+                            <a href="{!! $shareLinks['twitter'] !!}" class="button button__split button--tweet  ">
                                 <span class="button--icon"><i class="icon icon--twitter"></i></span>
                                 <span class="button--text">Tweet</span>
                             </a>                

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Tini Wini Biti</title>
 
+    @section('meta')
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta charset="utf-8">
@@ -22,6 +23,7 @@
     <meta property="og:description" content="">
     <meta property="og:image" content="">
     <meta name="mobile-web-app-capable" content="yes">
+    @show
     
     <link rel="apple-touch-startup-image" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" href="assets/images/touch/startup-retina.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
