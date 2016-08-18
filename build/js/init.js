@@ -92,9 +92,15 @@ Pace.on('done', function() {
 	 */
 
 	//  var controller =  new ScrollMagic.Controller();
+	console.log(tinymce)
+	tinymce.init({   
+		selector: '#editor--story',
+		height: 150
+	});
+
 
 	var uploader = document.getElementById('uploader')
-	console.log(uploader)
+
 
 	if(uploader != null){
 
@@ -123,6 +129,7 @@ Pace.on('done', function() {
 
 	// 						})
 	// })
+
 
 })
 

@@ -22,9 +22,7 @@ label
 textarea
 {
 	height: 150px;
-	color: $grey-default;
-	color: scale-color($grey-default, $lightness: -20%);
-
+	color: scale-color($grey-default, $lightness: -70%);
 }
 .form--login{
 	max-width: 70%;
