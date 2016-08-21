@@ -4,8 +4,6 @@ $('.login-form').on('submit', function(e) {
     var form = $(this);
     var url = form.prop('action');
 
-    console.log(form.serialize());
-
     $.ajax({
         type: "post",
         url: url,
@@ -15,14 +13,25 @@ $('.login-form').on('submit', function(e) {
             if(json.status == 'success') {
                 location.reload();
             } else {
+                $("[id^=err_]").hide();
+                $("[id^=err_]").empty();
+                $("[id^=err_]").removeClass();
                 for(var k in json.errors){
-                    alert(json.errors[k]);
+                    $('#err_' + k).addClass('panel--error');
+                    $('#err_' + k).append('<strong>' + json.errors[k] + '</strong>');
+                    $('#err_' + k).show();
                 }
-                console.log(json.errors);
             }
         },
         error: function(json) {
             console.log(json);
         },
     });
+});
+
+Pace.on('done', function() {
+    if(logged_in) {
+        var button = document.getElementById('toggle--close');
+        button.click();
+    }
 });

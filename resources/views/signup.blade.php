@@ -19,24 +19,59 @@
                     {{ csrf_field() }}
                     <div class="form__control required">
                         <input type="text" placeholder="Nama" name="name" value="{{ old('name') }}" />
+                        @if ($errors->has('name'))
+                            <span class="panel--error">
+                                <strong>{{ $errors->first('name') }}</strong>
+                            </span>
+                        @endif
                     </div>
                     <div class="form__control required">
                         <input type="email" placeholder="Email" name="email" value="{{ old('email') }}"/>
+                        @if ($errors->has('email'))
+                            <span class="panel--error">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
                     </div>
-                    <div class="form__control required {{ $errors->has('password') ? ' has-error' : '' }}">
+                    <div class="form__control required">
                         <input type="password" placeholder="Password" name="password" >
+                        @if ($errors->has('password'))
+                            <span class="panel--error">
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
+                        @endif
                     </div>
                     <div class="form__control required">
                         <input type="password" placeholder="Confirm Password" name="password_confirmation" >
+                        @if ($errors->has('password_confirmation'))
+                            <span class="panel--error">
+                                <strong>{{ $errors->first('password_confirmation') }}</strong>
+                            </span>
+                        @endif
                     </div>
                     <div class="form__control">
                         <input type="text" placeholder="City" name="city" value="{{ old('city') }}"/>
+                        @if ($errors->has('city'))
+                            <span class="panel--error">
+                                <strong>{{ $errors->first('city') }}</strong>
+                            </span>
+                        @endif
                     </div>
                     <div class="form__control ">
                         <textarea placeholder="Alamat" name="address">{{ old('address') }}</textarea>
+                        @if ($errors->has('address'))
+                            <span class="panel--error">
+                                <strong>{{ $errors->first('address') }}</strong>
+                            </span>
+                        @endif
                     </div>
                     <div class="form__control required">
-                        <input type="number" placeholder="Nomor Telepon/Handphone" name="phone" alue="{{ old('phone') }}"/>
+                        <input type="number" placeholder="Nomor Telepon/Handphone" name="phone" value="{{ old('phone') }}"/>
+                        @if ($errors->has('phone'))
+                            <span class="panel--error">
+                                <strong>{{ $errors->first('phone') }}</strong>
+                            </span>
+                        @endif
                     </div>
                     <div class="form__control">
                         <label>* Wajib diisi</label>

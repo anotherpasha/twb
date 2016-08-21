@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data['stories'] = Story::all()->take(8);
+        $data['stories'] = Story::orderBy('id', 'desc')->get()->take(8);
         return view('home', $data);
     }
 }

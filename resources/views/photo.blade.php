@@ -116,6 +116,7 @@
 
                     </div --> <!-- end of comment -->
             </div>
+            <a href="{!! url('/gallery') !!}" class="">< Kembali ke gallery</a>
         </div>
     </section>
     <!-- end of photo detail section -->

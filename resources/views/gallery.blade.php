@@ -35,7 +35,7 @@
                             <li class="images"><figure><img width="250" src="{!! asset('uploads/' . $story->image_path) !!}"></figure></li>
                             <li class=" title">{!! $story->title !!}</li>
                             <li class=" author">oleh {!! $story->user->name !!}</li>
-                            <li class="likes"><i class="icon icon--likes"></i> Likes</li>
+                            <li class="likes"><i class="icon icon--likes"></i> {!! $story->likes->count() !!} Likes</li>
                         </ul>
                     </a>
                 </div>

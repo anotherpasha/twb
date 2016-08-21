@@ -49,8 +49,23 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/success-submission', function () {
         return view('success-submission');
     });
+
 });
 
+Route::group(['middleware' => 'restricted'], function () {
+    Route::group(['prefix' => 'adm'], function () {
+        Route::get( '/', 'AdminController@dashboard' );
+        Route::get( '/stories', 'AdminController@stories' );
+        Route::post( '/stories', 'AdminController@stories' );
+        Route::get( '/archived-stories', 'AdminController@archivedStories' );
+        Route::get( '/story/{from}/{id}', 'AdminController@storyDetail' );
+        Route::get( '/approve/{id}', 'AdminController@approveStory' );
+        Route::get( '/reject/{id}', 'AdminController@rejectStory' );
+        Route::get( '/participants', 'AdminController@participants' );
+        Route::get( '/most-liked', 'AdminController@mostLiked' );
+        Route::get( '/most-viewed', 'AdminController@mostViewed' );
+    });
+});
 
 
 Route::get('auth/redirect/{provider}', 'SocialAuthController@redirect');
