@@ -13,14 +13,14 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        $data['mostLikes'] = Story::select(['*', DB::raw('count(story_likes.id) as totalcount')])
+        $data['mostLikes'] = Story::select(['stories.*', DB::raw('count(story_likes.id) as totalcount')])
             ->join('story_likes', 'stories.id', '=', 'story_likes.story_id')
             ->groupBy('stories.id')
             ->orderBy('totalcount', 'desc')
             ->take(5)
             ->get();
 
-        $data['mostViews'] = Story::select(['*', DB::raw('count(story_views.id) as totalview')])
+        $data['mostViews'] = Story::select(['stories.*', DB::raw('count(story_views.id) as totalview')])
             ->join('story_views', 'stories.id', '=', 'story_views.story_id')
             ->groupBy('stories.id')
             ->orderBy('totalview', 'desc')
@@ -115,7 +115,7 @@ class AdminController extends Controller
 
     public function mostViewed()
     {
-        $data['mostViews'] = Story::select(['*', DB::raw('count(story_views.id) as totalview')])
+        $data['mostViews'] = Story::select(['stories.*', DB::raw('count(story_views.id) as totalview')])
             ->join('story_views', 'stories.id', '=', 'story_views.story_id')
             ->groupBy('stories.id')
             ->orderBy('totalview', 'desc')
