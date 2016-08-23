@@ -1181,6 +1181,10 @@ textarea {
   margin: 20px 0;
   width: 100%; }
 
+@media all and (max-width: 39.9375em) {
+  .image--prize {
+    max-width: 80% !important; } }
+
 .decoration__wrapper--main {
   position: absolute;
   bottom: 0;
