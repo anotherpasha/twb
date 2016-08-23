@@ -98,26 +98,51 @@ Pace.on('done', function() {
 	});
 
 
-	var uploader = document.getElementById('uploader')
-
-
-	if(uploader != null){
-
-		var uploader = new Dropzone("#uploader", {
-											url: "/file/post",
-											thumbnailWidth: 720,
-											thumbnailHeight: 480,
-					                                    maxFilesize: 2,
-					                                    acceptedFiles: 'image/*',
-											previewTemplate: document.getElementById('preview-template').innerHTML
-										});		
-	        uploader.on("success", function(file, filename) {
-	            $('#image_path').val(filename);
-	        });
-	}
 
 
 
+	var uploader = document.querySelector('.uploader__wrapper');
+	if (uploader == null) {
+		return
+	 };
+	document.querySelector('.uploader__wrapper').addEventListener('dragover', handleDragOver, false)
+	document.querySelector('.uploader__wrapper').addEventListener('drop', handleFileSelect, false)
+
+	document.getElementById('uploader').addEventListener('change', handleFileSelect, false);
+
+	function handleFileSelect(evt) {
+		evt.preventDefault();
+		evt.stopPropagation();
+		if(evt.dataTransfer) {
+			files = evt.dataTransfer.files;
+		}else {
+			files = evt.target.files;
+		} 
+
+
+		// Loop through the FileList and render image files as thumbnails.
+		_.each(files, function(file) {
+			var reader = new FileReader();
+
+			reader.onload = (function(theFile) {
+				return function(e) {
+					// Render thumbnail.
+					document.getElementById('preview-template').style.display = 'block';
+					document.getElementById('image--preview').setAttribute('src', e.target.result)
+					document.getElementById('image--name').innerHTML =  file.name;
+				};
+			})(file);
+
+			reader.readAsDataURL(file)
+
+		});
+	};
+
+	function handleDragOver(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+	};
 
 
 })
