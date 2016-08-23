@@ -10,7 +10,7 @@ Pace.on('done', function() {
 		logo    = document.getElementById('logo-loader')
 
 
- 	timeline_loader.to(loader, 1, {top: "-100%"}, 1);
+	timeline_loader.to(loader, 1, {top: "-100%"}, 1);
 
 	var timeline = new TimelineMax({delay: 2});
 	var decor = {
@@ -58,33 +58,33 @@ Pace.on('done', function() {
 	 ** added auto scroll to section prizes
 	 */
 	 var toggle_scroll = document.getElementById('scroll-bottom'),
-	 	arrow		   = document.getElementById('arrow-down'),
-	 	prize_offset ;
+		arrow      = document.getElementById('arrow-down'),
+		prize_offset ;
 
-	 	if(toggle_scroll != null)
-	 	{
+		if(toggle_scroll != null)
+		{
 
 
-	 	toggle_scroll.addEventListener('click', function(e) {
-	 		e.preventDefault();
+		toggle_scroll.addEventListener('click', function(e) {
+			e.preventDefault();
 
-	 		prize_offset = document.getElementById('section--prize')
+			prize_offset = document.getElementById('section--prize')
 
-	 		TweenMax.to(window, 1, {
-	 			scrollTo:{
-	 				y: prize_offset.offsetTop
-	 			},
-	 			ease: Circ.easeOut
-	 		})
-	 	})
+			TweenMax.to(window, 1, {
+				scrollTo:{
+					y: prize_offset.offsetTop
+				},
+				ease: Circ.easeOut
+			})
+		})
 
-	 	TweenMax.to(arrow, 0.5, {
-	 		y: 5,
-	 		repeat: 1000,
-	 		yoyo: true,
-	 		delay: 0.4
-	 	})
-	 	}
+		TweenMax.to(arrow, 0.5, {
+			y: 5,
+			repeat: 1000,
+			yoyo: true,
+			delay: 0.4
+		})
+		}
 	/**
 	 ** Scroll to section
 	 ** added auto scroll to section, when window contain section
@@ -95,27 +95,49 @@ Pace.on('done', function() {
 	tinymce.init({   
 		selector: '#editor--story',
 		height: 150,
-        toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify'
+				toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify'
 	});
 
 
-	var uploader = document.getElementById('uploader')
+	function handleFileSelect(evt) {
+		evt.preventDefault();
+		evt.stopPropagation();
+		if(evt.dataTransfer) {
+			files = evt.dataTransfer.files;
+		}else {
+			files = evt.target.files;
+		} 
 
 
-	if(uploader != null){
+		// Loop through the FileList and render image files as thumbnails.
+		_.each(files, function(file) {
+			var reader = new FileReader();
 
-		var uploader = new Dropzone("#uploader", {
-											url: "/file/post",
-											thumbnailWidth: 720,
-											thumbnailHeight: 480,
-					                                    maxFilesize: 2,
-					                                    acceptedFiles: 'image/*',
-											previewTemplate: document.getElementById('preview-template').innerHTML
-										});		
-	        uploader.on("success", function(file, filename) {
-	            $('#image_path').val(filename);
-	        });
-	}
+			reader.onload = (function(theFile) {
+				return function(e) {
+					// Render thumbnail.
+					document.getElementById('preview-template').style.display = 'block';
+					document.getElementById('image--preview').setAttribute('src', e.target.result)
+					document.getElementById('image--name').innerHTML =  file.name;
+				};
+			})(file);
+
+			reader.readAsDataURL(file)
+
+		});
+	};
+
+	function handleDragOver(e) {
+		e.preventDefault();
+		e.stopPropagation();
+
+	};
+
+
+	document.querySelector('.uploader__wrapper').addEventListener('dragover', handleDragOver, false)
+	document.querySelector('.uploader__wrapper').addEventListener('drop', handleFileSelect, false)
+
+	document.getElementById('uploader').addEventListener('change', handleFileSelect, false);
 
 })
 
