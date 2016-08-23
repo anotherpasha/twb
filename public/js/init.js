@@ -117,7 +117,5 @@ Pace.on('done', function() {
 	        });
 	}
 
-
-
 })
 

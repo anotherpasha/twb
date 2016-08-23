@@ -4275,6 +4275,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/public\/uploads\/OjJdJPODLUN7.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 132944,
+		"inputAbbreviatedPath": "\/public\/uploads\/OjJdJPODLUN7.jpg",
+		"outputAbbreviatedPath": "\/public\/uploads\/OjJdJPODLUN7.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/public\/uploads\/R2SUBhxpIVsX.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -8163,6 +8174,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/storage\/framework\/views\/0c1e679eb4de496b01a38e915dd720284a070a48.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/storage\/framework\/views\/1141187c858da71de3bc1792b01d9526147db495.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/storage\/framework\/views\/1141187c858da71de3bc1792b01d9526147db495.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
