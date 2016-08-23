@@ -1810,7 +1810,8 @@ header {
   display: inline-block;
   margin-top: 20px; }
   .pagination li {
-    margin-right: 5px; }
+    margin-right: 5px;
+    margin-bottom: 10px; }
     .pagination li:last-child {
       margin-right: 0; }
     .pagination li a {
