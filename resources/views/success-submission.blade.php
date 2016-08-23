@@ -24,10 +24,10 @@
                  <br>
             </div>
             <div class="column__span-6 text--center-mobile">
-                <a href="" class="button button__split button--facebook-share rounded ">
+                <!--a href="" class="button button__split button--facebook-share rounded ">
                     <span class="button--icon"><i class="icon icon--facebook"></i></span>
                     <span class="button--text">Share</span>
-                </a>
+                </a-->
                 <br><br>
                 <a href="{!! url('/') !!}" class="button__back text--white">< Kembali ke beranda</a>
             </div>

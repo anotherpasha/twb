@@ -25,14 +25,14 @@
                 <h1 class="text--center-mobile">Entriku</h1>
                 <br><br>
                 <div class="row ">
-                    @foreach($user->stories as $story)
+                    @foreach($user->stories()->orderBy('id', 'desc')->get() as $story)
                         <div class="wrapper__thumb">
                             <a href="{!! url('story/' . $story->id) !!}" class="thumb--gallery">
                                 <ul class="cards cards--gallery">
                                     <li class="images"><figure><img src="{!! asset('uploads/' . $story->image_path) !!}" width="250"></figure></li>
                                     <li class="title">{!! $story->title !!}</li>
                                     <li class="author">Oleh {!! $story->user->name !!}</li>
-                                    <li class="likes"><i class="icon icon--likes"></i> Likes</li>
+                                    <li class="likes"><i class="icon icon--likes"></i> {!! $story->likes->count() !!} Likes</li>
                                 </ul>
                             </a>
                         </div>

@@ -94,7 +94,8 @@ Pace.on('done', function() {
 
 	tinymce.init({   
 		selector: '#editor--story',
-		height: 150
+		height: 150,
+        toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify'
 	});
 
 
@@ -115,10 +116,6 @@ Pace.on('done', function() {
 	            $('#image_path').val(filename);
 	        });
 	}
-
-
-
-
 
 })
 

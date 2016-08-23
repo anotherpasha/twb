@@ -11,14 +11,14 @@
             <nav class="navigation--home">
                 @if( Auth::check() )
                 <ul class="list__inline">
-                    <li class=""><a href="{!! url('logout') !!}" class="navigation--link white">Logout</a></li>
+                    <li class=""><a href="{!! url('logout') !!}"  class="navigation--link white">Logout</a></li>
                     <li class=""><a href="{!! url('profile') !!}" class="navigation--link white">Profilku</a></li>
-                    <li><img src="{!! asset('images/logo-twb.png') !!}"></li>
+                    <li class="hidden-on-small"><img src="{!! asset('images/logo-twb.png') !!}"></li>
                 </ul>
                 @else
                 <ul class="list__inline ">
-                    <li class="login--link"><a href="#login" class="button button__tertiary  button--small toggle--modal navigation--button" data-target="login">Login</a></li>
-                    <li><img src="{!! asset('images/logo-twb.png') !!}"></li>
+                    <li class="login--link"><a href="#login" id="login-button" class="button button__tertiary  button--small toggle--modal navigation--button" data-target="login">Login</a></li>
+                    <li class="hidden-on-small"><img src="{!! asset('images/logo-twb.png') !!}"></li>
                 </ul>
                 @endif
             </nav>

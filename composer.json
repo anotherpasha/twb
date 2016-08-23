@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "laravel/socialite": "^2.0",
         "intervention/image": "^2.3",
-        "chencha/share": "^5.2"
+        "chencha/share": "^5.2",
+        "orchestra/html": "~3.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

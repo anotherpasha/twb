@@ -32,7 +32,7 @@
                                 <form  role="form" method="POST" action="{{ url('/login') }}">
                                     {{ csrf_field() }}
                                     <div class="form__control{{ $errors->has('email') ? ' has-error' : '' }}">
-                                        <input  id="email"  type="email" placeholder="Email" value="{{ old('email') }}" />
+                                        <input  id="email" name="email" type="email" placeholder="Email" value="{{ old('email') }}" />
 
                                         @if ($errors->has('email'))
                                             <div class="panel--error">
@@ -42,7 +42,7 @@
                                     </div>
 
                                     <div class="form__control{{ $errors->has('password') ? ' has-error' : '' }}" >
-                                        <input id="password" placeholder="Password"  type="password" class="form-control" name="password">
+                                        <input id="password" name="password" placeholder="Password"  type="password" class="form-control" name="password">
 
                                         @if ($errors->has('password'))
                                             <div class="panel--error">
@@ -57,7 +57,8 @@
 
                                 </form>
                                 <div>
-                                    <p>Belum terdaftar? <a href="" class="toggle--modal text--red" data-target="signup">Daftar disini</a></p>
+                                    <!-- p>Belum terdaftar? <a href="" class="toggle--modal text--red" data-target="signup">Daftar disini</a></p -->
+                                    <p>Belum terdaftar? <a href="{!! url('register') !!}" class="text--red">Daftar disini</a></p>
                                 </div>
                             </div>
 

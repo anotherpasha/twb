@@ -16,7 +16,15 @@ class AjaxController extends Controller
 {
     public function login(Request $request)
     {
-        $this->validateUser($request->all());
+        if( $validator = $this->validateUser($request->all()) ) {
+            if ($validator->fails()) {
+                $errors = $validator->errors()->toArray();
+
+                return Response::json(
+                    array('status' => 'failed', 'errors' => $errors)
+                );
+            }
+        }
 
         if (Auth::attempt($request->except('_token'))) {
             return Response::json(
@@ -24,6 +32,7 @@ class AjaxController extends Controller
             );
         } else {
             $error = ['error' => $this->getFailedLoginMessage()];
+            Log::warning($error);
             return Response::json(
                 array('status' => 'failed', 'errors' => $error)
             );
@@ -61,13 +70,7 @@ class AjaxController extends Controller
             'password' => 'required|max:255',
         ]);
 
-        if ($validator->fails()) {
-            $errors = $validator->errors()->toArray();
-
-            return Response::json(
-                array('status' => 'failed', 'errors' => $errors)
-            );
-        }
+        return $validator;
     }
 
     private function getFailedLoginMessage()

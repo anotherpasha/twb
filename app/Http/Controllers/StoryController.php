@@ -9,6 +9,7 @@ use App\Http\Requests;
 use Validator;
 use Auth;
 use Share;
+use App\StoryView;
 
 class StoryController extends Controller
 {
@@ -57,12 +58,52 @@ class StoryController extends Controller
         return view('submission');
     }
 
-    public function showStory($id)
+    public function showStory(Request $request, $id)
     {
         $story = Story::find($id);
         $data['story'] = $story;
         $data['shareLinks'] = Share::load(url('story/' . $story->id), $story->title)->services('facebook', 'twitter');
+        $this->viewLogging($request->ip(), $id);
         return view('photo', $data);
+    }
+
+    private function viewLogging($ip, $id)
+    {
+        if (! $this->isViewedByThisIp($ip, $id)) {
+            $userId = '';
+            $userName = '';
+            if (Auth::check()) {
+                $user = Auth::user();
+                $userId = $user->id;
+                $userName = $user->name;
+            }
+            if ( (! $this->isViewedByThisUser($userId, $id)) || $userId == '') {
+                StoryView::create([
+                    'story_id'      => $id,
+                    'ip_address'    => $ip,
+                    'viewer_id'     => $userId,
+                    'viewer_name'   => $userName
+                ]);
+            }
+        }
+    }
+
+    private function isViewedByThisIp($ip, $id)
+    {
+        if (StoryView::where('ip_address', $ip)->where('story_id', $id)->count() > 0) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private function isViewedByThisUser($userId, $id)
+    {
+        if (StoryView::where('viewer_id', $userId)->where('story_id', $id)->count() > 0) {
+            return true;
+        }
+
+        return false;
     }
 
     public function gallery(Request $request)
@@ -76,10 +117,10 @@ class StoryController extends Controller
     {
         if( $request->has('s') ) {
             $s = $request->input('s');
-            $stories = Story::where('title', 'like', '%' . $s . '%')->paginate(12);
+            $stories = Story::where('title', 'like', '%' . $s . '%')->orderBy('id', 'desc')->paginate(12);
             $stories->setPath('?s=' . $s);
         } else {
-            $stories = Story::paginate(12);
+            $stories = Story::orderBy('id', 'desc')->paginate(12);
         }
         return $stories;
     }

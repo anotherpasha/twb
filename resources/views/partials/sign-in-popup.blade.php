@@ -21,42 +21,40 @@
 
             <div class="form--login">
                 <p>Masuk dengan email</p>
-                    <form  role="form" method="POST" action="{{ url('/login/#login') }}">
-                        {{ csrf_field() }}
-                        <div class="form__control{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <input  id="email"  type="email" placeholder="Email" value="{{ old('email') }}" />
+                <form  role="form" method="POST" action="{{ url('/ajax/login/') }}" class="login-form" >
+                    {{ csrf_field() }}
+                    <div class="" id="err_error" hidden></div>
 
-                            @if ($errors->has('email'))
-                                <div class="panel--error">
-                                    <strong>{{ $errors->first('email') }}</strong>
-                                </div>
-                            @endif
+                    <div class="form__control{{ $errors->has('email') ? ' has-error' : '' }}">
+                        <input  id="email" name="email" type="email" placeholder="Email" value="{{ old('email') }}" />
+                        <div class="" id="err_email" hidden>
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </div>
+                    </div>
+
+                    <div class="form__control{{ $errors->has('password') ? ' has-error' : '' }}" >
+                        <input id="password" placeholder="Password"  type="password" class="form-control" name="password">
+
+                        <div class="" id="err_password" hidden>
+                            <strong>{{ $errors->first('password') }}</strong>
                         </div>
 
-                        <div class="form__control{{ $errors->has('password') ? ' has-error' : '' }}" >
-                            <input id="password" placeholder="Password"  type="password" class="form-control" name="password">
+                    </div>
+                    <div class="form__submit">
+                        <button type="submit" class="button flush--top push--bottom button__form button--expand">Masuk</button>
+                    </div>
 
-                            @if ($errors->has('password'))
-                                <div class="panel--error">
-                                    <strong>{{ $errors->first('password') }}</strong>
-                                </div>
-                            @endif
-
-                        </div>
-                        <div class="form__submit">
-                            <button type="submit" class="button flush--top push--bottom button__form button--expand">Masuk</button>
-                        </div>
-
-                    </form>
+                </form>
                 <div>
-                    <p>Belum terdaftar? <a href="#signup" class="toggle--modal text--red" data-target="signup">Daftar disini</a></p>
-<!--                     <p>Belum terdaftar? <a href="{!! url('register') !!}" class="text--red">Daftar disini</a></p>
- -->                </div>
+                <!-- p>Belum terdaftar? <a href="#signup" class="toggle--modal text--red" data-target="signup">Daftar disini</a></p -->
+                <p>Belum terdaftar? <a href="{!! url('register') !!}" class="text--red">Daftar disini</a></p>
+
+                </div>
             </div>
 
 
         </div>
-        <a href="#" class="toggle--close"><i class="icon icon--close"></i></a>
+        <a href="#" class="toggle--close" id="toggle--close"><i class="icon icon--close"></i></a>
     </div>
 
 </div>

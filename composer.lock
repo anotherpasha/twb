@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "206de05581ffeb19396c6ceb5ab538ec",
-    "content-hash": "0a1d1d578e3152434b4e0b31506fe75d",
+    "hash": "46585ca126ca5d6d9ab869e9f6b80080",
+    "content-hash": "0c79ccc4040585f100e133d88754b1e8",
     "packages": [
         {
             "name": "chencha/share",
@@ -118,6 +118,62 @@
                 "preload"
             ],
             "time": "2015-11-09 22:51:51"
+        },
+        {
+            "name": "danielstjules/stringy",
+            "version": "2.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danielstjules/Stringy.git",
+                "reference": "4e214a5195fae3fb558e81b1c6010678f7600643"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danielstjules/Stringy/zipball/4e214a5195fae3fb558e81b1c6010678f7600643",
+                "reference": "4e214a5195fae3fb558e81b1c6010678f7600643",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/polyfill-mbstring": "~1.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stringy\\": "src/"
+                },
+                "files": [
+                    "src/Create.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel St. Jules",
+                    "email": "danielst.jules@gmail.com",
+                    "homepage": "http://www.danielstjules.com"
+                }
+            ],
+            "description": "A string manipulation library with multibyte support",
+            "homepage": "https://github.com/danielstjules/Stringy",
+            "keywords": [
+                "UTF",
+                "helpers",
+                "manipulation",
+                "methods",
+                "multibyte",
+                "string",
+                "utf-8",
+                "utility",
+                "utils"
+            ],
+            "time": "2016-05-02 15:18:10"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -782,6 +838,76 @@
             "time": "2016-06-22 12:40:16"
         },
         {
+            "name": "laravie/html",
+            "version": "v5.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravie/html.git",
+                "reference": "c8bf73855fd52f6dd8a8bfccb2aaa4d05b0f7767"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravie/html/zipball/c8bf73855fd52f6dd8a8bfccb2aaa4d05b0f7767",
+                "reference": "c8bf73855fd52f6dd8a8bfccb2aaa4d05b0f7767",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "~5.2.0",
+                "illuminate/routing": "~5.2.0",
+                "illuminate/session": "~5.2.0",
+                "illuminate/support": "~5.2.0",
+                "php": ">=5.5.9"
+            },
+            "replace": {
+                "laravelcollective/html": "*"
+            },
+            "require-dev": {
+                "illuminate/database": "~5.2.0",
+                "mockery/mockery": "^0.9.1",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                },
+                {
+                    "name": "Mior Muhammad Zaki",
+                    "email": "crynobone@gmail.com"
+                },
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "https://github.com/laravie/html",
+            "keywords": [
+                "form",
+                "html",
+                "laravel"
+            ],
+            "time": "2016-06-21 14:17:53"
+        },
+        {
             "name": "league/flysystem",
             "version": "1.0.27",
             "source": {
@@ -1146,6 +1272,190 @@
                 "php"
             ],
             "time": "2016-04-19 13:41:41"
+        },
+        {
+            "name": "orchestra/contracts",
+            "version": "v3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orchestral/contracts.git",
+                "reference": "a158292622e1d754bb705d6aee920b90703ed032"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orchestral/contracts/zipball/a158292622e1d754bb705d6aee920b90703ed032",
+                "reference": "a158292622e1d754bb705d6aee920b90703ed032",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "~5.2.0",
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Orchestra\\Contracts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mior Muhammad Zaki",
+                    "email": "crynobone@gmail.com",
+                    "homepage": "https://github.com/crynobone"
+                }
+            ],
+            "description": "Contracts for Orchestra Platform",
+            "keywords": [
+                "contracts",
+                "orchestra-platform",
+                "orchestral"
+            ],
+            "time": "2015-12-26 13:35:24"
+        },
+        {
+            "name": "orchestra/html",
+            "version": "v3.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orchestral/html.git",
+                "reference": "f9a02e879c8218ed4d8751dd27429dc3c42ce483"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orchestral/html/zipball/f9a02e879c8218ed4d8751dd27429dc3c42ce483",
+                "reference": "f9a02e879c8218ed4d8751dd27429dc3c42ce483",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/translation": "~5.2.0",
+                "laravie/html": "~5.2.0",
+                "orchestra/contracts": "~3.2.1",
+                "orchestra/support": "~3.2.3",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "illuminate/database": "~5.2.0",
+                "mockery/mockery": "^0.9.1"
+            },
+            "suggest": {
+                "laravel/framework": "Allow using orchestra/html component outside of Orchestra Platform (~5.2).",
+                "orchestra/foundation": "Allow using orchestra/html with Orchestra Platform (~3.2)."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Orchestra\\Html\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mior Muhammad Zaki",
+                    "email": "crynobone@gmail.com",
+                    "homepage": "https://github.com/crynobone"
+                }
+            ],
+            "description": "HTML Component for Orchestra Platform",
+            "homepage": "http://orchestraplatform.com/docs/latest/components/html/",
+            "keywords": [
+                "form",
+                "html",
+                "laravel",
+                "orchestra-platform",
+                "orchestral",
+                "table"
+            ],
+            "time": "2016-06-24 14:20:05"
+        },
+        {
+            "name": "orchestra/support",
+            "version": "v3.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orchestral/support.git",
+                "reference": "3fd1cc5afc9e3a6ae54613e37ea775f34f978612"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orchestral/support/zipball/3fd1cc5afc9e3a6ae54613e37ea775f34f978612",
+                "reference": "3fd1cc5afc9e3a6ae54613e37ea775f34f978612",
+                "shasum": ""
+            },
+            "require": {
+                "danielstjules/stringy": "~2.1",
+                "illuminate/support": "~5.2.0",
+                "orchestra/contracts": "~3.2.0",
+                "php": ">=5.5.0"
+            },
+            "replace": {
+                "orchestra/support-core": "self.version",
+                "orchestra/support-facades": "self.version",
+                "orchestra/support-providers": "self.version"
+            },
+            "require-dev": {
+                "illuminate/database": "~5.2.0",
+                "illuminate/encryption": "~5.2.0",
+                "illuminate/routing": "~5.2.0",
+                "illuminate/session": "~5.2.0",
+                "mockery/mockery": "0.9.*",
+                "paragonie/random_compat": "~1.1"
+            },
+            "suggest": {
+                "laravel/framework": "Allow using orchestra/support component outside of Orchestra Platform (~5.2).",
+                "orchestra/foundation": "Allow using orchestra/support with Orchestra Platform (~3.2).",
+                "orchestra/messages": "Allow using Messages component (~3.2)."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Orchestra\\Support\\Facades\\": "src/Facades/",
+                    "Orchestra\\Support\\Providers\\": "src/Providers/",
+                    "Orchestra\\Support\\": "src/Support/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mior Muhammad Zaki",
+                    "email": "crynobone@gmail.com",
+                    "homepage": "https://github.com/crynobone"
+                }
+            ],
+            "description": "Support Component for Orchestra Platform",
+            "homepage": "http://orchestraplatform.com/docs/latest/components/support/",
+            "keywords": [
+                "laravel",
+                "orchestra-platform",
+                "orchestral",
+                "utilities",
+                "validator"
+            ],
+            "time": "2016-04-23 13:06:53"
         },
         {
             "name": "paragonie/random_compat",
