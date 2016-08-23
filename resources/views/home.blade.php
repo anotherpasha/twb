@@ -13,13 +13,15 @@
                 <ul class="list__inline">
                     <li class=""><a href="{!! url('logout') !!}"  class="navigation--link white">Logout</a></li>
                     <li class=""><a href="{!! url('profile') !!}" class="navigation--link white">Profilku</a></li>
-                    <li><img src="{!! asset('images/logo-twb.png') !!}"></li>
+                    <li class="navigation--button"><a href="{!! url('submission') !!}" class="button button__primary button--small " data-target="login">Submit</a></li>
+                    <!-- <li class="hidden-on-small"><img src="{!! asset('images/logo-twb.png') !!}"></li> -->
+
                 </ul>
                 @else
                 <ul class="list__inline ">
                     <li class="login--link"><a href="#login" id="login-button" class="button button__tertiary  button--small toggle--modal navigation--button" data-target="login">Login</a></li>
-                    <li><img src="{!! asset('images/logo-twb.png') !!}"></li>
-                </ul>
+<!--                     <li class="hidden-on-small"><img src="{!! asset('images/logo-twb.png') !!}"></li>
+ -->                </ul>
                 @endif
             </nav>
         </div>

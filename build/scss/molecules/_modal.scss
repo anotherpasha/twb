@@ -9,6 +9,7 @@
 	background-color: rgba($black, 0.8);
 	z-index: 100000000;
 	text-align: center;
+	overflow: scroll;
 		@include mappy-bp(max-width small)
 		{
 			background-color: $white;
@@ -21,11 +22,11 @@
 	text-align: center;
 	display: inline-block;
 	margin: {
-		top: 80px;
+		top: 50px;
 		left: auto;
 		right: auto;
 	};
-	height: auto;
+
 	padding: 20px;
 	background-color: $white;
 	@include vendor((border-radius: 10px), webkit moz ms o);
