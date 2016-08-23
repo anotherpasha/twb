@@ -354,7 +354,7 @@
 		},
 	"\/build\/js\/modules\/animated.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/js\/modules\/animated.js",
 		"outputAbbreviatedPath": "\/public\/js\/animated.min.js",
@@ -365,7 +365,7 @@
 		},
 	"\/build\/js\/modules\/fitwindow.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/js\/modules\/fitwindow.js",
 		"outputAbbreviatedPath": "\/public\/js\/fitwindow.min.js",
@@ -376,7 +376,7 @@
 		},
 	"\/build\/js\/modules\/modal.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/js\/modules\/modal.js",
 		"outputAbbreviatedPath": "\/public\/js\/modal.min.js",
@@ -387,7 +387,7 @@
 		},
 	"\/build\/js\/modules\/tinymce.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/js\/modules\/tinymce.min.js",
 		"outputAbbreviatedPath": "\/public\/js\/tinymce.min.min.js",
@@ -398,7 +398,7 @@
 		},
 	"\/build\/js\/modules\/uploader.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/js\/modules\/uploader.js",
 		"outputAbbreviatedPath": "\/public\/js\/uploader.min.js",
@@ -1022,7 +1022,7 @@
 		},
 	"\/build\/vendor\/gsap\/src\/minified\/plugins\/ScrollToPlugin.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/build\/vendor\/gsap\/src\/minified\/plugins\/ScrollToPlugin.min.js",
 		"outputAbbreviatedPath": "\/public\/js\/ScrollToPlugin.min.min.js",
@@ -3353,7 +3353,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2426,
+		"initialSize": 2741,
 		"inputAbbreviatedPath": "\/dist\/assets\/images\/icon.png",
 		"outputAbbreviatedPath": "\/dist\/assets\/images\/icon.png",
 		"outputPathIsOutsideProject": 0,
@@ -7991,6 +7991,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/storage\/framework\/views\/0c1e679eb4de496b01a38e915dd720284a070a48.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/storage\/framework\/views\/1141187c858da71de3bc1792b01d9526147db495.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/storage\/framework\/views\/1141187c858da71de3bc1792b01d9526147db495.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
