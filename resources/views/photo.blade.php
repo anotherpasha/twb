@@ -13,7 +13,7 @@
         
             <div class="container__photo-detail">
                     <div class="column__span-6 text--center">
-                        <figure class="image--figured">
+                        <figure class="">
                             <img class="image--responsive" src="{!! asset('uploads/' . $story->image_path) !!}">
                         </figure>
 
