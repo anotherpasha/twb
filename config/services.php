@@ -36,15 +36,15 @@ return [
     ],
 
     'facebook' => [
-        'client_id' => '1809962919290325',
-        'client_secret' => 'd7c1d67864d6fb3d9cf1ba788e0462c8',
-        'redirect' => 'http://twb.local/auth/callback/facebook',
+        'client_id' => env('FB_ID', '1809962919290325'),
+        'client_secret' => env('FB_SECRET', 'd7c1d67864d6fb3d9cf1ba788e0462c8'),
+        'redirect' => env('FB_REDIRECT', 'http://twb.local/auth/callback/facebook'),
     ],
 
     'twitter' => [
-        'client_id' => '4MiIuBHv6YvflrUM2jnH18yEm',
-        'client_secret' => 'IrNxIqcc4szSbVE5KrTFtQVzZ5c3ywyRC0aaW7He68Bgxq7hqX',
-        'redirect' => 'http://twb.local/auth/callback/twitter',
+        'client_id' => env('TWITTER_ID', 'MiIuBHv6YvflrUM2jnH18yEm'),
+        'client_secret' => env('TWITTER_SECRET', 'IrNxIqcc4szSbVE5KrTFtQVzZ5c3ywyRC0aaW7He68Bgxq7hqX'),
+        'redirect' => env('TWITTER_REDIRECT', 'http://twb.local/auth/callback/twitter'),
     ],
 
 ];

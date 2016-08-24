@@ -32,7 +32,7 @@ class AjaxController extends Controller
             );
         } else {
             $error = ['error' => $this->getFailedLoginMessage()];
-            Log::warning($error);
+            // Log::warning($error);
             return Response::json(
                 array('status' => 'failed', 'errors' => $error)
             );
