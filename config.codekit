@@ -3092,6 +3092,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/public\/images\/decoration-mobile.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11878,
+		"inputAbbreviatedPath": "\/public\/images\/decoration-mobile.png",
+		"outputAbbreviatedPath": "\/public\/images\/decoration-mobile.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/public\/images\/fallbacks\/butterfly.png": {
 		"fileType": 32768,
 		"ignore": 0,
