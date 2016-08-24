@@ -1730,6 +1730,7 @@ header {
     font-family: "Oduda-Bold"; }
     @media all and (max-width: 39.9375em) {
       .cards--gallery .title {
+        min-height: 42px;
         font-size: 14px; } }
   .cards--gallery .author {
     font-size: 12px; }
