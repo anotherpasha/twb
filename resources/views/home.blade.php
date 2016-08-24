@@ -8,7 +8,9 @@
         <div class="container">
             
             <a href="{!! url('/') !!}" class="navbar--logo"><img src="{{ asset('/images/logo.png') }}"></a>
-            <nav class="navigation--home">
+            <a href="{!! url('/') !!}" class="navbar--toggle home"><span></span><span></span><span></span></a>
+
+            <nav class="navigation--home hidden-on-small">
                 @if( Auth::check() )
                 <ul class="list__inline">
                     <li class=""><a href="{!! url('logout') !!}"  class="navigation--link white">Logout</a></li>
