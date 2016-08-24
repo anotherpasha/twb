@@ -55,6 +55,19 @@
 @include('partials.sign-in-popup')
 @include('partials.footer')
 
+<nav class="navigation--mobile">
+    @if(Auth::check())
+    <ul>
+        <li class=""><a href="{!! url('logout') !!}" class="navigation--link black">Logout</a></li>
+        <li class=""><a href="{!! url('profile') !!}" class="navigation--link black">Profilku</a></li>
+        <li class=""><a href="{!! url('submission') !!}" class="button button__primary button--small button--expand text--center " data-target="login">Submit</a></li>
+    </ul>
+    @else
+    <ul>
+        <li class=""><a href="javascript:;" id="login-button" class="button button__quertiary  button--small toggle--modal button--expand text--center" data-target="login">Login</a></li>
+    </ul>
+    @endif
+</nav>
 <script type="text/javascript" src="{{asset('js/libs.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/plugins.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/init.min.js')}}"></script>
