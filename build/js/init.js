@@ -85,12 +85,34 @@ Pace.on('done', function() {
 	 		delay: 0.4
 	 	})
 	 	}
-	/**
-	 ** Scroll to section
-	 ** added auto scroll to section, when window contain section
-	 */
 
-	//  var controller =  new ScrollMagic.Controller();
+	/**
+	 ** Mobile Toggle 
+	 ** Push Menu
+	 */
+	 var toggle 		= document.querySelector('.navbar--toggle'),
+	 	 body  		= document.querySelector('body'),
+	 	 container 	= document.querySelector('.container__main');
+
+	 toggle.addEventListener('click', function(e) {
+	 	e.preventDefault();
+
+	 	if(!body.classList.contains('nav--active'))
+	 	{
+	 		body.classList.add('nav--active');
+	 		TweenMax.to(container, .5, {
+	 			x: -200
+	 		})
+	 		return;
+
+	 	};
+	 		body.classList.remove('nav--active');
+	 		TweenMax.to(container, .5, {
+	 			x: 0
+	 		})
+
+	 });
+
 
 	tinymce.init({   
 		selector: '#editor--story',
@@ -143,6 +165,7 @@ Pace.on('done', function() {
 		e.stopPropagation();
 
 	};
+
 
 
 })

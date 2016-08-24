@@ -50,7 +50,10 @@ $gallery: (
 /* ============================== *\
 	Container
 \* ============================== */
-
+.container__main
+{
+  background-color: $white;
+}
 .section
 {
 	display: table;
