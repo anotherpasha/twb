@@ -1604,7 +1604,7 @@ header {
   padding: 20px;
   width: 200px;
   height: 100%;
-  background-color: #ffdc59;
+  background-color: #ffd126;
   -webkit-box-shadow: 3px -1px 7px 0px rgba(0, 0, 0, 0.4) inset;
   -moz-box-shadow: 3px -1px 7px 0px rgba(0, 0, 0, 0.4) inset;
   -ms-box-shadow: 3px -1px 7px 0px rgba(0, 0, 0, 0.4) inset;
@@ -1897,5 +1897,7 @@ header {
       transition: all 500ms ease; }
       .pagination li a:hover {
         background-color: #ec1c24; }
+    .pagination li.active a {
+      background-color: #ec1c24; }
     .pagination li:last-child {
       margin-right: 0; }
