@@ -1380,8 +1380,8 @@ footer {
         font-size: 16px; } }
   @media all and (max-width: 39.9375em) {
       .headline--home a {
-        font-size: 14px;
-        margin: 0; } }
+        font-size: 12px;
+        margin-top: -10px; } }
 
 .caption--header .title {
   display: inline-block; }
