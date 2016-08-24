@@ -8,7 +8,9 @@
         <div class="container">
             
             <a href="{!! url('/') !!}" class="navbar--logo"><img src="{{ asset('/images/logo.png') }}"></a>
-            <nav class="navigation--home">
+            <a href="{!! url('/') !!}" class="navbar--toggle home"><span></span><span></span><span></span></a>
+
+            <nav class="navigation--home hidden-on-small">
                 @if( Auth::check() )
                 <ul class="list__inline">
                     <li class=""><a href="{!! url('logout') !!}"  class="navigation--link white">Logout</a></li>
@@ -275,7 +277,7 @@
                         <a href="{!! url('story/' . $story->id) !!}" class="thumb--gallery">
                             <ul class="cards cards--gallery">
                                 <li class="images"><figure><img width="250" src="{!! asset('uploads/' . $story->image_path) !!}"></figure></li>
-                                <li class=" title">{!! $story->title !!}</li>
+                                <li class=" title">{!!  str_limit($story->title, 23) !!}</li>
                                 <li class=" author">Oleh {!! $story->user->name !!}</li>
                                 <li class="likes"><i class="icon icon--likes"></i> {!! $story->likes->count() !!} Likes</li>
                             </ul>

@@ -38,19 +38,11 @@
 		 		.add(dialog_appear)		
 	}	
 
-			// triggering with hash
-			if(hash.length > 0)
-			{
-				 container = document.querySelector(hash);
-
-
-				modalShow(container);	
-			}	
 
 	_.each(modal_toggle, function (modal) {
 
 		modal.addEventListener('click', function (e) {
-			// e.preventDefault();
+			e.preventDefault();
 
 			var target = modal.getAttribute('data-target');
 				 container = document.getElementById(target);
@@ -65,7 +57,7 @@
 
 	_.each(close_toggle, function (close) {
 		close.addEventListener('click', function(e) {
-			// e.preventDefault();
+			e.preventDefault();
 			
 			dialog = this.parentElement
 			container 	   = this.parentElement.parentElement

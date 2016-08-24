@@ -215,7 +215,7 @@ img.fluid{
 {
     .hidden-on-small
     {
-        display: none;
+        display: none !important;
     }
     .text--center-mobile
     {

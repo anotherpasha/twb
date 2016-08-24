@@ -1,9 +1,10 @@
 <header class="navbar__subpage">
     <div class="container">
 
-        <a href="{!! url('/') !!}" class="navbar--logo push-half--top"><img src="{{asset('images/logo-small.png')}}"></a>
+        <a href="{!! url('/') !!}" class="navbar--logo subpage push-half--top"><img src="{{asset('images/logo-small.png')}}"></a>
+        <a href="{!! url('/') !!}" class="navbar--toggle subpage home"><span></span><span></span><span></span></a>
 
-        <nav class="navigation--home hard">
+        <nav class="navigation--home hard hidden-on-small">
             @if(Auth::check())
             <ul class="list__inline">
                 <li class=""><a href="{!! url('logout') !!}" class="navigation--link black">Logout</a></li>

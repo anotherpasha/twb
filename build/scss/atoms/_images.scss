@@ -11,3 +11,11 @@
 	margin: 20px 0;
 	width: 100%;
 }
+
+.image--prize
+{
+	@include mappy-bp(max-width small)
+	{
+		max-width: 80% !important;
+	}
+}

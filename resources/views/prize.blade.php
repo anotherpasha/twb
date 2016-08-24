@@ -55,7 +55,7 @@
 				<br>
 				<div class="column__span-2-desktop column__span-6-mobile text--center push--bottom">
 					<figure>
-						<img class="image--responsive" src="{{asset('images/consolation-prize-01.png')}}">
+						<img class="image--responsive image--prize" src="{{asset('images/consolation-prize-01.png')}}">
 					</figure>
 					<br>
 					<h6>2 Unit</h6>
@@ -64,7 +64,7 @@
 
 				<div class="column__span-2-desktop column__span-6-mobile text--center push--bottom">
 					<figure>
-						<img class="image--responsive" src="{{asset('images/consolation-prize-02.png')}}">
+						<img class="image--responsive image--prize" src="{{asset('images/consolation-prize-02.png')}}">
 					</figure>
 					<br>
 					<h6>5 Unit</h6>
@@ -73,7 +73,7 @@
 
 				<div class="column__span-2-desktop column__span-6-mobile text--center push--bottom">
 					<figure>
-						<img class="image--responsive" src="{{asset('images/consolation-prize-03.png')}}">
+						<img class="image--responsive image--prize" src="{{asset('images/consolation-prize-03.png')}}">
 					</figure>
 					<br>
 					<h6>2 Unit</h6>
@@ -93,7 +93,7 @@
 					<br><br>
 					<div class="column__span-3-desktop column__span-6-mobile text--center push--bottom">
 						<figure>
-							<img class="image--responsive" src="{{asset('images/weekly-prize-01.png')}}">
+							<img class="image--responsive image--prize" src="{{asset('images/weekly-prize-01.png')}}">
 						</figure>
 						<br>
 						<h3>Sodexo Voucher</h3>
@@ -102,7 +102,7 @@
 
 					<div class="column__span-3-desktop column__span-6-mobile text--center push--bottom">
 						<figure>
-							<img class="image--responsive" src="{{asset('images/weekly-prize-02.png')}}">
+							<img class="image--responsive image--prize" src="{{asset('images/weekly-prize-02.png')}}">
 						</figure>
 						<br>
 						<h3>Voucher Pulsa</h3>
