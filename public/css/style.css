@@ -1368,9 +1368,20 @@ footer {
       .headline--home figure {
         display: block; }
         .headline--home figure img {
-          max-width: 70%; }
+          max-width: 70%; } }
+      @media all and (max-width: 39.9375em) and (max-height: 31.1875em) {
+        .headline--home figure img {
+          max-width: 60%; } }
+  @media all and (max-width: 39.9375em) {
       .headline--home h2 {
         font-size: 18px; } }
+    @media all and (max-width: 39.9375em) and (max-height: 31.1875em) {
+      .headline--home h2 {
+        font-size: 16px; } }
+  @media all and (max-width: 39.9375em) {
+      .headline--home a {
+        font-size: 12px;
+        margin-top: -10px; } }
 
 .caption--header .title {
   display: inline-block; }
@@ -1730,6 +1741,7 @@ header {
     font-family: "Oduda-Bold"; }
     @media all and (max-width: 39.9375em) {
       .cards--gallery .title {
+        min-height: 42px;
         font-size: 14px; } }
   .cards--gallery .author {
     font-size: 12px; }
