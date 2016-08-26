@@ -13,7 +13,7 @@ header
 			position: relative;
 			border-bottom: solid 1px $grey-default;
 			@include mappy-bp(max-width small) {
-				padding: 10px 0;
+				padding: 10px;
 			}
 		}
 		@include mappy-bp(max-width small)
@@ -24,6 +24,11 @@ header
 
 	.navbar--logo
 	{
+		img
+		{
+			width: 105%;
+			max-width: 105%
+		}
 		&.subpage
 		{
 			display: inline-block !important;

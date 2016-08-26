@@ -53,6 +53,7 @@ $gallery: (
 .container__main
 {
   background-color: $white;
+  min-height: 100vh
 }
 .section
 {
@@ -125,7 +126,7 @@ $gallery: (
                           top: 0;
                           left: 0;
                           background-color: #32c0ff;
-                          z-index: -1;
+                          z-index: 0;
                             @include mappy-bp(max-width small)
                             {
                               height: 180px;

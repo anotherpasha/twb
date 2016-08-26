@@ -55,7 +55,7 @@
 							<textarea id="editor--story" name="story" placeholder="Sertakan serita seru Moms dan si kecil bersama karakter Tini Wini Biti" >{!! old('story') !!}</textarea>
 						</div>
 						<div class="form__control">
-							<button type="submit" class="button button__secondary button--small disabled">Daftar</button>
+							<button type="submit" class="button button__secondary button--small disabled">Kirim</button>
 						</div>
 					</div>
 

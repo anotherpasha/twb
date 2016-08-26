@@ -485,7 +485,8 @@ img.fluid {
 	Container
 \* ============================== */
 .container__main {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  min-height: 100vh; }
 
 .section {
   display: table;
@@ -565,7 +566,7 @@ img.fluid {
     top: 0;
     left: 0;
     background-color: #32c0ff;
-    z-index: -1; }
+    z-index: 0; }
     @media all and (max-width: 39.9375em) {
       #section--photo-detail:before {
         height: 180px; } }
@@ -1518,11 +1519,14 @@ header {
     border-bottom: solid 1px #e6e6e6; }
     @media all and (max-width: 39.9375em) {
       header.navbar__subpage {
-        padding: 10px 0; } }
+        padding: 10px; } }
   @media all and (max-width: 39.9375em) {
     header {
       padding: 10px; } }
 
+.navbar--logo img {
+  width: 105%;
+  max-width: 105%; }
 .navbar--logo.subpage {
   display: inline-block !important; }
 @media all and (max-width: 39.9375em) {
@@ -1723,7 +1727,7 @@ header {
     color: #1e419b; }
     @media all and (max-width: 39.9375em) {
       .cards--gallery li {
-        padding: 0 5px; } }
+        padding: 0 15px; } }
   .cards--gallery .images {
     display: inline-block;
     width: 100%;
