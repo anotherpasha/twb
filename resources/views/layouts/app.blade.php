@@ -73,12 +73,7 @@
 <script type="text/javascript" src="{{asset('js/init.min.js')}}"></script>
 
 
-<!-- script type="text/javascript">
-    var login_error = false;
-    @if($errors->has('email') || $errors->has('password'))
-        // login_error = true;
-    @endif
-</script -->
+
 <script type="text/javascript">
     var logged_in = false;
     @if(Auth::check())

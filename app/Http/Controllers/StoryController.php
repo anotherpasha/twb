@@ -157,7 +157,7 @@ class StoryController extends Controller
     {
         if( $request->has('s') ) {
             $s = $request->input('s');
-            $stories = Story::where('title', 'like', '%' . $s . '%')->orderBy('id', 'desc')->paginate(12);
+            $stories = Story::where('approval_status', 1)->where('title', 'like', '%' . $s . '%')->orderBy('id', 'desc')->paginate(12);
             $stories->setPath('?s=' . $s);
         } else {
             $stories = Story::orderBy('id', 'desc')->paginate(12);
