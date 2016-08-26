@@ -173,7 +173,7 @@
                     </li>
                     <li>
                         <h6>1 Unit</h6>
-                        <h4>Canon Powershot SX410 IS Camera</h4>
+                        <h4>Balance Wheel</h4>
                     </li>
 
                 </ul>
