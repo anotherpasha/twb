@@ -95,9 +95,9 @@
 		{
 			font-size: 18px;
 			font-family: $oduda;
-			
 				@include mappy-bp(max-width small)
 				{
+					min-height: 42px;
 					font-size: 14px;
 				}
 
