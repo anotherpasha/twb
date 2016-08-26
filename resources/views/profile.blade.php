@@ -23,6 +23,7 @@
             <div class="column__span-6">
                 <br>
                 <h1 class="text--center-mobile">Entriku</h1>
+                @if($user->stories()->count() > 0)
                 <br><br>
                 <div class="row ">
                     @foreach($user->stories()->orderBy('id', 'desc')->get() as $story)
@@ -38,6 +39,12 @@
                         </div>
                     @endforeach
                 </div>
+                @else
+                    <br>
+                    <div class="">
+                        <span class="username rounded">Belum ada entri</span>
+                    </div>
+                @endif
             </div>
         </div>
     </section>
