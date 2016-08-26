@@ -485,7 +485,8 @@ img.fluid {
 	Container
 \* ============================== */
 .container__main {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  min-height: 100vh; }
 
 .section {
   display: table;
