@@ -68,9 +68,11 @@
     </ul>
     @endif
 </nav>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="{{asset('js/libs.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/plugins.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/init.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/twb.js')}}"></script>
 
 
 <!-- script type="text/javascript">
@@ -86,8 +88,6 @@
     @endif
 </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="{{asset('js/twb.js')}}"></script>
 
 
 </body>
