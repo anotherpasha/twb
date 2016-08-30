@@ -53,13 +53,14 @@ class StoryController extends Controller
         $filename = $this->createUniqueImageFilename();
         $filePath = $filename.'.'.$extension;
         $upload_success = $file->move($destinationPath, $filePath);
-        $imagePath = $destinationPath. '/' . $filePath;
+
         if( $upload_success ) {
-            $image = Image::make($imagePath)->resize(720, null, function ($constraint) {
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-            $image->save($imagePath, 90);
+//            $imagePath = $destinationPath. '/' . $filePath;
+//            $image = Image::make($imagePath)->resize(720, null, function ($constraint) {
+//                $constraint->aspectRatio();
+//                $constraint->upsize();
+//            });
+//            $image->save($imagePath, 90);
             return $filePath;
         }
         return false;
