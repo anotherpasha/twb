@@ -53,13 +53,14 @@ class StoryController extends Controller
         $filename = $this->createUniqueImageFilename();
         $filePath = $filename.'.'.$extension;
         $upload_success = $file->move($destinationPath, $filePath);
-        $imagePath = $destinationPath. '/' . $filePath;
+
         if( $upload_success ) {
-            $image = Image::make($imagePath)->resize(720, null, function ($constraint) {
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-            $image->save($imagePath, 90);
+//            $imagePath = $destinationPath. '/' . $filePath;
+//            $image = Image::make($imagePath)->resize(720, null, function ($constraint) {
+//                $constraint->aspectRatio();
+//                $constraint->upsize();
+//            });
+//            $image->save($imagePath, 90);
             return $filePath;
         }
         return false;
@@ -101,6 +102,12 @@ class StoryController extends Controller
     public function showStory(Request $request, $id)
     {
         $story = Story::find($id);
+
+        // check the approval status
+        if ($story->approval_status != 1) {
+            return redirect('gallery')->withErrors(['error' => 'The story needs to be approved.']);
+        }
+
         $data['story'] = $story;
         $data['shareLinks'] = Share::load(url('story/' . $story->id), $story->title)->services('facebook', 'twitter');
         $this->viewLogging($request->ip(), $id);
@@ -168,6 +175,14 @@ class StoryController extends Controller
     public function likeStory($storyId)
     {
         $user = Auth::user();
+
+        // check approval status
+        $story = Story::find($storyId);
+        if ($story->approval_status != 1) {
+            return redirect('gallery')->withErrors(['error' => 'The story needs to be approved.']);
+        }
+
+        // check for duplication
         if( $user->likes()->where('story_id', $storyId)->get()->isEmpty() ) {
             $user->likes()->create([
                 'story_id'  => $storyId,

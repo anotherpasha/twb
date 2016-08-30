@@ -26,7 +26,10 @@
                 @if($user->stories()->count() > 0)
                 <br><br>
                 <div class="row ">
-                    @foreach($user->stories()->orderBy('id', 'desc')->get() as $story)
+                    @foreach($user->stories()
+                        ->where('approval_status', 1)
+                        ->orderBy('id', 'desc')
+                        ->get() as $story)
                         <div class="wrapper__thumb">
                             <a href="{!! url('story/' . $story->id) !!}" class="thumb--gallery">
                                 <ul class="cards cards--gallery">

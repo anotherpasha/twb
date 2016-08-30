@@ -35,3 +35,5 @@ composer.lock
 /bootstrap/cache
 /storage/logs
 /storage/framework
+/public/js/init.js
+/public/uploads
