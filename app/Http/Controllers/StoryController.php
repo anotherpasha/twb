@@ -101,6 +101,12 @@ class StoryController extends Controller
     public function showStory(Request $request, $id)
     {
         $story = Story::find($id);
+
+        // check the approval status
+        if ($story->approval_status != 1) {
+            return redirect('gallery')->withErrors(['error' => 'The story needs to be approved.']);
+        }
+
         $data['story'] = $story;
         $data['shareLinks'] = Share::load(url('story/' . $story->id), $story->title)->services('facebook', 'twitter');
         $this->viewLogging($request->ip(), $id);
@@ -168,6 +174,14 @@ class StoryController extends Controller
     public function likeStory($storyId)
     {
         $user = Auth::user();
+
+        // check approval status
+        $story = Story::find($storyId);
+        if ($story->approval_status != 1) {
+            return redirect('gallery')->withErrors(['error' => 'The story needs to be approved.']);
+        }
+
+        // check for duplication
         if( $user->likes()->where('story_id', $storyId)->get()->isEmpty() ) {
             $user->likes()->create([
                 'story_id'  => $storyId,
