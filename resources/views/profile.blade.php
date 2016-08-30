@@ -23,9 +23,13 @@
             <div class="column__span-6">
                 <br>
                 <h1 class="text--center-mobile">Entriku</h1>
+                @if($user->stories()->count() > 0)
                 <br><br>
                 <div class="row ">
-                    @foreach($user->stories()->orderBy('id', 'desc')->get() as $story)
+                    @foreach($user->stories()
+                        ->where('approval_status', 1)
+                        ->orderBy('id', 'desc')
+                        ->get() as $story)
                         <div class="wrapper__thumb">
                             <a href="{!! url('story/' . $story->id) !!}" class="thumb--gallery">
                                 <ul class="cards cards--gallery">
@@ -38,11 +42,17 @@
                         </div>
                     @endforeach
                 </div>
+                @else
+                    <br>
+                    <div class="">
+                        <span class="username rounded">Belum ada entri</span>
+                    </div>
+                @endif
             </div>
         </div>
     </section>
     <!-- end of profile section -->
-
+    <br><br><br><br><br><br>
 
 </div><!-- end of main container -->
 

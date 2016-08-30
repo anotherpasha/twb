@@ -46,6 +46,10 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/like/{id}', 'StoryController@likeStory');
 
+    Route::get('/success', function () {
+        return view('success');
+    });
+
     Route::get('/success-submission', function () {
         return view('success-submission');
     });
@@ -71,11 +75,9 @@ Route::group(['middleware' => 'restricted'], function () {
 Route::get('auth/redirect/{provider}', 'SocialAuthController@redirect');
 Route::get('auth/callback/{provider}', 'SocialAuthController@callback');
 
-
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/post-story', 'PostController@postStory');
 
-
+// Route::get('/post-story', 'PostController@postStory');
 // Route::get('auth/redirect/{provider}/registration', 'SocialAuthController@redirect');

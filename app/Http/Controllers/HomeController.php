@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data['stories'] = Story::orderBy('id', 'desc')->get()->take(8);
+        $data['stories'] = Story::where('approval_status', 1)->orderBy('id', 'desc')->get()->take(8);
         return view('home', $data);
     }
 }

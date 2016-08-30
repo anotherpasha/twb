@@ -116,7 +116,9 @@ Pace.on('done', function() {
 
 	tinymce.init({   
 		selector: '#editor--story',
-		height: 150
+		height: 150,
+        menubar: false,
+        toolbar: 'undo redo | bold italic underline'
 	});
 
 

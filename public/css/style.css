@@ -1934,3 +1934,7 @@ header {
       background-color: #ec1c24; }
     .pagination li:last-child {
       margin-right: 0; }
+
+    .navigation--back-to-gallery {
+      position: absolute;
+    }

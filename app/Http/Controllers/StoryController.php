@@ -10,13 +10,12 @@ use Validator;
 use Auth;
 use Share;
 use App\StoryView;
-
+use Image;
 class StoryController extends Controller
 {
 
     public function postStory(Request $request)
     {
-        // dd($request->input());
         $validator = $this->validator($request->except('_token'));
         if($validator->fails()) {
             return redirect('submission')
@@ -24,31 +23,73 @@ class StoryController extends Controller
                 ->withInput();
         }
 
-        $userId = Auth::user()->id;
-        $title = $request->input('title');
-        $story = $request->input('story');
-        $imagePath = $request->input('image_path');
+        $file = $request->file('file');
+        if ($imagePath = $this->uploadImage($file)) {
 
-        Story::create([
-            'user_id'       => $userId,
-            'title'         => $title,
-            'story'         => $story,
-            'image_path'    => $imagePath
-        ]);
+            $userId = Auth::user()->id;
+            $title = $request->input('title');
+            $story = $request->input('story');
 
-        return redirect('success-submission');
+            Story::create([
+                'user_id'       => $userId,
+                'title'         => $title,
+                'story'         => $story,
+                'image_path'    => $imagePath
+            ]);
+
+            return redirect('success-submission');
+        } else {
+            $error = ['error' => 'There is a problem when upload the image, please try again.'];
+            return redirect('submission')
+                ->withErrors($error)
+                ->withInput();
+        }
+    }
+
+    public function uploadImage($file)
+    {
+        $destinationPath = public_path().'/uploads';
+        $extension =$file->getClientOriginalExtension();
+        $filename = $this->createUniqueImageFilename();
+        $filePath = $filename.'.'.$extension;
+        $upload_success = $file->move($destinationPath, $filePath);
+
+        if( $upload_success ) {
+//            $imagePath = $destinationPath. '/' . $filePath;
+//            $image = Image::make($imagePath)->resize(720, null, function ($constraint) {
+//                $constraint->aspectRatio();
+//                $constraint->upsize();
+//            });
+//            $image->save($imagePath, 90);
+            return $filePath;
+        }
+        return false;
+    }
+
+    private function createUniqueImageFilename()
+    {
+        $filename = str_random(12);
+        if ($this->isFilenameIsUsed($filename)) {
+            return $this->createUniqueImageFilename();
+        }
+        return $filename;
+    }
+
+    private function isFilenameIsUsed($filename)
+    {
+        return (Story::where('image_path', 'like', $filename. '%.')->count() > 0);
     }
 
     private function validator(array $inputs)
     {
         $messages = [
-            'image_path.required'   => 'Please upload the image first.'
+            'file.required'   => 'The image field is required.'
         ];
 
         return Validator::make($inputs, [
-            'title'         => 'required',
-            'story'         => 'required',
-            'image_path'    => 'required'
+            'title'     => 'required',
+            'story'     => 'required',
+            'file'      => 'required|image|max:2048'
         ], $messages);
 
     }
@@ -61,6 +102,12 @@ class StoryController extends Controller
     public function showStory(Request $request, $id)
     {
         $story = Story::find($id);
+
+        // check the approval status
+        if ($story->approval_status != 1) {
+            return redirect('gallery')->withErrors(['error' => 'The story needs to be approved.']);
+        }
+
         $data['story'] = $story;
         $data['shareLinks'] = Share::load(url('story/' . $story->id), $story->title)->services('facebook', 'twitter');
         $this->viewLogging($request->ip(), $id);
@@ -117,10 +164,10 @@ class StoryController extends Controller
     {
         if( $request->has('s') ) {
             $s = $request->input('s');
-            $stories = Story::where('title', 'like', '%' . $s . '%')->orderBy('id', 'desc')->paginate(12);
+            $stories = Story::where('approval_status', 1)->where('title', 'like', '%' . $s . '%')->orderBy('id', 'desc')->paginate(12);
             $stories->setPath('?s=' . $s);
         } else {
-            $stories = Story::orderBy('id', 'desc')->paginate(12);
+            $stories = Story::where('approval_status', 1)->orderBy('id', 'desc')->paginate(12);
         }
         return $stories;
     }
@@ -128,6 +175,14 @@ class StoryController extends Controller
     public function likeStory($storyId)
     {
         $user = Auth::user();
+
+        // check approval status
+        $story = Story::find($storyId);
+        if ($story->approval_status != 1) {
+            return redirect('gallery')->withErrors(['error' => 'The story needs to be approved.']);
+        }
+
+        // check for duplication
         if( $user->likes()->where('story_id', $storyId)->get()->isEmpty() ) {
             $user->likes()->create([
                 'story_id'  => $storyId,
