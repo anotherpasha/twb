@@ -110,8 +110,10 @@
                                             OPEN
                                         @elseif($story->approval_status == 1)
                                             APPROVED
-                                        @else
+                                        @elseif($story->approval_status == 2)
                                             REJECTED
+                                        @else
+                                            DELETED
                                         @endif
                                     </td>
                                 </tr>
