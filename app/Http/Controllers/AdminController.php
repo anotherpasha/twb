@@ -99,9 +99,9 @@ class AdminController extends Controller
     public function deleteStory($id)
     {
         $story = Story::find($id);
-        $story->likes()->delete();
-        $story->views()->delete();
-        $story->delete();
+        $story->approval_status = 3;
+        $story->save();
+        $data['story'] = $story;
         return redirect('adm/stories');
     }
 

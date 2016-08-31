@@ -18,11 +18,15 @@
                                     <img class="image--responsive" src="{!! asset('uploads/' . $story->image_path) !!}">
                                 </figure>
 
-                                @if($story->approval_status == 0)
                                 <div class="photo--detail text--left">
-                                    <a href="{{ url('adm/approve/' . $story->id) }}" class="btn btn-primary" role="button">Approve</a> <a href="{{ url('adm/reject/' . $story->id) }}" class="btn btn-default" role="button">Reject</a>
+                                    @if($story->approval_status == 0)
+                                    <a href="{{ url('adm/approve/' . $story->id) }}" class="btn btn-primary" role="button">Approve</a> <a href="{{ url('adm/reject/' . $story->id) }}" class="btn btn-default btn-warning" role="button">Reject</a>
+                                    @endif
+
+                                    @if($story->approval_status != 3)
+                                    <a href="{{ url('adm/delete/' . $story->id) }}" class="btn btn-default btn-danger" role="button">Delete</a>
+                                    @endif
                                 </div>
-                                @endif
 
                                 <div class="photo--detail text--left">
                                     <div class="caption--header">

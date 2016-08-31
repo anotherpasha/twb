@@ -20,6 +20,7 @@
                                         <option value="0" @if($status == '0') selected @endif>Open</option>
                                         <option value="1" @if($status == '1') selected @endif>Approved</option>
                                         <option value="2" @if($status == '2') selected @endif>Rejected</option>
+                                        <option value="3" @if($status == '3') selected @endif>Deleted</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-lg-12">
@@ -54,10 +55,15 @@
                                         <a href="{{ url('adm/approve/' . $story->id) }}">Approve</a> | <a href="{{ url('adm/reject' . $story->id) }}">Reject</a>
                                         @elseif($status == 1)
                                             APPROVED
-                                        @else
+                                        @elseif($status == 2)
                                             REJECTED
+                                        @else
+                                            DELETED
                                         @endif
-                                         | <a href="{{ url('adm/delete' . $story->id) }}">Delete</a>
+
+                                        @if($status != 3)
+                                         | <a href="{{ url('adm/delete/' . $story->id) }}">Delete</a>
+                                        @endif
                                     </td>
                                 </tr>
                                 @endforeach

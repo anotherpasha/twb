@@ -65,6 +65,7 @@ Route::group(['middleware' => 'restricted'], function () {
         Route::get( '/story/{from}/{id}', 'AdminController@storyDetail' );
         Route::get( '/approve/{id}', 'AdminController@approveStory' );
         Route::get( '/reject/{id}', 'AdminController@rejectStory' );
+        Route::get( '/delete/{id}', 'AdminController@deleteStory' );
         Route::get( '/participants', 'AdminController@participants' );
         Route::get( '/most-liked', 'AdminController@mostLiked' );
         Route::get( '/most-viewed', 'AdminController@mostViewed' );
