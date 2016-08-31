@@ -141,7 +141,7 @@
                         </li>
 
                         <li>
-                            - 1 (satu) unit Kamera Canon  
+                            - 1 (satu) unit Hoverboard Segway
                         </li>
                     </ul>
 
