@@ -40,6 +40,7 @@
 								  <figure class="wrapper--img-preview">
 									<img id="image--preview" class='image--responsive' />
 									<figcaption id="image--name"> </figcaption>
+									<a href="" id="remove--upload"><strong>x</strong></a>
 								  </figure>
 															
 							</div>
