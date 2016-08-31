@@ -96,6 +96,15 @@ class AdminController extends Controller
         return redirect('adm/stories');
     }
 
+    public function deleteStory($id)
+    {
+        $story = Story::find($id);
+        $story->likes()->delete();
+        $story->views()->delete();
+        $story->delete();
+        return redirect('adm/stories');
+    }
+
     public function participants()
     {
         $participants = User::where('email', '<>', 'admin@duniatiniwinibiti.com')->paginate(20);

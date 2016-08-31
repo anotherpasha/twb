@@ -57,6 +57,7 @@
                                         @else
                                             REJECTED
                                         @endif
+                                         | <a href="{{ url('adm/delete' . $story->id) }}">Delete</a>
                                     </td>
                                 </tr>
                                 @endforeach
