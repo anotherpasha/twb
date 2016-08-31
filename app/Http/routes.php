@@ -21,7 +21,7 @@ Route::get('/signup', function () {
     return view('signup');
 });
 
-Route::get('/snk', function () {
+Route::get('/syarat-ketentuan', function () {
     return view('snk');
 });
 

@@ -4,7 +4,7 @@
 				
 				<ul class="list__inline list--foot">
 					<li>
-						<a href="{!! url('/snk') !!}">Syarat &amp;  Ketentuan</a>
+						<a href="{!! url('/syarat-ketentuan') !!}">Syarat &amp;  Ketentuan</a>
 					</li>
 					<li class="list--divider hidden-on-small"> | </li>
 					<li>
