@@ -30,12 +30,15 @@ class StoryController extends Controller
             $title = $request->input('title');
             $story = $request->input('story');
 
-            Story::create([
+            $story = Story::create([
                 'user_id'       => $userId,
                 'title'         => $title,
                 'story'         => $story,
                 'image_path'    => $imagePath
             ]);
+
+            $story->shorten_url = \UrlShortener::shorten(url('story/' . $story->id));
+            $story->save();
 
             return redirect('success-submission');
         } else {
@@ -109,7 +112,8 @@ class StoryController extends Controller
         }
 
         $data['story'] = $story;
-        $data['shareLinks'] = Share::load(url('story/' . $story->id), $story->title)->services('facebook', 'twitter');
+        $data['facebookLink'] = Share::load(url('story/' . $story->id), $story->title)->services('facebook');
+        $data['twitterLink'] = Share::load($story->shorten_url, $story->title)->services('twitter');
         $this->viewLogging($request->ip(), $id);
         return view('photo', $data);
     }
