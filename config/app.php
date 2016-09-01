@@ -161,7 +161,10 @@ return [
         Chencha\Share\ShareServiceProvider::class,
 
         // Image
-        Intervention\Image\ImageServiceProvider::class
+        Intervention\Image\ImageServiceProvider::class,
+
+        // URL Shortener
+        Waavi\UrlShortener\UrlShortenerServiceProvider::class,
 
     ],
 
@@ -213,6 +216,8 @@ return [
         'Share' => Chencha\Share\ShareFacade::class,
 
         'Image' => Intervention\Image\Facades\Image::class,
+
+        'UrlShortener' => Waavi\UrlShortener\Facades\UrlShortener::class,
 
     ],
 

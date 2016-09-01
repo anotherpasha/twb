@@ -28,11 +28,11 @@
                     </div>
 
                     <div class="share--group  text--left">
-                        <a href="{!! $shareLinks['facebook'] !!}" target="_blank" class="button button__split button--facebook-share  ">
+                        <a href="{!! $facebookLink['facebook'] !!}" target="_blank" class="button button__split button--facebook-share  ">
                             <span class="button--icon"><i class="icon icon--facebook"></i></span>
                             <span class="button--text">Share</span>
                         </a>
-                        <a href="{!! $shareLinks['twitter'] !!}" target="_blank" class="button button__split button--tweet  ">
+                        <a href="{!! $twitterLink['twitter'] !!}" target="_blank" class="button button__split button--tweet  ">
                             <span class="button--icon"><i class="icon icon--twitter"></i></span>
                             <span class="button--text">Tweet</span>
                         </a>
