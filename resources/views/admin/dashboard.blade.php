@@ -72,6 +72,10 @@
                                     <span class="badge">{{ $rejectedStory }}</span>
                                     <a href="{{ url('adm/stories/?status=2') }}">Rejected</a>
                                 </li>
+                                <li class="list-group-item">
+                                    <span class="badge">{{ $deletedStory }}</span>
+                                    <a href="{{ url('adm/stories/?status=3') }}">Deleted</a>
+                                </li>
                             </ul>
                         </div>
                     </div>

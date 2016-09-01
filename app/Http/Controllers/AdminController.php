@@ -41,6 +41,7 @@ class AdminController extends Controller
         $data['openStory'] = Story::where('approval_status', 0)->count();
         $data['approvedStory'] = Story::where('approval_status', 1)->count();
         $data['rejectedStory'] = Story::where('approval_status', 2)->count();
+        $data['deletedStory'] = Story::where('approval_status', 3)->count();
 
         return view('admin.dashboard', $data);
     }
