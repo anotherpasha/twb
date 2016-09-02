@@ -34,7 +34,7 @@ class AdminController extends Controller
             ->get();
 
         $data['stories'] = Story::orderBy('id', 'desc')
-            ->take(5)
+            ->take(15)
             ->get();
 
         $data['submissionNumber'] = Story::count();
@@ -53,12 +53,17 @@ class AdminController extends Controller
             $s = $request->input('s');
             $status = $request->input('status');
             $data['status'] = $status;
-            $stories = Story::where('approval_status', $status)->orderBy('id', 'desc')->whereHas('user', function($query) use ($s) {
+            if ($status == '99') {
+                $stories = Story::where('id', '<>', 0);
+            } else {
+                $stories = Story::where('approval_status', $status);
+            }
+            $stories = $stories->orderBy('id', 'desc')->whereHas('user', function($query) use ($s) {
                 $query->where('name', 'like', '%' . $s . '%');
             })->paginate(16);
             $stories->setPath('?s=' . $s . '&status=' . $status);
         } else {
-            $stories = Story::where('approval_status', 0)->orderBy('id', 'desc')->paginate(16);
+            $stories = Story::orderBy('id', 'desc')->paginate(16);
         }
         $data['stories'] = $stories;
         return view('admin.story-list', $data);
