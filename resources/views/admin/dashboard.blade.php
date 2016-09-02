@@ -85,6 +85,22 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
+                        <span>Pages</span>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a class="badge" href="{{ url('adm/edit-page/1') }}">Edit</a>
+                                Syaran dan ketentuan
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
                         <span>Latest Stories</span>
                         <span class="pull-right"><a href="{{ url('adm/stories') }}">See All</a></span>
                     </div>

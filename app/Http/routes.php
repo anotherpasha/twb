@@ -22,7 +22,8 @@ Route::get('/signup', function () {
 });
 
 Route::get('/syarat-ketentuan', function () {
-    return view('snk');
+    $data['page'] = \App\Models\Page::find(1);
+    return view('snk', $data);
 });
 
 Route::get('/success', function () {
@@ -69,6 +70,8 @@ Route::group(['middleware' => 'restricted'], function () {
         Route::get( '/participants', 'AdminController@participants' );
         Route::get( '/most-liked', 'AdminController@mostLiked' );
         Route::get( '/most-viewed', 'AdminController@mostViewed' );
+        Route::get( '/edit-page/{id}', 'AdminController@editPage' );
+        Route::post( '/save-page/{id}', 'AdminController@savePage' );
     });
 });
 

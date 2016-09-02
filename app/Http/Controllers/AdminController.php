@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Page;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -136,5 +137,38 @@ class AdminController extends Controller
             ->orderBy('totalview', 'desc')
             ->paginate(20);
         return view('admin.most-views', $data);
+    }
+
+    public function editPage($id)
+    {
+        $page = Page::find($id);
+        $data['page'] = $page;
+        return view('admin.edit-page', $data);
+    }
+
+    public function savePage(Request $request, $id)
+    {
+        $validator = $this->validator($request->except('_token'));
+
+        if ($validator->fails()) {
+            return redirect('adm/edit-page/' . $id)
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $page = Page::find($id);
+        $page->title = $request->input('title');
+        $page->content = $request->input('content');
+        $page->save();
+
+        return redirect('adm');
+    }
+
+    private function validator(array $inputs)
+    {
+        return \Validator::make($inputs, [
+            'title'     => 'required',
+            'content'   => 'required'
+        ]);
     }
 }
