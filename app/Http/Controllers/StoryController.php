@@ -37,8 +37,8 @@ class StoryController extends Controller
                 'image_path'    => $imagePath
             ]);
 
-            $story->shorten_url = \UrlShortener::shorten(url('story/' . $story->id));
-            $story->save();
+            //$story->shorten_url = \UrlShortener::shorten(url('story/' . $story->id));
+            //$story->save();
 
             return redirect('success-submission');
         } else {
