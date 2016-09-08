@@ -49,7 +49,7 @@
                                     <td>{{ $story->user->email }}</td>
                                     <td>{{ $story->created_at->format('d-M-Y') }}</td>
                                     <td><a href="{{ url('adm/story/stories/' . $story->id) }}">{{ $story->title }}</a></td>
-                                    <td><img width="100" src="{{ asset('uploads/' . $story->image_path) }}"></td>
+                                    <td><img width="100" src="{{ asset('uploads/' . $story->thumbnail_path) }}"></td>
                                     <td>{{ $story->likes->count() }}</td>
                                     <td>
                                         @if($story->approval_status == 0)

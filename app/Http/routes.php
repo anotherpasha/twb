@@ -72,6 +72,7 @@ Route::group(['middleware' => 'restricted'], function () {
         Route::get( '/most-viewed', 'AdminController@mostViewed' );
         Route::get( '/edit-page/{id}', 'AdminController@editPage' );
         Route::post( '/save-page/{id}', 'AdminController@savePage' );
+        Route::get( '/generate-thumbnail', 'AdminController@generateThumbnail' );
     });
 });
 

@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Story;
 use App\User;
 use DB;
+use Image;
 
 class AdminController extends Controller
 {
@@ -170,5 +171,27 @@ class AdminController extends Controller
             'title'     => 'required',
             'content'   => 'required'
         ]);
+    }
+
+    public function generateThumbnail()
+    {
+        $stories = Story::where('image_path', '<>', '')->get();
+        foreach ($stories as $story) {
+            $imagePath = public_path('uploads') . '/' . $story->image_path;
+            $path = pathinfo($imagePath);
+            $imageName = $path['filename'];
+            $imageExt = $path['extension'];
+            $thumbnailName = $imageName . '_thumb' . '.' . $imageExt;
+            $thumbnailPath = public_path('uploads') . '/' . $thumbnailName;
+
+            $image = Image::make($imagePath)->resize(300, null, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            $image->save($thumbnailPath, 100);
+
+            $story->thumbnail_path = $thumbnailName;
+            $story->save();
+        }
+
     }
 }
