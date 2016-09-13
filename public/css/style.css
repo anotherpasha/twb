@@ -1763,7 +1763,7 @@ header {
       .cards--gallery .images figure img {
         width: 100%; }
   .cards--gallery .title {
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Oduda-Bold"; }
     @media all and (max-width: 39.9375em) {
       .cards--gallery .title {
