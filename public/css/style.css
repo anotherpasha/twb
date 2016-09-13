@@ -1773,7 +1773,8 @@ header {
     font-size: 12px; }
     @media all and (max-width: 39.9375em) {
       .cards--gallery .author {
-        font-size: 10px; } }
+        font-size: 9px;
+        min-height: 35px; } }
   .cards--gallery .likes {
     font-size: 12px;
     margin-top: 5px; }

@@ -111,7 +111,8 @@
 			font-size: 12px;
 				@include mappy-bp(max-width small)
 				{
-					font-size: 10px;
+					font-size: 9px;
+					min-height: 35px;
 				}
 		}
 		.likes
