@@ -30,12 +30,16 @@ class StoryController extends Controller
             $title = $request->input('title');
             $story = $request->input('story');
 
-            Story::create([
+            $story = Story::create([
                 'user_id'       => $userId,
                 'title'         => $title,
                 'story'         => $story,
-                'image_path'    => $imagePath
+                'image_path'    => $imagePath['imagePath'],
+                'thumbnail_path' => $imagePath['thumbnailPath'],
             ]);
+
+            //$story->shorten_url = \UrlShortener::shorten(url('story/' . $story->id));
+            //$story->save();
 
             return redirect('success-submission');
         } else {
@@ -55,13 +59,26 @@ class StoryController extends Controller
         $upload_success = $file->move($destinationPath, $filePath);
 
         if( $upload_success ) {
-//            $imagePath = $destinationPath. '/' . $filePath;
-//            $image = Image::make($imagePath)->resize(720, null, function ($constraint) {
-//                $constraint->aspectRatio();
-//                $constraint->upsize();
-//            });
-//            $image->save($imagePath, 90);
-            return $filePath;
+            $imagePath = $destinationPath. '/' . $filePath;
+            $thumbnailPath = $destinationPath . '/' . $filename . '-thumb' . '.' . $extension;
+
+            $path = [
+                'imagePath'     => $filePath,
+                'thumbnailPath' => $filename . '-thumb' . '.' . $extension
+            ];
+
+            $image = Image::make($imagePath)->resize(800, null, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            $image->save($imagePath, 100);
+
+            // create thumbnail
+            $image = Image::make($imagePath)->resize(300, null, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            $image->save($thumbnailPath, 100);
+
+            return $path;
         }
         return false;
     }
@@ -109,7 +126,8 @@ class StoryController extends Controller
         }
 
         $data['story'] = $story;
-        $data['shareLinks'] = Share::load(url('story/' . $story->id), $story->title)->services('facebook', 'twitter');
+        $data['facebookLink'] = Share::load(url('story/' . $story->id), $story->title)->services('facebook');
+        $data['twitterLink'] = Share::load($story->shorten_url, $story->title)->services('twitter');
         $this->viewLogging($request->ip(), $id);
         return view('photo', $data);
     }

@@ -72,8 +72,28 @@
                                     <span class="badge">{{ $rejectedStory }}</span>
                                     <a href="{{ url('adm/stories/?status=2') }}">Rejected</a>
                                 </li>
+                                <li class="list-group-item">
+                                    <span class="badge">{{ $deletedStory }}</span>
+                                    <a href="{{ url('adm/stories/?status=3') }}">Deleted</a>
+                                </li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span>Pages</span>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a class="badge" href="{{ url('adm/edit-page/1') }}">Edit</a>
+                                Syaran dan ketentuan
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -103,15 +123,17 @@
                                     <td>{{ $story->user->email }}</td>
                                     <td>{{ $story->created_at->format('d-M-Y') }}</td>
                                     <td><a href="{{ url('adm/story/dashboard/' . $story->id) }}">{{ $story->title }}</a></td>
-                                    <td><img width="100" src="{{ asset('uploads/' . $story->image_path) }}"></td>
+                                    <td><img width="100" src="{{ asset('uploads/' . $story->thumbnail_path) }}"></td>
                                     <td>{{ $story->likes->count() }}</td>
                                     <td>
                                         @if($story->approval_status == 0)
                                             OPEN
                                         @elseif($story->approval_status == 1)
                                             APPROVED
-                                        @else
+                                        @elseif($story->approval_status == 2)
                                             REJECTED
+                                        @else
+                                            DELETED
                                         @endif
                                     </td>
                                 </tr>

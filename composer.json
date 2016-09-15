@@ -10,7 +10,8 @@
         "laravel/socialite": "^2.0",
         "intervention/image": "^2.3",
         "chencha/share": "^5.2",
-        "orchestra/html": "~3.2"
+        "orchestra/html": "~3.2",
+        "waavi/url-shortener": "1.0.x"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
