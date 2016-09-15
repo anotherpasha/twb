@@ -21,7 +21,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <link rel="stylesheet" type="text/css" href="{{asset('css/style.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 
     <script type="text/javascript">
     /**
