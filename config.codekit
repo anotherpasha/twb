@@ -218,6 +218,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/Models\/Page.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/Models\/Page.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/Models\/SocialAccount.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -2898,6 +2907,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/config\/urlshortener.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/config\/urlshortener.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/config\/view.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -2997,6 +3015,33 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/database\/migrations\/2016_09_01_035632_add_shorten_url_on_stories.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/database\/migrations\/2016_09_01_035632_add_shorten_url_on_stories.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/database\/migrations\/2016_09_02_093827_create_pages_table.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/database\/migrations\/2016_09_02_093827_create_pages_table.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/database\/migrations\/2016_09_08_045039_add_thumbnail_on_stories_table.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/database\/migrations\/2016_09_08_045039_add_thumbnail_on_stories_table.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/database\/seeds\/DatabaseSeeder.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -3033,6 +3078,15 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public\/css\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/public\/css\/style.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/css\/style.min.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -3096,7 +3150,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 11878,
+		"initialSize": 45202,
 		"inputAbbreviatedPath": "\/public\/images\/decoration-mobile.png",
 		"outputAbbreviatedPath": "\/public\/images\/decoration-mobile.png",
 		"outputPathIsOutsideProject": 0,
@@ -3371,7 +3425,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 122186,
+		"initialSize": 179238,
 		"inputAbbreviatedPath": "\/public\/images\/prizes.png",
 		"outputAbbreviatedPath": "\/public\/images\/prizes.png",
 		"outputPathIsOutsideProject": 0,
@@ -3532,149 +3586,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
-		},
-	"\/public\/uploads\/0AguwzP8aKeR.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 163423,
-		"inputAbbreviatedPath": "\/public\/uploads\/0AguwzP8aKeR.png",
-		"outputAbbreviatedPath": "\/public\/uploads\/0AguwzP8aKeR.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/public\/uploads\/2R154Pj4pKdd.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 75446,
-		"inputAbbreviatedPath": "\/public\/uploads\/2R154Pj4pKdd.jpg",
-		"outputAbbreviatedPath": "\/public\/uploads\/2R154Pj4pKdd.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/public\/uploads\/E20KQvNSaKoF.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 213227,
-		"inputAbbreviatedPath": "\/public\/uploads\/E20KQvNSaKoF.jpg",
-		"outputAbbreviatedPath": "\/public\/uploads\/E20KQvNSaKoF.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/public\/uploads\/FpxuLyiVzrXi.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 291124,
-		"inputAbbreviatedPath": "\/public\/uploads\/FpxuLyiVzrXi.jpg",
-		"outputAbbreviatedPath": "\/public\/uploads\/FpxuLyiVzrXi.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/public\/uploads\/nina-1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 62155,
-		"inputAbbreviatedPath": "\/public\/uploads\/nina-1.jpg",
-		"outputAbbreviatedPath": "\/public\/uploads\/nina-1.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/public\/uploads\/nina-2.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 85139,
-		"inputAbbreviatedPath": "\/public\/uploads\/nina-2.jpg",
-		"outputAbbreviatedPath": "\/public\/uploads\/nina-2.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/public\/uploads\/nina-3.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 53580,
-		"inputAbbreviatedPath": "\/public\/uploads\/nina-3.jpg",
-		"outputAbbreviatedPath": "\/public\/uploads\/nina-3.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/public\/uploads\/nina-4.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 213227,
-		"inputAbbreviatedPath": "\/public\/uploads\/nina-4.jpg",
-		"outputAbbreviatedPath": "\/public\/uploads\/nina-4.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/public\/uploads\/nina-5.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 291124,
-		"inputAbbreviatedPath": "\/public\/uploads\/nina-5.jpg",
-		"outputAbbreviatedPath": "\/public\/uploads\/nina-5.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/public\/uploads\/OjJdJPODLUN7.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 132944,
-		"inputAbbreviatedPath": "\/public\/uploads\/OjJdJPODLUN7.jpg",
-		"outputAbbreviatedPath": "\/public\/uploads\/OjJdJPODLUN7.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/public\/uploads\/p8oz7PDwQuQW.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 163423,
-		"inputAbbreviatedPath": "\/public\/uploads\/p8oz7PDwQuQW.png",
-		"outputAbbreviatedPath": "\/public\/uploads\/p8oz7PDwQuQW.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/public\/uploads\/R2SUBhxpIVsX.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 75446,
-		"inputAbbreviatedPath": "\/public\/uploads\/R2SUBhxpIVsX.jpg",
-		"outputAbbreviatedPath": "\/public\/uploads\/R2SUBhxpIVsX.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/public\/uploads\/wBDtMXY5xAuu.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 53580,
-		"inputAbbreviatedPath": "\/public\/uploads\/wBDtMXY5xAuu.jpg",
-		"outputAbbreviatedPath": "\/public\/uploads\/wBDtMXY5xAuu.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
 		},
 	"\/README.md": {
 		"criticStyle": 0,
@@ -7287,6 +7198,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/resources\/views\/admin\/edit-page.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/resources\/views\/admin\/edit-page.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/resources\/views\/admin\/most-likes.blade.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -7490,6 +7410,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/resources\/views\/signup.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/resources\/views\/snk.blade - Copy.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/resources\/views\/snk.blade - Copy.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
