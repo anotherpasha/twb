@@ -16,11 +16,13 @@
 
                  <h1 class="text--center-mobile">Berhasil</h1>
                  <br><br>
-                 <h6 class="text--white text--center-mobile">
+                 <p class="text--white text--center-mobile">
                      Terima kasih Moms telah berpartisipasi dalam kompetisi foto kreatif Dunia Tini Wini Biti! 
                      <br><br>
-                    Ayo share fotonya dan kumpulkan likes untuk foto dan cerita seru Moms dan si kecil bersama karakter Tini Wini Biti. Ada banyak hadiah menarik untuk Moms dan si kecil.
-                </h6>
+                     Karya Moms akan di moderasi terlebih dahulu oleh admin kami.
+                     <br><br>
+                     Setelah karya Moms diterima, Moms bisa share foto kreatif Moms bersama si kecil untuk mengumpulkan likes karena ada banyak hadiah menarik dari Tini Wini Biti, lho!
+                 </p>
                  <br>
             </div>
             <div class="column__span-6 text--center-mobile">

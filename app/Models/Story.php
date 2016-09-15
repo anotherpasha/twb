@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Story extends Model
 {
-    protected $fillable = ['user_id', 'title', 'story', 'image_path'];
+    protected $fillable = ['user_id', 'title', 'story', 'image_path', 'thumbnail_path'];
 
     protected $dates = ['created_at'];
 

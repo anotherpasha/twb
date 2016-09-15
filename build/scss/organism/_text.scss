@@ -18,11 +18,24 @@
 					img
 					{
 						max-width: 70%;
+							@include mappy-bp(h max-height 500px)
+							{
+								max-width: 60%;
+							}
 					}
 			}
 			h2
 			{
 				font-size: 18px;
+							@include mappy-bp(h max-height 500px)
+							{
+								font-size: 16px;
+							}
+			}
+			a
+			{
+				font-size: 12px;
+				margin-top: -10px;
 			}
 		}
 }

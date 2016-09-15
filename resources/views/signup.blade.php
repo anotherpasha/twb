@@ -49,7 +49,7 @@
                             </span>
                         @endif
                     </div>
-                    <div class="form__control">
+                    <div class="form__control required">
                         <input type="text" placeholder="City" name="city" value="{{ old('city') }}"/>
                         @if ($errors->has('city'))
                             <span class="panel--error">
@@ -57,7 +57,7 @@
                             </span>
                         @endif
                     </div>
-                    <div class="form__control ">
+                    <div class="form__control required">
                         <textarea placeholder="Alamat" name="address">{{ old('address') }}</textarea>
                         @if ($errors->has('address'))
                             <span class="panel--error">

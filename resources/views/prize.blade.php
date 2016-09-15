@@ -32,11 +32,11 @@
 
 						<li>
 							<h6>1 Unit</h6>
-							<h4>Samsung Galaxy Tab 4 T231</h4>
+							<h4>Samsung Galaxy Tab</h4>
 						</li>
 						<li>
 							<h6>1 Unit</h6>
-							<h4>Canon Powershot SX410 IS Camera</h4>
+							<h4>Hoverboard Segway</h4>
 						</li>
 
 					</ul>

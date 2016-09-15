@@ -70,7 +70,7 @@
 				color: $primary-color;
 					@include mappy-bp(max-width small)
 					{
-						padding: 0 5px;
+						padding: 0 15px;
 					}
 			}
 
@@ -79,7 +79,7 @@
 			display: inline-block;
 			width: 100%;
 			padding: 0;
-			height: 150px;
+			height: 130px;
 			overflow: hidden;
 			background-color: $black;
 			@include mappy-bp(max-width small)
@@ -89,15 +89,19 @@
 				figure
 				{
 					margin:  0 -10px;
+						img
+						{
+							width: 100%;
+						}
 				}
 		}
 		.title
 		{
 			font-size: 16px;
 			font-family: $oduda;
-			
 				@include mappy-bp(max-width small)
 				{
+					min-height: 42px;
 					font-size: 14px;
 				}
 

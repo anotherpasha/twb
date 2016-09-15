@@ -116,7 +116,10 @@ Pace.on('done', function() {
 
 	tinymce.init({   
 		selector: '#editor--story',
-		height: 150
+		height: 150,
+       	menubar: false,
+		toolbar: 'undo redo | bold italic underline',
+        statusbar: false
 	});
 
 
@@ -130,7 +133,7 @@ Pace.on('done', function() {
 	document.querySelector('.uploader__wrapper').addEventListener('dragover', handleDragOver, false)
 	document.querySelector('.uploader__wrapper').addEventListener('drop', handleFileSelect, false)
 
-	document.getElementById('uploader').addEventListener('change', handleFileSelect, false);
+	document.getElementById('preview-template').addEventListener('change', handleFileSelect, false);
 
 	function handleFileSelect(evt) {
 		evt.preventDefault();
@@ -166,6 +169,12 @@ Pace.on('done', function() {
 
 	};
 
+	document.getElementById('remove--upload').addEventListener("click", function(e) {
+		e.preventDefault();
+		document.getElementById('preview-template').style.display = 'none';
+
+
+	});
 
 
 })

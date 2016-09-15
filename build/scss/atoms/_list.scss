@@ -21,3 +21,19 @@
 
 			}
 	}
+
+	.list--snk
+	{
+		padding-left: 20px;
+		margin-top: 20px;
+		li
+		{
+			font-size: $base-font-size;
+			margin-bottom: $paragraph-margin-bottom;
+			font-style: normal;
+			margin-bottom: 10px;
+			padding-left: 10px;
+			color: scale-color($black, $lightness: 30%);
+			font-family: $body-font-family;
+		}
+	}

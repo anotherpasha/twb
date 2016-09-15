@@ -65,3 +65,10 @@
 	background-color: $grey-default;
 	color: scale-color($grey-default, $lightness: -30%);
 }
+
+#remove--upload
+{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;	
+}

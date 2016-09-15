@@ -73,6 +73,10 @@ $heading-font-family: $oduda , helvetica, sans-serif;
 	{
 		color: scale-color($grey-default, $lightness: -20%);
 	}
+	&-red
+	{
+		color: $red;
+	}
 
 }
 .text-{
@@ -98,7 +102,6 @@ small
 }
 p{
 	font-size: $base-font-size;
-	display: block;
 	margin-bottom: $paragraph-margin-bottom;
 	font-style: normal;
 	display: block;
@@ -146,6 +149,10 @@ h5{
 }
 h6{
 	font-size: $h6-font-size;
+		&.subheading
+		{
+			font-size: ($h6-font-size - 2px);
+		}
 }
 
 h1,h2,h3,h4,h5,h6,p,a,ul,ol,li,span{

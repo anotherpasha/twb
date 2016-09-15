@@ -21,8 +21,9 @@ Route::get('/signup', function () {
     return view('signup');
 });
 
-Route::get('/snk', function () {
-    return view('snk');
+Route::get('/syarat-ketentuan', function () {
+    $data['page'] = \App\Models\Page::find(1);
+    return view('snk', $data);
 });
 
 Route::get('/success', function () {
@@ -46,6 +47,10 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/like/{id}', 'StoryController@likeStory');
 
+    Route::get('/success', function () {
+        return view('success');
+    });
+
     Route::get('/success-submission', function () {
         return view('success-submission');
     });
@@ -61,9 +66,13 @@ Route::group(['middleware' => 'restricted'], function () {
         Route::get( '/story/{from}/{id}', 'AdminController@storyDetail' );
         Route::get( '/approve/{id}', 'AdminController@approveStory' );
         Route::get( '/reject/{id}', 'AdminController@rejectStory' );
+        Route::get( '/delete/{id}', 'AdminController@deleteStory' );
         Route::get( '/participants', 'AdminController@participants' );
         Route::get( '/most-liked', 'AdminController@mostLiked' );
         Route::get( '/most-viewed', 'AdminController@mostViewed' );
+        Route::get( '/edit-page/{id}', 'AdminController@editPage' );
+        Route::post( '/save-page/{id}', 'AdminController@savePage' );
+        Route::get( '/generate-thumbnail', 'AdminController@generateThumbnail' );
     });
 });
 
@@ -71,11 +80,9 @@ Route::group(['middleware' => 'restricted'], function () {
 Route::get('auth/redirect/{provider}', 'SocialAuthController@redirect');
 Route::get('auth/callback/{provider}', 'SocialAuthController@callback');
 
-
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/post-story', 'PostController@postStory');
 
-
+// Route::get('/post-story', 'PostController@postStory');
 // Route::get('auth/redirect/{provider}/registration', 'SocialAuthController@redirect');
