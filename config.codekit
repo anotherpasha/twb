@@ -3150,7 +3150,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 11878,
+		"initialSize": 45202,
 		"inputAbbreviatedPath": "\/public\/images\/decoration-mobile.png",
 		"outputAbbreviatedPath": "\/public\/images\/decoration-mobile.png",
 		"outputPathIsOutsideProject": 0,
@@ -3406,6 +3406,17 @@
 		"initialSize": 28969,
 		"inputAbbreviatedPath": "\/public\/images\/photo-decoration.png",
 		"outputAbbreviatedPath": "\/public\/images\/photo-decoration.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/images\/prize-on-land.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 60992,
+		"inputAbbreviatedPath": "\/public\/images\/prize-on-land.png",
+		"outputAbbreviatedPath": "\/public\/images\/prize-on-land.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
