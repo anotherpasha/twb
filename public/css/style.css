@@ -1252,8 +1252,8 @@ textarea {
   left: 15%;
   z-index: 11; }
 .character--elephant {
-  top: 28%;
-  left: 35%;
+  top: 10%;
+  left: 15%;
   z-index: 11; }
 .character--fish {
   bottom: 4%;
@@ -1261,10 +1261,10 @@ textarea {
   z-index: 11; }
 .character--turtle {
   top: 55%;
-  right: 25%;
+  right: 15%;
   z-index: 11; }
 .character--butterfly {
-  top: 15%;
+  top: 5%;
   right: 20%;
   z-index: 11; }
 
@@ -1312,6 +1312,10 @@ textarea {
   bottom: 22%;
   right: 1%;
   z-index: 3; }
+.decoration--prizes {
+  top: 10%;
+  right: 30%;
+  z-index: 5; }
 
 .list__inline {
   display: inline-block;

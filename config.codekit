@@ -3356,6 +3356,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/public\/images\/prize-on-land.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 60992,
+		"inputAbbreviatedPath": "\/public\/images\/prize-on-land.png",
+		"outputAbbreviatedPath": "\/public\/images\/prize-on-land.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/public\/images\/prizes.png": {
 		"fileType": 32768,
 		"ignore": 0,
