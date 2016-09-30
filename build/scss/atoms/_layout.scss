@@ -117,6 +117,10 @@ $gallery: (
                         background-size: 100%;
                       }
                   }
+                  #section--hadiah-hiburan
+                  {
+                    background-color: scale-color($white, $lightness: -5%);
+                  }
 
                   #section--photo-detail
                   {

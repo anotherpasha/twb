@@ -96,7 +96,7 @@
 	</section>
 
 
-	<section class="section ">
+	<section class="section "  id="section--hadiah-hiburan">
 		<div class="section__container">
 			<br>
 
@@ -149,7 +149,7 @@
 
 	<section class="section section--subpage">
 			<div class="section__container">
-			<br><br><br><hr>	<br><br><br>
+				<br><br><br>
 
 
 					<h1 class="text--red text--center">Pemenang Hadiah Mingguan</h1>
