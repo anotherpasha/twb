@@ -19,6 +19,47 @@
 	width: 100%;
 	position: relative;
 }
+	.cards--winner
+	{
+		padding: 0 15px;
+		.images
+		{
+				position: relative;
+				@include vendor((box-shadow: 1px 1px 1px rgba(0,0,0,.5)), webkit moz ms o);
+				margin-bottom: 20px;
+				img
+				{
+					width: 100%;
+				}
+				.winner--label
+				{
+					position: absolute;
+					bottom: -10px;
+					right: -10px;
+					width: 75px;
+					height: 53px;
+					padding: 10px 5px;
+					text-align: center;
+					content: '';
+					background: url(../images/winner-label-bg.png)no-repeat top left;
+					background-size: 100%;
+					line-height: 1;
+					font-size: 14px;
+					color: $primary-color;
+				}
+		}
+		.title
+		{
+			font-size: 22px;
+			color: $primary-color;
+		}
+		.author
+		{
+			font-size: 14px;
+			color: $primary-color;
+		}
+	}
+
 	.cards--howto
 	{
 		background-color: $grey-default;

@@ -13,6 +13,7 @@
             </ul>
             @else
             <ul class="list__inline">
+              <li class=""><a href="javascript:;" id="login-button" class="button button__primary  button--small toggle--modal" data-target="login">Pemenang</a></li>
                 <li class=""><a href="javascript:;" id="login-button" class="button button__quertiary  button--small toggle--modal" data-target="login">Login</a></li>
 <!--                 <li><img class="image--responsive" src="{!! asset('/images/logo-twb-small.png') !!}"></li>
  -->            </ul>
