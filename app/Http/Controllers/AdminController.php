@@ -115,7 +115,7 @@ class AdminController extends Controller
 
     public function participants()
     {
-        $participants = User::where('email', '<>', 'admin@duniatiniwinibiti.com')->paginate(20);
+        $participants = User::where('email', '<>', 'admin@duniatiniwinibiti.com')->orderBy('id', 'desc')->paginate(20);
         $data['participants'] = $participants;
         return view('admin.participants', $data);
     }
