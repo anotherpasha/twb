@@ -29,7 +29,7 @@ $heading-font-family: $oduda , helvetica, sans-serif;
 
 @font-face {
   font-family: 'Montserrat-Regular';
-  src: url('#{$font-path}Montserrat-Regular.eot?#iefix') format('embedded-opentype'),  
+  src: url('#{$font-path}Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
   	   url('#{$font-path}Montserrat-Regular.otf')  format('opentype'),
 	   url('#{$font-path}Montserrat-Regular.woff') format('woff'),
 	   url('#{$font-path}Montserrat-Regular.ttf')  format('truetype'),
@@ -73,6 +73,10 @@ $heading-font-family: $oduda , helvetica, sans-serif;
 	{
 		color: scale-color($grey-default, $lightness: -20%);
 	}
+  &-jet-grey
+  {
+    color: #404040;
+  }
 	&-red
 	{
 		color: $red;

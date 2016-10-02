@@ -6,7 +6,7 @@
 <!-- start header -->
 		<header>
 				<div class="container">
-						
+
 						<a href="{!! url('/') !!}" class="navbar--logo"><img src="{{ asset('/images/logo.png') }}"></a>
 						<a href="{!! url('/') !!}" class="navbar--toggle home"><span></span><span></span><span></span></a>
 
@@ -21,6 +21,7 @@
 								</ul>
 								@else
 								<ul class="list__inline ">
+										<li class=""><a href="javascript:;" id="login-button" class="button button__secondary  button--small toggle--modal" data-target="login">Pemenang</a></li>
 										<li class="login--link"><a href="#login" id="login-button" class="button button__tertiary  button--small toggle--modal navigation--button" data-target="login">Login</a></li>
 <!--                     <li class="hidden-on-small"><img src="{!! asset('images/logo-twb.png') !!}"></li>
  -->                </ul>
@@ -35,11 +36,11 @@
 		<section id="section--main" class=" window__fit section text--center">
 
 				<div class="content--vertical-middle ">
-						
+
 						<div class="section__container">
-								
+
 								<div class="column__span-3-desktop column__span-6-mobile column__offset-3 text--left">
-										<div class="headline--home">    
+										<div class="headline--home">
 												<figure class="hidden-on-large"><img class="image--responsive" src="{!! asset('images/logo.png') !!}"></figure>
 												<h2 class="">Ikuti kompetisi foto kreatif Dunia Tini Wini Biti, dan dapatkan puluhan <strong class="text--red">hadiah menarik!</strong></h2>
 												<br>
@@ -64,11 +65,11 @@
 						</div>
 
 				<div class="decoration__wrapper--main">
-						
+
 						<div class="decoration">
 
 						<div id="land" class="decoration--land--desktop">
-						
+
 
 								<!-- start character icon positioning-->
 								<div id="duck"  class="decoration__character character--duck animated">
@@ -89,7 +90,7 @@
 								<div id="butterfly" class="decoration__character character--butterfly" >
 										<img src="{{asset('images/fallbacks/butterfly.png')}}" alt="[butterfly]" />
 								</div>
-								
+
 
 								<!-- start decoration positioning-->
 
@@ -111,7 +112,7 @@
 								<div id="tree-big" class="decoration__character decoration--tree-big" >
 										<img src="{{asset('images/fallbacks/tree-big.png')}}" alt="[tree-big]" />
 								</div>
-								
+
 
 								<!-- cloud -->
 								<div id="cloud" class="decoration__character decoration--cloud-01" type="image/svg+xml" data="assets/images/characters/cloud-01.svg">
@@ -125,7 +126,7 @@
 								<div id="cloud" class="decoration__character decoration--cloud-03" type="image/svg+xml" data="assets/images/characters/cloud-03.svg">
 											 <img src="{{asset('images/fallbacks/cloud-03.png')}}" alt="[cloud-03]" />
 								</div>
-								
+
 								<!-- end cloud -->
 
 								<div  id="flower-red-small" class="decoration__character decoration--flower-red-small">
@@ -139,10 +140,10 @@
 					                       <img src="{{asset('images/prize-on-land.png')}}" alt="[prizes]" />
 					                </div>
 						</div>
-						
+
 						</div>
 				</div>
-				
+
 		</section>
 		<!-- end of main section -->
 
@@ -151,10 +152,10 @@
 		<section id="section--prize" class="  section">
 
 				<div class="section__container">
-						
+
 						<div class="column__span-3-desktop column__span-6-mobile">
 								<figure>
-										
+
 										<img class="image--responsive" src="{{asset('images/prizes.png')}}">
 
 								</figure>
@@ -195,7 +196,7 @@
 		<section  id="section--howto" class="  section text--center">
 
 				<div class="section__container">
-						
+
 
 						<div class="column__span-6">
 								<h2>How To Play</h2>
@@ -203,7 +204,7 @@
 						</div>
 
 						<div class="column__span-6">
-																
+
 								<div class="cards__wrapper">
 										<ul class="cards cards--howto">
 												<li class="title">
@@ -223,9 +224,9 @@
 								<div class="cards__wrapper">
 										<ul class="cards cards--howto">
 												<li class="title">
-														Step 2                          
+														Step 2
 												</li>
-												
+
 												<li class="images">
 														<img class="image--responsive" src="{{asset('images/step-02.png')}}">
 												</li>
@@ -241,7 +242,7 @@
 												<li class="title">
 														Step 3
 												</li>
-												
+
 												<li class="images">
 														<img class="image--responsive" src="{{asset('images/step-03.png')}}">
 												</li>
@@ -266,14 +267,14 @@
 
 
 				<div class="section__container">
-						
+
 						<div class="column__span-6">
 								<h2>Gallery</h2>
 								<br>
 						</div>
 
 						<div class="column__span-6">
-								 
+
 								 <div class="container__gallery">
 										@foreach($stories as $story)
 										<div class="wrapper__thumb">
@@ -288,10 +289,10 @@
 										</div>
 										@endforeach
 								 </div>
-						
+
 						</div>
             <div class="column__span-6">
-                 
+
                  <div class="container__gallery">
                     @foreach($stories as $story)
                     <div class="wrapper__thumb">
@@ -306,7 +307,7 @@
                     </div>
                     @endforeach
                  </div>
-            
+
             </div>
 
 						<div class="column__span-6">

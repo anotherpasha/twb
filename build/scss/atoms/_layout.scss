@@ -61,6 +61,10 @@ $gallery: (
 	width: 100%;
       position: relative;
 }
+  .winner--container
+  {
+    margin-top: 40px;
+  }
 	.section__container
 	{
 		@include container(1024px);
@@ -79,26 +83,26 @@ $gallery: (
           }
       }
 
-			#section--main 
+			#section--main
 			{
 				@include linear-gradient($tertiary-color 0%,  $white 100%);
 			}
 
-                  #section--prize 
+                  #section--prize
                   {
                     background-color: $querniry-color;
                     padding-top: 40px;
-                    padding-bottom: 90px; 
+                    padding-bottom: 90px;
                   }
 
-                  #section--howto 
+                  #section--howto
                   {
                     background-color: $white;
                     padding-bottom: 65px;
                     padding-top: 75px;
                   }
 
-                  #section--gallery 
+                  #section--gallery
                   {
                    background-color: scale-color($white, $lightness: -10%);
                    padding-top: 66px;
@@ -112,6 +116,10 @@ $gallery: (
                       {
                         background-size: 100%;
                       }
+                  }
+                  #section--hadiah-hiburan
+                  {
+                    background-color: scale-color($white, $lightness: -5%);
                   }
 
                   #section--photo-detail
@@ -141,7 +149,7 @@ $gallery: (
                   }
 
 
-.content--vertical-middle 
+.content--vertical-middle
   {
 	display: table-cell;
 	vertical-align: middle;
@@ -176,7 +184,7 @@ $gallery: (
 }
 
   /**
-   ** Column 
+   ** Column
    */
    .column
    {
@@ -207,6 +215,17 @@ $gallery: (
         &__span-4
         {
           @include span(4);
+        }
+        &__span-4-desktop
+        {
+          @include span(4);
+        }
+        &__span-4-mobile
+        {
+            @include mappy-bp(max-width small)
+            {
+              @include span(4);
+            }
         }
 
         &__span-5

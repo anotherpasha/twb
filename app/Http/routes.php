@@ -16,6 +16,9 @@ Route::get('/', 'HomeController@index');
 Route::get('/prize', function () {
     return view('prize');
 });
+Route::get('/winners', function () {
+    return view('winners');
+});
 
 Route::get('/signup', function () {
     return view('signup');

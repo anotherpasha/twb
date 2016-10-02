@@ -5,6 +5,24 @@
 			float: left;
 		}
 }
+	.list--winner
+	{
+		text-align: left;
+		display: inline-block;
+		border-top: solid 1px rgba(0,0,0, .5);
+		margin-top: 20px;
+		width: 100%;
+		padding: 20px;
+			&.consolation
+			{
+				border: none;
+				margin-top: 0;
+			}
+			li
+			{
+				color: $primary-color;
+			}
+	}
 
 	.list__undot
 	{
