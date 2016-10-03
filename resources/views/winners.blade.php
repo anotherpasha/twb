@@ -108,7 +108,7 @@
 					</figure>
 					<br>
 					<h6>2 Unit</h6>
-					<h3>Samsung Galaxy J3</h3>
+          <h4 class="subheading">Samsung Galaxy V</h4>
           <ol class="list--winner">
             <li>Winner</li>
             <li>Winner</li>
@@ -121,7 +121,7 @@
 					</figure>
 					<br>
 					<h6>5 Unit</h6>
-					<h3>Samsung Galaxy V</h3>
+					<h4 class="subheading">Samsung Galaxy V</h4>
           <ol class="list--winner">
             <li>Winner</li>
             <li>Winner</li>
@@ -135,7 +135,7 @@
 					</figure>
 					<br>
 					<h6>2 Unit</h6>
-					<h3>Lego Set</h3>
+          <h4 class="subheading">Samsung Galaxy V</h4>
           <ol class="list--winner">
             <li>Winner</li>
             <li>Winner</li>
@@ -160,11 +160,11 @@
             <hr>
             <div class="column__span-6-mobilepush--bottom">
               <div class="column__span-2-desktop text--left">
-                  <h1 class="text--jet-grey">Periode {{$i}}</h1>
+                  <h4 class="text--jet-grey subheading">Periode {{$i}}</h4>
               </div>
               <div class="column__span-6-mobile column__span-4-desktop top-bordered">
                   <div class="column__span-3-desktop column-span-6-mobile">
-                    <h3>Sodexo Voucher<br>@IDR 250,000</h3>
+                    <h4 class="subheading">Sodexo Voucher<br>@IDR 250,000</h4>
                   </div>
                   <div class="column__span-3-desktop column-span-6-mobile">
                     <ol class="list--winner consolation">
@@ -174,7 +174,7 @@
                   </div>
                   <div class="column__span-6 hard push--top">
                       <div class="column__span-3-desktop column-span-6-mobile">
-                        <h3>Voucher Pulsa<br>@IDR 100,000</h3>
+                        <h4 class="subheading">Voucher Pulsa<br>@IDR 100,000</h4>
                       </div>
                       <div class="column__span-3-desktop column-span-6-mobile">
                         <ol class="list--winner consolation">

@@ -13,6 +13,7 @@
 						<nav class="navigation--home hidden-on-small">
 								@if( Auth::check() )
 								<ul class="list__inline">
+										<li class=""><a href="{!! url('winners') !!}"  class="button button__secondary  button--small toggle--modal">Pemenang</a></li>
 										<li class=""><a href="{!! url('logout') !!}"  class="navigation--link white">Logout</a></li>
 										<li class=""><a href="{!! url('profile') !!}" class="navigation--link white">Profilku</a></li>
 										<li class="navigation--button"><a href="{!! url('submission') !!}" class="button button__primary button--small " data-target="login">Submit</a></li>
@@ -21,7 +22,7 @@
 								</ul>
 								@else
 								<ul class="list__inline ">
-										<li class=""><a href="javascript:;" id="login-button" class="button button__secondary  button--small toggle--modal" data-target="login">Pemenang</a></li>
+										<li class=""><a href="{!! url('winners') !!}"  class="button button__secondary  button--small toggle--modal">Pemenang</a></li>
 										<li class="login--link"><a href="#login" id="login-button" class="button button__tertiary  button--small toggle--modal navigation--button" data-target="login">Login</a></li>
 <!--                     <li class="hidden-on-small"><img src="{!! asset('images/logo-twb.png') !!}"></li>
  -->                </ul>
