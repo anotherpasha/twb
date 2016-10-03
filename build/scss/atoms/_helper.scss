@@ -210,9 +210,23 @@ img.fluid{
 
 // control by max-widh
 
-
+@include mappy-bp(small)
+{
+  .show-on-mobile
+  {
+    display: none;
+  }
+}
 @include mappy-bp(max-width small)
 {
+  .show-on-mobile
+  {
+    display: block;
+  }
+    .show-on--desktop
+    {
+      display: none;
+    }
     .hidden-on-small
     {
         display: none !important;
