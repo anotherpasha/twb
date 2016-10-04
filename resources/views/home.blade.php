@@ -11,7 +11,6 @@
 						<a href="{!! url('/') !!}" class="navbar--toggle home"><span></span><span></span><span></span></a>
 
 						<nav class="navigation--home hidden-on-small">
-                            adsfasdfasdfasdf
 								@if( Auth::check() )
 								<ul class="list__inline">
 										<li class=""><a href="{!! url('logout') !!}"  class="navigation--link white">Logout</a></li>
