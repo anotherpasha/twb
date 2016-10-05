@@ -46,7 +46,7 @@
 @yield('content')
 @include('partials.sign-in-popup')
 @include('partials.footer')
-
+             
 <nav class="navigation--mobile">
     @if(Auth::check())
     <ul>

@@ -3591,6 +3591,50 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/public\/uploads\/P8YweakQy6Zs-thumb.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26248,
+		"inputAbbreviatedPath": "\/public\/uploads\/P8YweakQy6Zs-thumb.jpg",
+		"outputAbbreviatedPath": "\/public\/uploads\/P8YweakQy6Zs-thumb.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/uploads\/P8YweakQy6Zs.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 220525,
+		"inputAbbreviatedPath": "\/public\/uploads\/P8YweakQy6Zs.jpg",
+		"outputAbbreviatedPath": "\/public\/uploads\/P8YweakQy6Zs.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/uploads\/UduMTvGxeYmx-thumb.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26248,
+		"inputAbbreviatedPath": "\/public\/uploads\/UduMTvGxeYmx-thumb.jpg",
+		"outputAbbreviatedPath": "\/public\/uploads\/UduMTvGxeYmx-thumb.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/uploads\/UduMTvGxeYmx.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 220525,
+		"inputAbbreviatedPath": "\/public\/uploads\/UduMTvGxeYmx.jpg",
+		"outputAbbreviatedPath": "\/public\/uploads\/UduMTvGxeYmx.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/README.md": {
 		"criticStyle": 0,
 		"enableFootnotes": 1,
