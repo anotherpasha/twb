@@ -18,7 +18,7 @@
   "dependencies": {
     "susy": "~2.2.10",
     "gsap": "~1.18.2",
-    "sanitize-css": "~3.0.0",
+    "sanitize-css": "^4.1.0",
     "mappy-breakpoints": "~0.2.1",
     "underscore": "^1.8.3",
     "scrollmagic": "^2.0.5"
