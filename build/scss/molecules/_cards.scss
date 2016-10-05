@@ -100,6 +100,7 @@
 	.cards--gallery
 	{
 		background-color: $white;
+		padding: 0;
 		@include vendor((border-radius: 10px), webkit moz ms o);
 		overflow: hidden;
 		text-align: left;
@@ -149,7 +150,7 @@
 		}
 		.author
 		{
-			font-size: 12px;
+			font-size: 10px;
 				@include mappy-bp(max-width small)
 				{
 					font-size: 9px;
