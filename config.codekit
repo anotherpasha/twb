@@ -630,6 +630,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/build\/scss\/atoms\/_sanitize.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/build\/scss\/atoms\/_sanitize.scss",
+		"outputAbbreviatedPath": "\/public\/css\/style.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/build\/scss\/atoms\/_text.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1487,35 +1503,6 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
-	"\/build\/vendor\/sanitize-css\/dist\/sanitize.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/build\/vendor\/sanitize-css\/dist\/sanitize.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/build\/vendor\/sanitize-css\/dist\/sanitize.min.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/build\/vendor\/sanitize-css\/dist\/sanitize.min.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/build\/vendor\/sanitize-css\/index.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/build\/vendor\/sanitize-css\/index.js",
-		"outputAbbreviatedPath": "\/public\/js\/index.min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/build\/vendor\/sanitize-css\/LICENSE.md": {
 		"criticStyle": 0,
 		"enableFootnotes": 1,
@@ -1567,37 +1554,14 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/build\/vendor\/sanitize-css\/sanitize.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/build\/vendor\/sanitize-css\/sanitize.scss",
-		"outputAbbreviatedPath": "\/public\/css\/style.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/build\/vendor\/sanitize-css\/sanitize.styl": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"fileType": 8,
+	"\/build\/vendor\/sanitize-css\/test.html": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"importCSS": 0,
-		"inputAbbreviatedPath": "\/build\/vendor\/sanitize-css\/sanitize.styl",
-		"outputAbbreviatedPath": "\/build\/vendor\/css\/sanitize.css",
+		"inputAbbreviatedPath": "\/build\/vendor\/sanitize-css\/test.html",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"resolveRelativeURLS": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0
+		"outputPathIsSetByUser": 0
 		},
 	"\/build\/vendor\/scrollmagic\/bower.json": {
 		"fileType": 524288,
