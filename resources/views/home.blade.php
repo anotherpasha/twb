@@ -292,24 +292,6 @@
 								 </div>
 
 						</div>
-            <div class="column__span-6">
-
-                 <div class="container__gallery">
-                    @foreach($stories as $story)
-                    <div class="wrapper__thumb">
-                        <a href="{!! url('story/' . $story->id) !!}" class="thumb--gallery">
-                            <ul class="cards cards--gallery">
-                                <li class="images"><figure><img width="250" src="{!! asset('uploads/' . $story->thumbnail_path) !!}"></figure></li>
-                                <li class=" title">{!!  str_limit($story->title, 20) !!}</li>
-                                <li class=" author">Oleh {!! $story->user->name !!}</li>
-                                <li class="likes"><i class="icon icon--likes"></i> {!! $story->likes->count() !!} Likes</li>
-                            </ul>
-                        </a>
-                    </div>
-                    @endforeach
-                 </div>
-
-            </div>
 
 						<div class="column__span-6">
 								<a href="{!! url('/gallery') !!}" class="button button--small button__secondary">Lihat Semua</a>
