@@ -113,9 +113,17 @@ class AdminController extends Controller
         return redirect('adm/stories');
     }
 
-    public function participants()
+    public function participants(Request $request)
     {
-        $participants = User::where('email', '<>', 'admin@duniatiniwinibiti.com')->orderBy('id', 'desc')->paginate(20);
+        $participants = User::where('email', '<>', 'admin@duniatiniwinibiti.com');
+        if ($request->has('name')) {
+            $name = $request->input('name');
+            $participants = $participants->where('name', 'like', '%'.$name.'%')->orderBy('id', 'desc')->paginate(20);
+            $participants->appends(['name' => $name]);
+        } else {
+            $participants = $participants->orderBy('id', 'desc')->paginate(20);
+        }
+
         $data['participants'] = $participants;
         return view('admin.participants', $data);
     }

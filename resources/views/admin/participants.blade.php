@@ -8,7 +8,19 @@
                     <div class="panel-heading">Participant List</div>
                     <div class="panel-body">
 
-                        <div>
+                        <div class="col-lg-12">
+                            <form action="{!! url('adm/participants') !!}" method="post">
+                                {!! csrf_field() !!}
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Participant Name">
+                                </div>
+                                <button type="submit" name="search" value="search" class="btn btn-default">Search</button>
+                            </form>
+                            <br>
+                        </div>
+
+                        <div class="col-lg-12">
                             <table class="table table-bordered table-striped">
                                 <tr align="center">
                                     <td>Nama</td>
